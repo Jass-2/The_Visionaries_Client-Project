@@ -1,11 +1,52 @@
-@use "../abstracts" as a;
+// @use "../abstracts" as a;
 
+
+
+/* Desktop Styles (min-width: 1200px) */
 @media screen and (min-width: 1200px) {
-    body {
-      
-    }
-  
-    // HEADER
-  
+  .container {
+    padding: 0;
+    max-width: 1110px;
   }
+
+  .hero-title {
+    font-size: 6rem;
+  }
+
+  .vision-content h2 {
+    font-size: 2rem;
+  }
+
+  .who-we-are-section {
+    height: 500px;
+  }
+
+  .who-we-are-overlay h2 {
+    font-size: 4rem;
+  }
+
+  .events-title {
+    font-size: 4.5rem;
+  }
+
+ 
+  
+  .event-info{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .featured-event{
+    display: flex;
+  }
+  
+
+  .contact-banner {
+    font-size: 4.5rem;
+  }
+}
   
