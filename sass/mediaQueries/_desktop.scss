@@ -18,13 +18,24 @@
   }
 
   .who-we-are-section {
-    height: 500px;
+    height: 100vh;
   }
 
   .who-we-are-overlay h2 {
     font-size: 4rem;
   }
 
+
+  .video-container{
+    display: flex;
+    width: 635px;
+    height: 379px;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
   .events-title {
     font-size: 4.5rem;
   }
