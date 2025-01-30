@@ -5,7 +5,7 @@ nav {
   align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
-  padding: 0 1rem;
+  padding:  1rem;
   max-width: var(--max-width);
   margin: 0 auto;
 }
@@ -39,10 +39,18 @@ nav {
   font-weight: bold;
 }
 
+// .hero {
+//   text-align: center;
+//   margin-top: 2rem;
+//   padding: 0 1rem;
+//   max-width: var(--max-width);
+//   margin: 0 auto;
+// }
+
 .hero {
   text-align: center;
   margin-top: 2rem;
-  padding: 0 1rem;
+  padding: 7rem 1rem 0 1rem;
   max-width: var(--max-width);
   margin: 0 auto;
 }
@@ -57,28 +65,37 @@ nav {
 }
 
 .hero-title {
-  color: var(--white);
-  font-size: 2.25rem;
+  color: var(--white, #FFF);
+  text-align: center;
+  font-family: Manrope;
+  font-size: 3rem;
+  font-style: normal;
   font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: -0.5px;
-  margin-top: 1rem;
+  line-height: 95%;
+  letter-spacing: -1.44px;
+  
 }
+
+// .hero-description {
+//   color: var(--white);
+//   font-size: 0.875rem;
+//   max-width: 539px;
+//   margin: 1.5rem auto 0;
+// }
 
 .hero-description {
   color: var(--white);
-  font-size: 0.875rem;
+  font-size: .875rem;
   max-width: 539px;
-  margin: 1.5rem auto 0;
+  margin: 3rem auto 0;
 }
 
 .progress-section {
-  margin-top: 2rem;
+  margin-top: 4.5rem;
 }
-
 .progress-text {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   gap: 0.5rem;
   text-align: right;
@@ -115,7 +132,7 @@ nav {
 
 .hero-buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   gap: 0.75rem;
   margin-top: 1.5rem;
@@ -129,6 +146,11 @@ nav {
 }
 
 .btn-primary {
+
+font-size: 1rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
   background-color: var(--white);
   color: var(--dark-text);
 }
@@ -138,6 +160,10 @@ nav {
 }
 
 .btn-secondary {
+  font-size: 1rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
   background-color: transparent;
   color: var(--white);
 }
@@ -174,10 +200,12 @@ nav {
 .vision-content hr {
   margin: 1rem 0;
   border: none;
+  opacity: 24%;
   border-top: 1px solid var(--dark-text);
 }
 
 .vision-image {
+  display: none;
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -186,7 +214,7 @@ nav {
 /* Who We Are Section */
 .who-we-are-section {
   width: 100%;
-  height: 300px;
+  height: 100vh;
   background-image: url('../images/who-we-are-pic.png');
   background-size: cover;
   background-position: center;
@@ -229,7 +257,8 @@ nav {
   margin: 0 auto;
 }
 .video-container {
-  width: 100%;
+  width: 345px;
+  height: 205.913px;
   margin-bottom: 2rem;
 }
 .video-placeholder {
@@ -481,6 +510,6 @@ nav {
   font-weight: 600;
   line-height: 1.2;
   margin-top: 4rem;
-  padding: 3rem 1.5rem;
+  padding: 3rem 3.5rem;
   border-radius: 1rem;
 }

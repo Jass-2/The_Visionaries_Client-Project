@@ -1,47 +1,50 @@
 /*base styles to be used acroass all the pages for easy and coinsize styling*/
 :root {
-    --primary-blue: rgba(148,191,228,1);
-    --secondary-blue: rgba(41,127,202,1);
-    --light-bg: rgba(229,239,248,1);
-    --dark-overlay: rgba(26,26,26,0.48);
-    --white: #ffffff;
-    --dark-text: #333333;
-    --max-width: 1200px;
-  }
+  --primary-blue: rgba(148,191,228,1);
+  --secondary-blue: rgba(41,127,202,1);
+  --light-bg: rgba(229,239,248,1);
+  --dark-overlay: rgba(26,26,26,0.48);
+  --white: #ffffff;
+  --dark-text: #333333;
+  --max-width: 1200px;
+}
 
-  /* 1 rem = Equals 16px */
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Manrope", serif;
-    line-height: 1.5;
-  }
-  
-  /* Container */
-  .container {
-    width: 100%;
-    padding: 0 1rem;
-    margin: 0 auto;
-  }
-  
+/* 1 rem = Equals 16px */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", serif;
+  line-height: 1.5;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
 
 
 /* Header Styles */
 header {
-    width: 100%;
-    background-color: var(--dark-overlay);
-    background-image: url('../images/Banner-pic.png');
-    background-size: cover;
-    padding: 1rem 0 3rem;
-    
-  }
+  width: 100%;
+  background-color: var(--dark-overlay);
+  background: url('../images/Banner-pic.png');
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  padding: 1rem 0 3rem;
+  
+}
 
 
-  .hidden{
-    display: none;
-  }
+.hidden{
+  display: none;
+}

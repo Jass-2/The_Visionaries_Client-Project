@@ -7,7 +7,7 @@
   nav {
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 0;
+    margin-bottom: 8.5rem;
   }
 
   .logo {
@@ -21,28 +21,36 @@
     font-size: 1rem;
   }
 
+  
   .hero {
+    text-align: center;
     margin-top: 9.5rem;
+    padding: 0 1rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
   }
 
   .hero-title {
     font-size: 4.5rem;
-    line-height: 7.625rem;
+    line-height: 95%;
     letter-spacing: -3.84px;
   }
 
   .hero-description {
-    font-size: 1rem;
-    margin-top: 3rem;
+    color: var(--white);
+    font-size: 0.875rem;
+    max-width: 539px;
+    margin: 1.5rem auto 0;
   }
+  
 
   .hero-buttons {
     flex-direction: row;
-    margin-top: 4.5rem;
+    margin-top: 1.5rem;
   }
 
   .who-we-are-section {
-    height: 400px;
+    height: 100vh;
   }
   .who-we-are-overlay h2 {
     font-size: 3rem;
@@ -56,6 +64,7 @@
 
   .video-section {
     display: flex;
+    align-items: center;
         width: 100%;
         padding: 2rem 1rem;
         max-width: 1200px;
@@ -63,15 +72,27 @@
   }
   
   .video-container{
-    display: flex
-;
-    width: 100%;
-    /* margin-bottom: 2rem; */
+    display: flex;
+    width: 500px;
+    height: 310px;
     flex-direction: column;
     align-content: center;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
   }
+
+  .vision-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .vision-content{
+    padding-top: 3.5rem;
+  }
+
   .vision-text {
       padding: 1rem 0;
           text-align: left;
@@ -89,6 +110,29 @@
   .vision-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .support-section {
+    background-image: url('../images/Donation-pic.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(26,26,26,0.72);
+    padding: 4rem 1rem;
+  }
+  
+  .support-container {
+    padding-top: 3.5rem;
+    max-width: 730px;
+    margin: 0 auto;
+  }
+  
+  .support-title {
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
 
   .amount-grid {
     grid-template-columns: repeat(3, 1fr);
