@@ -11,13 +11,18 @@
 }
 
 .cta-content {
+  background-image: url(../images/cta-banner.png) !important; /* Replace with actual image path */
   background-color: rgba(70, 70, 70, 1);
+  background-size: cover !important; /* Ensures the image covers the entire section */
+  background-position: center !important; /* Centers the image */
+  background-repeat: no-repeat !important; /* Prevents repetition */
   border-radius: 0.5rem;
   padding: 3rem 1.5rem;
   color: white;
   text-align: center;
   position: relative;
 }
+
 
 .cta-title {
   font-size: 2.5rem;

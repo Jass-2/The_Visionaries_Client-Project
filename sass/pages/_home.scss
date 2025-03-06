@@ -18,7 +18,7 @@
 }
 
 .header {
-  padding: 1.25rem 5% 1rem;
+
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
@@ -246,12 +246,17 @@
 
 /* Support Section */
 .home-support {
+  background-image: url(../images/donate-banner.png);
   background-color: #1a1a1a;
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents image repetition */
   padding: 3rem 1.5rem;
   color: white;
   text-align: center;
   margin-top: 2.5rem;
 }
+
 
 .home-support-intro {
   font-size: 1.125rem;
@@ -481,14 +486,19 @@
     min-height: 100vh;
   }
   
-  .header {
-    padding-top: 2rem;
-  }
+  // .header {
+  //   padding-top: 2rem;
+  // }
   
+  // .home-hero-content {
+  //   padding-top: 8rem;
+  //   padding-bottom: 8rem;
+  // }
+
   .home-hero-content {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
+    padding-top: 9.5rem;
+    /* padding-bottom: 8rem; */
+}
   
   // .desktop-nav li a {
   //   color: white;
@@ -498,13 +508,38 @@
     padding: 0 5rem 5rem;
   }
 
-  .home-hero-content h1 {
-    font-size: 3.5rem;
-  }
+ 
 
   .home-hero-content p {
     max-width: 30rem;
   }
+  .home-hero-content{
+    margin-top: 0;
+
+  }
+
+  .home-hero-content p {
+    line-height: normal;
+    margin-top: 2rem;
+    font-size: 1.75rem;
+    max-width: 100%;
+    padding: 0 1rem;
+}
+  
+  
+  .home-hero-content h1 {
+    line-height: 95%;
+    font-size: 4rem;
+}
+  
+   // .home-hero-content p {
+    //   max-width: 30rem;
+    // }
+  
+  .home-hero-section {
+      padding: 0 5rem 0rem;
+    }
+
 
   .home-mobile-progress {
     display: none;
@@ -512,6 +547,7 @@
 
   .home-vision-mission-container {
     flex-direction: row;
+    align-items: center;
     margin: 0 auto;
     max-width: 1110px;
   }
@@ -527,7 +563,7 @@
   }
 
   .home-who-we-are {
-    height: 100vh;
+    height: 110vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -796,7 +832,7 @@
   }
 
   .home-hero-content h1 {
-    font-size: 4.375rem;
+    font-size: 7rem;
   }
 
   .home-history {
