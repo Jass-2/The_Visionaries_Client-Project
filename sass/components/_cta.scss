@@ -1,0 +1,91 @@
+/* CTA Section Styles */
+.cta-section {
+  padding: 0 1.5rem;
+  margin: 2.5rem 0 4rem;
+}
+
+.cta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cta-content {
+  background-color: rgba(70, 70, 70, 1);
+  border-radius: 0.5rem;
+  padding: 3rem 1.5rem;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.cta-description {
+  font-size: 1rem;
+  /* margin: 0 auto 2rem; */
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cta-donate-btn {
+  background-color: white;
+  color: black;
+  padding: 0.625rem 2rem;
+  border-radius: 0;
+  font-weight: 500;
+  min-width: 120px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.cta-about-btn {
+  color: white;
+  padding: 0.625rem 0;
+  text-decoration: none;
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 768px) {
+  .cta-section {
+    padding: 0 2rem;
+    margin: 4rem 0 6rem;
+  }
+  
+  .cta-content {
+    padding: 4rem;
+    text-align: left;
+  }
+  
+  .cta-title {
+    font-size: 3.5rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cta-section {
+    margin: 6rem 0 8rem;
+  }
+  
+  .cta-title {
+    font-size: 4rem;
+  }
+}
