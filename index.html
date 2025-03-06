@@ -1,224 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <title>Brothers In Arms Memorial</title>
-    <link rel="stylesheet" href="css/main.css" >
-    <link rel="stylesheet" href="css/grid.css" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brothers In Arms</title>
 
-  </head>
-  <body>
-    <header>
-      <nav>
-        <img src="images/logo.svg" class="logo" alt="Logo">
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#Donations">Donations</a>
-          <a href="#contact" class="bold">Contact us</a>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="module" src="js/main.js"></script>
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="container transparent-header" id="pageContainer">
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <div class="mobile-menu-header">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo-main.svg" alt="Brothers In Arms Logo">
+          </a>
         </div>
-      </nav>
-
-      <div class="hero">
-        <span class="hero-subtitle">Brothers In Arms</span>
-        <h1 class="hero-title">
-          Guard of Honour<br/>& Memorial
-        </h1>
-        <p class="hero-description">
-          Your support helps us maintain the memorial and continue our
-          important work in the community. Every contribution counts towards
-          preserving our shared legacy.
-        </p>
-
-        <div class="progress-section">
-          <div class="progress-text">
-            <span class="progress-amount">400 000 / 1 000 000</span>
-            <span class="progress-currency">$CAD</span>
-          </div>
-          <div class="progress-bar">
-            <div class="progress-fill"></div>
-          </div>
-          
-          <div class="hero-buttons">
-            <button class="btn btn-primary">Donate</button>
-            <button class="btn btn-secondary">About us</button>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <section class="vision-section">
-      <div class="vision-grid">
-        <div class="vision-content">
-          <h2>Vision</h2>
-          <p>
-            To commemorate the valour of Indian and Canadian Brothers In
-            Arms, to inspire future generations to uphold values of humanity
-            and freedom.
-          </p>
-
-          <hr/>
-
-          <h2>Mission</h2>
-          <p>
-            This memorial highlights the forgotten story of the
-            collaboration between the Indian &amp; Canadian soldiers who fought
-            side by side, at the Western Front, in Europe.
-          </p>
-
-          <hr/>
-
-          <p>
-            Bring forward shared personal experiences of battle, challenges,
-            emotions and triumph.
-          </p>
-
-          <hr/>
-
-          <p>
-            To reflect on the lessons from the stories of heroism,
-            sacrifices and voices of liberation.
-          </p>
-        </div>
-
-        <img src="images/Place-holder-1.png" class="vision-image" alt="Memorial Vision"/>
-      </div>
-    </section>
-    <section class="who-we-are-section">
-      <h2 class="hidden">Who we are Section</h2>
-      <div class="who-we-are-overlay">
-        <h2>Who we are?</h2>
-      </div>
-    </section>
-    <section class="info-section grid-con">
-      <h2 class="hidden">Info Section</h2>
-      <p class="info-text col-span-full">
-        Over 135,000 (of a total of 1.3 Million) Indian Army Corps soldiers fought 
-        alongside Canadian soldiers in Europe that included but not limited to - Ypres, 
-        St Julien, Festubert, The Somme, Vimy
-      </p>
-    </section>
-    <section class="video-section">
-      <div class="video-container">
-        <video src="video/video.mp4"  preload="metadata" poster="images/Vid-placeholder.png" width="435" >
-          
-        </video>
-        
-      </div>
-
-
-
-      <div class="vision-text">
-        <h3>Vision</h3>
-        <p>
-          To commemorate the place of Indian and Canadian Brothers 
-          in Arms, to inspire future generations to uphold values of 
-          humanity and freedom.
-        </p>
-        <h3>Vision</h3>
-        <p>
-          To commemorate the place of Indian and Canadian Brothers 
-          in Arms, to inspire future generations to uphold values of 
-          humanity and freedom.
-        </p>
-      </div>
-    </section>
-
-
-
-    <section class="support-section">
-      <div class="support-container">
-        <h2 class="support-title">
-          Your support helps us maintain the memorial and continue our
-          important work in the community. Every contribution counts towards
-          preserving our shared legacy.
-        </h2>
-
-        <div class="support-card">
-          <h3>Support us</h3>
-          
-          <div class="support-tabs">
-            <div class="support-tab active">One Time</div>
-            <div class="support-tab">Monthly</div>
-          </div>
-
-          <div class="amount-grid">
-            <button class="amount-btn">$10</button>
-            <button class="amount-btn">$25</button>
-            <button class="amount-btn">$50</button>
-          </div>
-
-          <div class="amount-display">$25.00</div>
-          <button class="donate-btn">Donate - $25</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="events-section">
-      <h2 class="events-title">Upcoming Events</h2>
-
-      <div class="featured-event">
-        <img src="images/Place-holder-2.png" alt="Featured Event"/>
-        <div class="event-info">
-          <h3>Diwali or Deepavali</h3>
-          <span class="event-location">Centennial Hall, London, ON</span>
-          <p class="event-description">
-            which means a row of lights, is the biggest and most popular
-            ancient festival of our Dharmic traditions. Celebrated by
-            Hindus, Sikhs, and Jains, the festival marks the return of joy
-            to our minds, going from darkness to light &amp; new beginnings...
-          </p>
-          <span class="event-date">November 10th</span>
-        </div>
-      </div>
-
-      <div class="events-grid">
-        <div class="event-card">
-          <img src="images/Place-holder-3.png" alt="Event 1" />
-          <h3>Diwali or Deepavali</h3>
-          <span class="event-location">Centennial Hall, London, ON</span>
-        </div>
-        <div class="event-card">
-          <img src="images/Place-holder-3.png" alt="Event 2" />
-          <h3>Diwali or Deepavali</h3>
-          <span class="event-location">Centennial Hall, London, ON</span>
-        </div>
-        <div class="event-card">
-          <img src="images/Place-holder-3.png" alt="Event 3" />
-          <h3>Diwali or Deepavali</h3>
-          <span class="event-location">Centennial Hall, London, ON</span>
-        </div>
-      </div>
-
-      <button class="more-events">More Events &gt;</button>
-
-      <div class="contact-banner">
-        Let's <br />
-        Keep in Touch
-      </div>
-    </section>
-
-    <footer>
-      <div class="footer-main">
-        <div class="footer-content">
-          <div class="footer-logo"></div>
-          <div class="footer-links">
-            <div class="footer-link"></div>
-            <div class="footer-link"></div>
-            <div class="footer-link"></div>
-          </div>
+        <div class="mobile-close-button" id="mobileCloseButton">
+          <span></span>
+          <span></span>
         </div>
       </div>
       
-      <div class="footer-bottom">
-        <div class="footer-bottom-content">
-          <div class="footer-text-short"></div>
-          <div class="footer-text-long"></div>
+      <div class="mobile-menu-content">
+        <div class="mobile-menu-title">Menu</div>
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="donations.html">Donation</a></li>
+            <li><a href="memorial.html">Memorial</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="events.html">News & Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-contact-section">
+          <div class="mobile-contact-title">Get in Touch</div>
+          <div class="mobile-contact-email">info@brotherinarms.com</div>
         </div>
       </div>
+    </div>
+  
+    <!-- Hero Section -->
+    <section class="home-hero-section" id="heroSection">
+      <!-- Fixed Background for Header -->
+      <div class="header-background"></div>
+      
+      <header class="header">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo-main.svg" alt="Brothers In Arms Logo">
+          </a>
+        </div>
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="#about">About us</a></li>
+            <li><a href="donations.html">Donation</a></li>
+            <li><a href="memorial.html">Memorial</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="events.html">News & Events</a></li>
+            <li><a href="contact.html" class="active">Contact us</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu-button" id="mobileMenuButton">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+      
+      <section class="home-hero-content">
+        <h4 class="home-subtitle">Brothers In Arms</h4>
+        <h1>Guard of Honour<br>& Memorial</h1>
+        <p>"Every contribution helps preserve the untold stories of bravery and sacrifice, ensuring their legacy lives on."</p>
+        
+        <div class="home-hero-buttons">
+          <a href="donations.html" class="home-btn home-btn-primary">Donate</a>
+          <a href="memorial.html" class="home-btn home-btn-secondary">Memorial</a>
+        </div>
+      </section>
+    </section>
+    
+    <!-- Vision Mission Section -->
+    <section class="home-vision-mission">
+      <div class="home-vision-mission-container">
+        <div class="home-text-column">
+          <h2>Vision</h2>
+          <p>To commemorate the valour of Indian and Canadian Brothers In Arms, to inspire future generations to uphold values of humanity and freedom.</p>
+          <div class="home-divider"></div>
+          
+          <h2>Mission</h2>
+          <p>This memorial highlights the forgotten story of the collaboration between the Indian & Canadian soldiers who fought side by side, at the Western Front, in Europe.</p>
+          <div class="home-divider"></div>
+          
+          <p>Bring forward shared personal experiences of battle, challenges, emotions and triumph.</p>
+          <div class="home-divider"></div>
+          
+          <p>To reflect on the lessons from the stories of heroism, sacrifices and voices of liberation.</p>
+          
+          <a href="initiative.html" class="home-initiatives-btn">Initiatives ›</a>
+        </div>
+        <div class="home-image-column">
+          <img src="images/vision-banner.png" alt="Soldiers during World War I">
+        </div>
+      </div>
+    </section>
+    
+    <!-- Who We Are Section -->
+    <section id="about" class="home-who-we-are">
+      <h2>Who we are?</h2>
+    </section>
+    
+    <!-- History Section -->
+    <section id="history" class="home-history">
+      <h2>Over 135,000 Indian soldiers from the 1.3 million-strong Indian Army Corps fought alongside Canadian soldiers in historic battles such as Ypres, St. Julian, Festubert, The Somme, and Vimy.</h2>
+      <p>Discover the untold story of Indian and Canadian soldiers who stood together on the Western Front. This video explores their bravery, sacrifices, and the significance of the "<span class="home-highlight">Living Guard of Honour & Memorial</span>"—a tribute to their legacy and the shared history of valor.</p>
+      
+      <div class="home-history-columns">
+        <div class="home-history-image">
+          <div class="video-container">
+            <video controls poster="images/Vid1-banner.png">
+              <source src="/video/history.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="home-history-text">
+          <h3>Preserving History, Inspiring Generations</h3>
+          <p>Our mission is to honor the forgotten bravery of Indian and Canadian soldiers who stood side by side during World War I. Through this initiative, we aim to educate future generations about their sacrifices and ensure their legacy is never forgotten.</p>
+          
+          <h3>A Tribute to Brotherhood & Valor</h3>
+          <p>The Living Guard of Honour & Memorial serves as a lasting tribute to the courage, unity, and resilience of those who fought together. It is a symbol of remembrance, fostering awareness and appreciation for their shared history.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Support Section -->
+    <section id="memorial" class="home-support">
+      <p class="home-support-intro">Your support helps us maintain the memorial and continue our important work in the community. Every contribution counts towards preserving our shared legacy.</p>
+      
+      <div class="home-donation-box">
+        <h3>Support us</h3>
+        
+        <div class="home-donation-type-toggle">
+          <div class="home-toggle-option active">One Time</div>
+          <div class="home-toggle-option">Monthly</div>
+        </div>
+        
+        <div class="home-donation-amounts">
+          <div class="home-amount-btn">$10</div>
+          <div class="home-amount-btn active">$25</div>
+          <div class="home-amount-btn">$50</div>
+        </div>
+        
+        <div class="home-donation-display">$25.00</div>
+        
+        <a href="donations.html" class="home-donate-btn">Donate - One Time</a>
+      </div>
+    </section>
+    
+    <!-- Events Section -->
+    <section id="events" class="home-events">
+      <h2>Upcoming Events</h2>
+      
+      <!-- Mobile Event Card -->
+      <div class="home-mobile-event-card">
+        <img src="images/Event1.png" alt="Event">
+        <div class="home-event-card-content">
+          <h3>Diwali or Deepavali</h3>
+          <p class="home-event-location">CENTENNIAL HALL, LONDON, ON</p>
+          <p class="home-event-description">which means a row of lights, is the biggest and most popular ancient festival of our Dharmic traditions. Celebrated by Hindus, Sikhs, and Jains, the festival marks the return of joy to our minds, going from darkness to light & new beginnings symbolized by the return of Sri Rama to Ayodhya, Bandi Chorr Divas and Nirvana of Mahavira. Like the row of lights lit from a single source, all of us and everything is one with the Universe and powered by the same source.</p>
+          <p class="home-event-date">NOVEMBER 10TH</p>
+          <a href="#" class="home-event-more-btn">More Events ›</a>
+        </div>
+      </div>
+      
+      <!-- Desktop Event Layout -->
+      <div class="home-desktop-events">
+        <!-- Main Event -->
+        <div class="home-main-event">
+          <div class="home-main-event-image"><img src="images/Event1.png" alt="Event image"></div>
+          <div class="home-main-event-info">
+            <h3>Diwali or Deepavali</h3>
+            <p class="home-event-description">which means a row of lights, is the biggest and most popular ancient festival of our Dharmic traditions. Celebrated by Hindus, Sikhs, and Jains, the festival marks the return of joy to our minds, going from darkness to light & new beginnings symbolized by the return of Sri Rama to Ayodhya, Bandi Chorr Divas and Nirvana of Mahavira. Like the row of lights lit from a single source, all of us and everything is one with the Universe and powered by the same source.</p>
+            <p class="home-event-date">NOVEMBER 10TH</p>
+          </div>
+        </div>
+        
+        <!-- Event Grid -->
+        <div class="home-event-grid">
+          <div class="home-event-card">
+            <img src="images/event2.png" alt="Event image">
+            <h3>Diwali or Deepavali</h3>
+            <p>CENTENNIAL HALL, LONDON, ON</p>
+          </div>
+          
+          <div class="home-event-card">
+            <img src="images/event3.png" alt="Event image">
+            <h3>Diwali or Deepavali</h3>
+            <p>CENTENNIAL HALL, LONDON, ON</p>
+          </div>
+          
+          <div class="home-event-card">
+            <img src="images/event4.png" alt="Event image">
+            <h3>Diwali or Deepavali</h3>
+            <p>CENTENNIAL HALL, LONDON, ON</p>
+          </div>
+        </div>
+        
+        <a href="#" class="home-events-more-btn">More Details ›</a>
+      </div>
+    </section>
+    
+    <!-- Contact/CTA Section -->
+    <section class="cta-section">
+      <div class="cta-container">
+        <div class="cta-content">
+          <h2 class="cta-title">Keep their<br>Legacy alive</h2>
+          <p class="cta-description">
+            To commemorate the valour of Indian and Canadian Brothers in Arms, to inspire future generations to uphold values of
+            humanity and freedom.
+          </p>
+          <div class="cta-buttons">
+            <a href="donations.html" class="cta-donate-btn">Donate</a>
+            <a href="#about" class="cta-about-btn">About us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+      <div class="footer-main">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <div class="contact-item">
+            <span class="icon"><img src="images/envelope.svg" alt="mail"></span>
+            <span>info@brotherinarms.com</span>
+          </div>
+          <div class="contact-item">
+            <span class="icon"><img src="images/phone.svg" alt="phone"></span>
+            <span>+1 (123) 456-7890</span>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <div class="quick-links">
+            <a href="#about">About us</a>
+            <a href="donations.html">Donation</a>
+            <a href="#memorial">Memorial</a>
+            <a href="#history">History</a>
+            <a href="#initiative">Initiative</a>
+            <a href="#events">News & Events</a>
+            <a href="contact.html">Contact us</a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-item">
+            <img src="images/Facebook.svg" alt="Facebook" class="social-icon">
+            <span>Srishti Foundation - Canada</span>
+          </div>
+          <div class="social-item">
+            <img src="images/Instagram.svg" alt="Instagram" class="social-icon">
+            <span>srishticanada</span>
+          </div>
+          <div class="social-item">
+            <img src="images/youtube.svg" alt="YouTube" class="social-icon">
+            <span>Srishti Foundation</span>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Newsletter</h3>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email...">
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-copyright">
+        <a href="https://www.srishticanada.org/"> By Srishti Foundation</a>
+      </div>
     </footer>
-  </body>
+  </div>
+  
+
+  
+  <!-- Script for scroll-based header styling -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const pageContainer = document.getElementById('pageContainer');
+      const heroSection = document.getElementById('heroSection');
+      
+      function checkScroll() {
+        // Get the height of the hero section
+        const heroHeight = heroSection.offsetHeight;
+        
+        // Check if we've scrolled past the hero section
+        if (window.scrollY > heroHeight - 200) {
+          pageContainer.classList.remove('transparent-header');
+        } else {
+          pageContainer.classList.add('transparent-header');
+        }
+      }
+      
+      // Check scroll position on page load
+      checkScroll();
+      
+      // Check scroll position on scroll
+      window.addEventListener('scroll', checkScroll);
+    });
+  </script>
+</body>
 </html>

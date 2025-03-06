@@ -1,0 +1,426 @@
+
+/* Memorial Page Styles */
+
+/* Hero Section */
+.memorial-hero {
+  padding: 7rem 1.5rem 2rem;
+  max-width: 100%;
+}
+
+.memorial-hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.memorial-subtitle {
+  font-size: 0.875rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #8E9196;
+  margin-bottom: 1rem;
+}
+
+.memorial-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: #333;
+}
+
+.memorial-title .highlight {
+  color: #ea384c;
+}
+
+.memorial-description {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #555;
+}
+
+.memorial-image {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.memorial-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
+.memorial-divider {
+  width: 80%;
+  max-width: 800px;
+  height: 1px;
+  background-color: #eee;
+  margin: 0 auto;
+}
+
+/* Memorial Content Sections */
+.memorial-section {
+  padding: 4rem 1.5rem;
+}
+
+.memorial-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.memorial-section-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #8E9196;
+  margin-bottom: 0.5rem;
+}
+
+.memorial-section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.memorial-section-subtitle {
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #8E9196;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Three-column layout */
+.memorial-three-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.memorial-column p {
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Images row */
+.memorial-images-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.memorial-image-container {
+  flex: 1;
+  overflow: hidden;
+}
+
+.memorial-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Text blocks */
+.memorial-text-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.memorial-text-block h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.memorial-text-block p {
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Voices Section */
+.voices-section {
+  background-color: #f9f9f9;
+}
+
+.memorial-voice-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.memorial-voice-image {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.memorial-voice-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.memorial-voice-text {
+  width: 100%;
+}
+
+.memorial-voice-subheader {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  color: #333;
+}
+
+.memorial-paragraph {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* United Section */
+.united-section {
+  padding-bottom: 6rem;
+}
+
+.memorial-united-header {
+  margin-bottom: 2rem;
+}
+
+.memorial-united-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.memorial-united-images {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.memorial-united-main-image {
+  flex: 3;
+}
+
+.memorial-united-main-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.memorial-united-side-images {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 2;
+}
+
+.memorial-united-side-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.memorial-united-text {
+  margin-top: 2rem;
+}
+
+.memorial-united-subheader {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  color: #333;
+}
+
+/* Bravest Section */
+.bravest-section {
+  background-color: #f9f9f9;
+}
+
+.memorial-bravest-header {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.memorial-bravest-subtitle {
+  font-size: 0.875rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #8E9196;
+  margin-bottom: 0.5rem;
+}
+
+.memorial-bravest-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.2;
+}
+
+.memorial-bravest-image {
+  max-width: 100%;
+  margin: 0 0 3rem;
+}
+
+.memorial-bravest-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
+.memorial-bravest-content {
+  max-width: 100%;
+  margin: 0;
+}
+
+.memorial-bravest-subheader {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  color: #333;
+}
+
+/* Stone Section */
+.stone-section {
+  padding-bottom: 6rem;
+}
+
+.memorial-stone-header {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.memorial-stone-subtitle {
+  font-size: 0.875rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #8E9196;
+  margin-bottom: 0.5rem;
+}
+
+.memorial-stone-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.2;
+}
+
+.memorial-stone-image {
+  max-width: 100%;
+  margin: 0 0 3rem;
+}
+
+.memorial-stone-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
+.memorial-stone-content {
+  max-width: 100%;
+  margin: 0;
+}
+
+.memorial-stone-subheader {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 768px) {
+  .memorial-hero {
+    padding-top: 8rem;
+  }
+
+  .memorial-title {
+    font-size: 3.5rem;
+  }
+
+  .memorial-three-column {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .memorial-images-row {
+    flex-direction: row;
+  }
+
+  .memorial-voice-content {
+    flex-direction: column;
+  }
+
+  .memorial-voice-image {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .memorial-voice-text {
+    width: 100%;
+  }
+
+  .memorial-united-images {
+    flex-direction: row;
+  }
+
+  .memorial-united-side-images {
+    flex-direction: column;
+  }
+  
+  .memorial-bravest-title, 
+  .memorial-stone-title {
+    font-size: 3rem;
+  }
+
+  .memorial-bravest-image,
+  .memorial-stone-image {
+    max-width: 100%;
+  }
+
+  .memorial-bravest-content,
+  .memorial-stone-content {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .memorial-section {
+    padding: 5rem 2rem;
+  }
+
+  .memorial-title {
+    font-size: 4rem;
+  }
+
+  .memorial-description {
+    font-size: 1.125rem;
+  }
+
+  .memorial-section-title {
+    font-size: 2.5rem;
+  }
+  
+  .memorial-bravest-title, 
+  .memorial-stone-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .memorial-section {
+    padding: 6rem 2rem;
+  }
+}
