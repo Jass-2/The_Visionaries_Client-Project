@@ -1,7 +1,25 @@
+
+// Import modules
 import { setupMobileMenu } from './modules/hamburger.js';
 import { setupBattlefieldTabs } from './modules/slider.js';
+import { setupDonation } from './modules/donation.js';
+// import { createPopup } from './modules/popup.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+// import { setupTransparentHeader } from './modules/transparentHeader.js';
+
+// Initialize on DOM content loaded
+
+  // Set up mobile menu
   setupMobileMenu();
+  
+  // Set up battlefield tabs if they exist
   setupBattlefieldTabs();
-});
+
+  // Set up logo switch on scroll
+
+   setupDonation();
+
+  // Set up popup for donation
+  // createPopup();
+  // Set up transparent header
+  // setupTransparentHeader();
