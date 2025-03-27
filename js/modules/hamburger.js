@@ -7,23 +7,44 @@ export function setupMobileMenu() {
   const mobileCloseButton = document.querySelector('.mobile-close-button');
   const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
   const body = document.body;
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
 
   function openMobileMenu() {
-    if (mobileMenuOverlay) {
+    if (mobileMenuButton && mobileMenuOverlay) {
+      // First make it display block so animations can work
+      mobileMenuOverlay.style.display = 'block';
+      
+      // Force a reflow before adding the active class to ensure the animation works
+      void mobileMenuOverlay.offsetWidth;
+      
+      // Then add active class which triggers the animations
       mobileMenuOverlay.classList.add('active');
+      
+      // Add active class to hamburger button for animation
+      mobileMenuButton.classList.add('active');
+      
       body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
     }
   }
 
   function closeMobileMenu() {
-    if (mobileMenuOverlay) {
+    if (mobileMenuButton && mobileMenuOverlay) {
+      // First remove active class to start the animation
       mobileMenuOverlay.classList.remove('active');
+      
+      // Remove active class from hamburger button
+      mobileMenuButton.classList.remove('active');
+      
+      // After animation completes, hide the menu entirely
+      setTimeout(() => {
+        if (!mobileMenuOverlay.classList.contains('active')) {
+          mobileMenuOverlay.style.display = '';
+        }
+      }, 450); // Match this timing with the CSS transition duration
+      
       body.style.overflow = ''; // Restore scrolling
     }
   }
 
-  // Set up event listeners
   if (mobileMenuButton) {
     mobileMenuButton.addEventListener('click', openMobileMenu);
   }
@@ -32,7 +53,7 @@ export function setupMobileMenu() {
     mobileCloseButton.addEventListener('click', closeMobileMenu);
   }
 
-  // Close menu when clicking on mobile nav links
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
   if (mobileNavLinks.length > 0) {
     mobileNavLinks.forEach(link => {
       link.addEventListener('click', closeMobileMenu);
@@ -40,26 +61,13 @@ export function setupMobileMenu() {
   }
 
   // Add active class to current page link
-  highlightCurrentPage();
-}
-
-/**
- * Highlights the current page in the navigation
- */
-function highlightCurrentPage() {
   const currentPage = window.location.pathname.split('/').pop();
   const navLinks = document.querySelectorAll('.desktop-nav a, .mobile-nav a');
   
   navLinks.forEach(link => {
     const linkHref = link.getAttribute('href');
-    
-    // Check if this link matches the current page
-    if ((linkHref === currentPage) || 
-        (currentPage === '' && linkHref === 'index.html') || 
-        (linkHref && currentPage && linkHref.includes(currentPage))) {
+    if (linkHref === currentPage || (currentPage === '' && linkHref === 'index.html')) {
       link.classList.add('active');
-    } else {
-      link.classList.remove('active');
     }
   });
 }

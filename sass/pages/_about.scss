@@ -1,0 +1,359 @@
+
+/* About Page Styles */
+
+/* Section 1 - Video Section */
+.about-video-section {
+  background-color: #fff;
+  padding: 3rem 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-video-container {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-video-header {
+  margin-bottom: 2.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+.about-video-subtitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.075rem;
+  text-transform: uppercase;
+  color: #8E9196;
+  margin-bottom: 1rem;
+}
+
+.page-title{
+  display: none;
+}
+.about-video-title {
+  color: #333;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.about-video-title span {
+  color: #ea384c;
+}
+
+.about-video-wrapper {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.about-video-wrapper video {
+  width: 100%;
+  display: block;
+}
+
+.about-video-content {
+  margin-top: 2rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+}
+
+/* Section 2 - Vision and Mission */
+.vision-mission-section {
+  padding: 4rem 1.5rem;
+  background-color: #f9f9f9;
+  width: 100%;
+}
+
+.vision-mission-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1110px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.vision-mission-content {
+  width: 100%;
+}
+
+.vision-mission-image {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.vision-mission-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.vision-header {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.vision-text {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.mission-header {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem;
+}
+
+.mission-text {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.initiative-btn {
+  display: inline-block;
+  background-color: #da7010;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.initiative-btn:hover {
+  background-color: #C50000;
+  transform: translateY(-2px);
+}
+
+/* Section 3 - Memorial Meaning */
+.memorial-meaning-section {
+  padding: 4rem 1.5rem;
+  width: 100%;
+  background-color: #fff;
+}
+
+.memorial-meaning-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1110px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.memorial-meaning-image {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.memorial-meaning-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.memorial-meaning-content {
+  width: 100%;
+}
+
+.memorial-meaning-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.memorial-meaning-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem;
+  color: #333;
+}
+
+.memorial-meaning-text {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.memorial-meaning-features {
+  margin-top: 1.5rem;
+}
+
+.memorial-feature {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.memorial-feature-dot {
+  color: #ea384c;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.memorial-feature-text {
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Section 4 - Support Options */
+.support-options-section {
+  padding: 4rem 1.5rem;
+  background-color: #f9f9f9;
+  width: 100%;
+}
+
+.support-options-container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.support-options-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.support-options-title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.support-options-subtitle {
+  font-size: 1rem;
+  color: #8E9196;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.support-options-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.support-card {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.support-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.support-card-icon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1.5rem;
+}
+
+.support-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.support-card-text {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+  .about-video-section {
+    padding: 5rem 2rem;
+  }
+
+  .about-video-title {
+    font-size: 3.5rem;
+  }
+
+  .vision-mission-container {
+    flex-direction: row;
+  }
+
+  .vision-mission-content {
+    width: 50%;
+  }
+
+  .vision-mission-image {
+    width: 50%;
+  }
+
+  .memorial-meaning-container {
+    flex-direction: row;
+  }
+
+  .memorial-meaning-image {
+    width: 50%;
+  }
+
+  .memorial-meaning-content {
+    width: 50%;
+  }
+
+  .support-options-cards {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .support-card {
+    width: 33.333%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-video-section {
+    padding: 6rem 1rem;
+  }
+
+  .vision-mission-section,
+  .memorial-meaning-section,
+  .support-options-section {
+    padding: 5rem 1rem;
+  }
+
+  .about-video-title {
+    font-size: 4.5rem;
+  }
+
+  .vision-mission-container,
+  .memorial-meaning-container {
+    gap: 4rem;
+  }
+}
