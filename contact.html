@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="css/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script type="module" src="js/main.js"></script>
-
 </head>
 <body>
   <div class="container" id="pageContainer">
@@ -16,7 +15,7 @@
       <div class="mobile-menu-header">
         <div class="logo">
           <a href="index.html">
-            <img src="images/logo-main.svg" alt="Brothers In Arms Logo">
+            <img src="images/Full-Logo.svg" alt="Brothers In Arms Logo">
           </a>
         </div>
         <div class="mobile-close-button" id="mobileCloseButton">
@@ -41,6 +40,7 @@
         <div class="mobile-contact-section">
           <div class="mobile-contact-title">Get in Touch</div>
           <div class="mobile-contact-email">info@brotherinarms.com</div>
+          <div class="mobile-contact-phone">+1 (123) 456-7890</div>
         </div>
       </div>
     </div>
@@ -53,17 +53,17 @@
       <header class="header">
         <div class="logo">
           <a href="index.html">
-            <img src="images/logo-main.svg" alt="Brothers In Arms Logo">
+            <img src="images/Full-Logo.svg" alt="Brothers In Arms Logo">
           </a>
         </div>
         <nav class="desktop-nav">
           <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="donations.html">Donation</a></li>
+            <li><a href="about.html">About us</a></li>
             <li><a href="memorial.html">Memorial</a></li>
             <li><a href="history.html">History</a></li>
             <li><a href="events.html">News & Events</a></li>
-            <li><a href="contact.html" class="active">Contact us</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="donations.html" class="donation-primary">Donate</a></li>
           </ul>
         </nav>
         <div class="mobile-menu-button" id="mobileMenuButton">
@@ -186,7 +186,7 @@
           </p>
           <div class="cta-buttons">
             <a href="donations.html" class="cta-donate-btn">Donate</a>
-            <a href="index.html#about" class="cta-about-btn">About</a>
+            <a href="about.html" class="cta-about-btn">About</a>
           </div>
         </div>
       </div>
@@ -210,12 +210,12 @@
         <div class="footer-section">
           <h3>Quick Links</h3>
           <div class="quick-links">
-            <a href="index.html#about">About us</a>
+            <a href="about.html">About us</a>
             <a href="donations.html">Donation</a>
-            <a href="index.html#memorial">Memorial</a>
+            <a href="memorial.html">Memorial</a>
             <a href="history.html">History</a>
-            <a href="index.html#initiative">Initiative</a>
-            <a href="index.html#events">News & Events</a>
+            <a href="initiative.html">Initiative</a>
+            <a href="events.html">News & Events</a>
             <a href="contact.html">Contact us</a>
           </div>
         </div>
@@ -251,6 +251,34 @@
     </footer>
   </div>
   
-
+  <script>
+    const logo = document.querySelector('.header .logo img');
+    let scrolled = false; // Flag to track whether the logo has switched
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 0 && !scrolled) {
+        // Switch to the second logo only once when scrolling down
+        scrolled = true;
+        logo.classList.add('hidden');
+    
+        setTimeout(() => {
+          logo.src = 'images/logo.svg';
+          logo.classList.remove('hidden');
+        }, 300); 
+    
+      } else if (window.scrollY === 0 && scrolled) {
+        // Switch back to the first logo when scrolling to the top
+        scrolled = false;
+        logo.classList.add('hidden');
+    
+        setTimeout(() => {
+          logo.src = 'images/Full-Logo.svg';
+          logo.classList.remove('hidden');
+        }, 300);
+      }
+    });
+  </script>
+  
+  <script src="js/hamburger.js"></script>
 </body>
 </html>
