@@ -12,6 +12,7 @@
 }
 
 .about-video-container {
+  text-align: center;
   max-width: 1110px;
   width: 100%;
   margin: 0 auto;
@@ -19,7 +20,6 @@
 
 .about-video-header {
   margin-bottom: 2.5rem;
-  text-align: left;
   width: 100%;
 }
 
@@ -62,10 +62,11 @@
 }
 
 .about-video-content {
+  text-align: left;
   margin-top: 2rem;
   line-height: 1.6;
   color: #333;
-  max-width: 800px;
+  max-width: 1200px;
 }
 
 /* Section 2 - Vision and Mission */
@@ -89,11 +90,12 @@
 
 .vision-mission-image {
   width: 100%;
-  border-radius: 1rem;
+  // border-radius: 1rem;
   overflow: hidden;
 }
 
 .vision-mission-image img {
+  border-radius: 8px;
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -162,13 +164,13 @@
 
 .memorial-meaning-image {
   width: 100%;
-  border-radius: 1rem;
   overflow: hidden;
 }
 
 .memorial-meaning-image img {
   width: 100%;
   height: auto;
+  border-radius: 8px;
   object-fit: cover;
 }
 
@@ -231,7 +233,7 @@
 }
 
 .support-options-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 3rem;
 }
 
@@ -256,17 +258,48 @@
   width: 100%;
 }
 
+.support-card:nth-child(1) {
+  background-image: url(../images/support-bg1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(23 16 16 / 70%);
+  background-blend-mode: multiply;
+}
+
+.support-card:nth-child(2) {
+  background-image: url(../images/support-bg2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(23 16 16 / 70%);
+  background-blend-mode: multiply;
+}
+
+.support-card:nth-child(3) {
+  background-image: url(../images/support-bg3.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(23 16 16 / 70%);
+  background-blend-mode: multiply;
+}
+
+
+
 .support-card {
-  background-color: white;
+  background-color: #fff;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .05);
+  transition: transform .3s ease, box-shadow .3s ease;
   padding: 2rem;
-  display: flex;
+  display: flex
+;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  text-align: left;
+  color: #fff;
+  justify-content: flex-end;
 }
 
 .support-card:hover {
@@ -275,21 +308,20 @@
 }
 
 .support-card-icon {
-  width: 120px;
-  height: 120px;
-  margin-bottom: 1.5rem;
+  width: 4rem;
+    height: 4rem;
+    margin-bottom: 8.5rem;
 }
 
 .support-card-title {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #333;
+ 
 }
 
 .support-card-text {
   font-size: 0.9rem;
-  color: #666;
   line-height: 1.6;
 }
 
@@ -324,7 +356,11 @@
   }
 
   .memorial-meaning-content {
-    width: 50%;
+    display: flex
+    ;
+            width: 50%;
+            flex-direction: column;
+            justify-content: center;
   }
 
   .support-options-cards {
@@ -334,6 +370,7 @@
 
   .support-card {
     width: 33.333%;
+    height: 21.8rem;
   }
 }
 
