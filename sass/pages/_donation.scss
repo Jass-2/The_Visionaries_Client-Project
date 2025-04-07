@@ -109,7 +109,7 @@
 /* Donation amount buttons - Simplified grid */
 .donation-amounts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem;
   margin-bottom: 1.5rem;
 }
@@ -643,8 +643,15 @@
   }
   
   .donation-form-card {
-    width: 60%;
+    width: 70%;
   }
+  .donation-amounts {
+    display: grid
+;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .75rem;
+    margin-bottom: 1.5rem;
+}
 
   .memory-content p {
      width: 31.688rem;
