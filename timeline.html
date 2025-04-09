@@ -14,70 +14,70 @@
 <body>
   <!-- Header Background -->
    <!-- Header Section -->
-   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
-    <div class="mobile-menu-header">
-      <div class="logo">
-        <a href="index.html">
-                      <img src="images/Full-Logo.svg" alt="Brothers In Arms Logo">
+     <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <div class="mobile-menu-header">
+        <div class="logo">
+          <a href="index.html">
+                        <img src="images/Full-Logo.svg" alt="Brothers In Arms Logo">
 
-        </a>
+          </a>
+        </div>
+        <div class="mobile-close-button" id="mobileCloseButton">
+          <span></span>
+          <span></span>
+        </div>
       </div>
-      <div class="mobile-close-button" id="mobileCloseButton">
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-    
-    <div class="mobile-menu-content">
-      <div class="mobile-menu-title">Menu</div>
-      <nav class="mobile-nav">
-        <ul>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="donations.html">Donation</a></li>
-          <li><a href="memorial.html">Memorial</a></li>
-          <li><a href="history.html">History</a></li>
-          <li><a href="index.html#events">News & Events</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
       
-      <div class="mobile-contact-section">
-        <div class="mobile-contact-title">Get in Touch</div>
-        <div class="mobile-contact-email">info@brotherinarms.com</div>
+      <div class="mobile-menu-content">
+        <div class="mobile-menu-title">Menu</div>
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="donations.html">Donation</a></li>
+            <li><a href="memorial.html">Memorial</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="news-events.html">News &amp; Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-contact-section">
+          <div class="mobile-contact-title">Get in Touch</div>
+          <div class="mobile-contact-email">info@brotherinarms.com</div>
+        </div>
       </div>
     </div>
-  </div>
-  
-  <!-- Header Section -->
-  <div class="header-section">
-    <!-- Fixed Background for Header -->
-    <div class="header-background"></div>
     
-    <header class="header">
-      <div class="logo">
-        <a href="index.html">
-                      <img src="images/Full-Logo.svg" alt="Brothers In Arms Logo">
+    <!-- Header Section -->
+    <div class="header-section">
+      <!-- Fixed Background for Header -->
+      <div class="header-background"></div>
+      
+      <header class="header">
+        <div class="logo">
+          <a href="index.html">
+                        <img src="images/Full-Logo.svg" alt="Brothers In Arms Logo">
 
-        </a>
-      </div>
-      <nav class="desktop-nav">
-        <ul>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="memorial.html">Memorial</a></li>
-          <li><a href="history.html">History</a></li>
-          <li><a href="events.html">News & Events</a></li>
-          <li><a href="contact.html" class="active">Contact us</a></li>
-          <li><a href="donations.html" class="donation-primary">Donate</a></li>
+          </a>
+        </div>
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="memorial.html">Memorial</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="news-events.html">News &amp; Events</a></li>
+            <li><a href="contact.html" class="active">Contact us</a></li>
+            <li><a href="donations.html" class="donation-primary">Donate</a></li>
 
-        </ul>
-      </nav>
-      <div class="mobile-menu-button" id="mobileMenuButton">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </header>
-  </div>
+          </ul>
+        </nav>
+        <div class="mobile-menu-button" id="mobileMenuButton">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+    </div>
   <!-- Header Section -->
   
   
@@ -286,7 +286,8 @@
           <a href="memorial.html">Memorial</a>
           <a href="history.html">History</a>
           <a href="initiative.html">Initiative</a>
-          <a href="events.html">News & Events</a>
+          <a href="news-events.html">News &amp; Events</a>
+
           <a href="contact.html">Contact us</a>
         </div>
       </div>
@@ -320,34 +321,7 @@
       <a  href="https://www.srishticanada.org/" target="_blank" rel="noopener noreferrer"> By Srishti Foundation</a>
     </div>
   </footer>
-<script>
-  const logo = document.querySelector('.header .logo img');
-let scrolled = false; // Flag to track whether the logo has switched
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 0 && !scrolled) {
-    // Switch to the second logo only once when scrolling down
-    scrolled = true;
-    logo.classList.add('hidden');
-
-    setTimeout(() => {
-      logo.src = 'images/logo.svg';
-      logo.classList.remove('hidden');
-    }, 300); 
-
-  } else if (window.scrollY === 0 && scrolled) {
-    // Switch back to the first logo when scrolling to the top
-    scrolled = false;
-    logo.classList.add('hidden');
-
-    setTimeout(() => {
-      logo.src = 'images/Full-Logo.svg';
-      logo.classList.remove('hidden');
-    }, 300);
-  }
-});
-
-</script> 
+ 
 
 </body>
 </html>

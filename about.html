@@ -61,7 +61,7 @@
             <li><a href="about.html" class="active">About us</a></li>
             <li><a href="memorial.html">Memorial</a></li>
             <li><a href="history.html">History</a></li>
-            <li><a href="events.html">News & Events</a></li>
+            <li><a href="news-events.html">News &amp; Events</a></li>
             <li><a href="contact.html">Contact us</a></li>
             <li><a href="donations.html" class="donation-primary">Donate</a></li>
           </ul>
@@ -222,7 +222,7 @@
             <a href="memorial.html">Memorial</a>
             <a href="history.html">History</a>
             <a href="initiative.html">Initiative</a>
-            <a href="events.html">News & Events</a>
+            <a href="news-events.html">News &amp; Events</a>
             <a href="contact.html">Contact us</a>
           </div>
         </div>
@@ -258,32 +258,6 @@
     </footer>
   </div>
   
-  <script>
-    const logo = document.querySelector('.header .logo img');
-    let scrolled = false; // Flag to track whether the logo has switched
-    
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 0 && !scrolled) {
-        // Switch to the second logo only once when scrolling down
-        scrolled = true;
-        logo.classList.add('hidden');
-    
-        setTimeout(() => {
-          logo.src = 'images/logo.svg';
-          logo.classList.remove('hidden');
-        }, 300); 
-    
-      } else if (window.scrollY === 0 && scrolled) {
-        // Switch back to the first logo when scrolling to the top
-        scrolled = false;
-        logo.classList.add('hidden');
-    
-        setTimeout(() => {
-          logo.src = 'images/Full-Logo.svg';
-          logo.classList.remove('hidden');
-        }, 300);
-      }
-    });
-  </script>
+ 
 </body>
 </html>

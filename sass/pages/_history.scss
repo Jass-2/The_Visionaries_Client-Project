@@ -1,4 +1,3 @@
-
 /* History Page Styles */
 
 /* General Styles */
@@ -20,7 +19,7 @@
   text-transform: uppercase;
   color: #8E9196;
   text-align: left;
-  margin-bottom: 3rem;
+  margin-bottom: 4.5rem;
   letter-spacing: 1px;
 }
 
@@ -98,9 +97,7 @@
   padding: 0 11vw 0 11vw;
 }
 
-.timeline-btn{
- transform: translateY(-50%);
-}
+
 
 /* Section 2: Forgotten No More Cards */
 .history-forgotten {
@@ -223,7 +220,7 @@
   transition: all 0.3s ease;
   width: 100%;
   height: auto;
-  min-height: 600px; /* Ensure enough height for content */
+  min-height: 700px; /* Moderate starting height */
 }
 
 .battlefield-slider.dragging {
@@ -235,7 +232,7 @@
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: auto; /* Changed from 100% to auto to fit content */
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -243,6 +240,7 @@
   transition: transform 0.5s ease-in-out;
   user-select: none;
   display: block;
+  overflow-y: auto; /* Add vertical scrolling if content exceeds height */
 }
 
 .battlefield-title {
@@ -309,10 +307,12 @@
 }
 
 .victoria-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  display: flex
+  ;
+      flex-direction: column;
+      justify-content: left;
+      align-items: flex-start;
+  }
 
 .victoria-header {
   margin-bottom: 2rem;
@@ -333,26 +333,32 @@
 }
 
 .victoria-description {
-  max-width: 800px;
+  max-width: 1110px;
   text-align: left;
   margin-bottom: 2rem;
   line-height: 1.6;
 }
 
-.victoria-btn {
-  display: inline-block;
-  background-color: #ea384c;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.25rem;
-  text-decoration: none;
+.victoria-btn  {
   font-weight: 500;
-  transition: background-color 0.3s;
+  padding: .5rem 1.5rem;
+  border-radius: .25rem;
+  background-color: #da7010;
+  color: #fff !important;
+  transition: all .3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+  min-width: 120px;
+  text-align: center;
 }
 
 .victoria-btn:hover {
-  background-color: #d82738;
+  background-color: #c50000;
+  transition: all .3s ease-in-out;
+
 }
+
+
+ 
 
 /* Section 5: Letters from Frontline */
 .history-letters {
@@ -360,7 +366,12 @@
 }
 
 .letters-header {
-  margin-bottom: 4rem;
+  display: flex
+  ;
+      /* margin-bottom: 4rem; */
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
 }
 
 .letters-slider-container {
@@ -491,5 +502,9 @@
   .battlefield-tab {
       font-size: 0.75rem;
       padding: 0.25rem 0;
+  }
+  
+  .battlefield-slider {
+    min-height: 800px; /* Slightly more height on mobile */
   }
 }

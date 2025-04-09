@@ -25,8 +25,10 @@
   position: relative;
   background-size: cover;
   background-position: center center;
-  background-color: rgba(23, 16, 16, .37);
+  background-color: rgba(23, 16, 16, .72);
   background-blend-mode: multiply;
+  background-blend-mode: multiply, normal, normal;
+
 }
 
 .cta-title {

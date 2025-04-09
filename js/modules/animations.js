@@ -127,11 +127,7 @@ export function heroAnimation() {
     const ctaDiv = document.querySelector(".cta-container");
     const donationCard = document.querySelector(".memory-card");
     const donationForm = document.querySelector(".donation-form-card");
-    const memorialColumns = document.querySelectorAll(".memorial-column");
-    const memorialTextBlocks = document.querySelectorAll(".memorial-text-block"); // those are the same but in html they have different classes for some reason idk 
-    const memorialParagraphs = document.querySelectorAll(".memorial-paragraph"); // those are the same but in html they have different classes for some reason idk
-    const memorialSubheadings = document.querySelectorAll(".memorial-sub-anim");
-    const memorialImgs = document.querySelectorAll(".memorial-img");
+
     // Image column animation
 
     gsap.fromTo(homeImageColumn,
@@ -267,88 +263,5 @@ export function heroAnimation() {
             }
         }
         );
-
-    // Memorial page text column animation
-
-    memorialColumns.forEach(column => {
-        gsap.set(column, {opacity: 0, y: 100});
-        gsap.to(column, {
-            opacity: 1,
-            y: 0,
-            ease: "power2.out",
-            duration: 1,
-            scrollTrigger: {
-                trigger: column,
-                toggleActions: 'play none none none',
-                start: 'top bottom',
-                end: 'bottom 60%',
-            }
-        });
-      })
-
-      memorialTextBlocks.forEach(block => {
-        gsap.set(block, {opacity: 0, y: 100});
-        gsap.to(block, {
-            opacity: 1,
-            y: 0,
-            ease: "power2.out",
-            duration: 1,
-            scrollTrigger: {
-                trigger: block,
-                toggleActions: 'play none none none',
-                start: 'top bottom',
-                end: 'bottom 60%',
-            }
-        });
-      })
-
-      memorialParagraphs.forEach(paragraph => {
-        gsap.set(paragraph, {opacity: 0, y: 50});
-        gsap.to(paragraph, {
-            opacity: 1,
-            y: 0,
-            ease: "power2.out",
-            duration: 1,
-            delay: .4,
-            scrollTrigger: {
-                trigger: paragraph,
-                toggleActions: 'play none none none',
-                start: 'top bottom',
-                end: 'bottom 60%',
-            }
-        });
-      })
-
-      memorialSubheadings.forEach(subheading => {
-        gsap.set(subheading, {opacity: 0, y: 25});
-        gsap.to(subheading, {
-            opacity: 1,
-            y: 0,
-            ease: "power2.out",
-            duration: 1,
-            scrollTrigger: {
-                trigger: subheading,
-                toggleActions: 'play none none none',
-                start: 'top bottom',
-                end: 'bottom 60%',
-            }
-        });
-      })
-
-      memorialImgs.forEach(image => {
-        gsap.set(image, {opacity: 0, y: 25});
-        gsap.to(image, {
-            opacity: 1,
-            y: 0,
-            ease: "power2.out",
-            duration: 1,
-            scrollTrigger: {
-                trigger: image,
-                toggleActions: 'play none none none',
-                start: 'top bottom',
-                end: 'bottom 60%',
-            }
-        });
-      })
 
   }
