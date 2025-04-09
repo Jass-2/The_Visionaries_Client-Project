@@ -88,6 +88,8 @@ export function heroAnimation() {
     const eventsHeading = document.querySelector(".home-events h2");
     const eventCards = document.querySelectorAll(".home-event-card");
     const ctaDiv = document.querySelector(".cta-container");
+    const donationCard = document.querySelector(".memory-card");
+    const donationForm = document.querySelector(".donation-form-card");
 
     // Image column animation
 
@@ -128,22 +130,7 @@ export function heroAnimation() {
 
     // Heading animation
 
-    gsap.fromTo(homeHeading,
-    { opacity: 0, y: -100 },
-    {
-        opacity: 1,
-        y: 0,
-        duration: 1.2,
-        ease: "power4.out",
-        scrollTrigger: {
-        trigger: '#about',
-        start: "60% 80%",
-        end: "90% 60%",
-        toggleActions: "play none none none",
-        scrub: true,
-        }
-    }
-    );
+
 
     // Events heading animation
 
@@ -184,6 +171,41 @@ export function heroAnimation() {
     duration: 1,
     ease: "power4.out"
     });
+
+    // Right donation card animation
+
+    gsap.fromTo(donationForm,
+        { opacity: 0, x: 100 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1.2,
+          ease: "power4.out",
+          scrollTrigger: {
+            trigger: '.donation-content',
+            start: "top 80%",
+            end: "bottom 60%",
+            toggleActions: "play none none none",
+          }
+        }
+      );
+      
+    // Left donation card animation
+    gsap.fromTo(donationCard,
+    { opacity: 0, x: -100 },
+    {
+        opacity: 1,
+        x: 0,
+        duration: 1.2,
+        ease: "power4.out",
+        scrollTrigger: {
+        trigger: '.donation-content',
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none",
+        }
+    }
+    );
 
     // CTA animation
 
