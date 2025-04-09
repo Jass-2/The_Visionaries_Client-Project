@@ -365,128 +365,24 @@
         </section>
         
         <!-- Section 5: Letters from Frontline -->
-        <section class="history-letters">
+        <section id="letters-app" class="history-letters">
             <div class="history-content">
-                <div class="letters-header">
-                    <h2 class="history-section-title">Letters from Frontline</h2>
-                    <div class="history-section-subtitle">VOICES FROM THE TRENCHES</div>
+              <div class="letters-header">
+                <h2 class="history-section-title">Letters from Frontline</h2>
+                <div class="history-section-subtitle">VOICES FROM THE TRENCHES</div>
+              </div>
+          
+              <div class="letters-slider-container slide-25-up">
+                <div class="letters-slider">
+                  <div class="letter-card" v-for="letter in letters" :key="letter.id">
+                    <div class="letter-date">{{ letter.date }}</div>
+                    <h3 class="letter-location">{{ letter.flname }}</h3>
+                    <div class="letter-content" v-html="formatLetter(letter.letter)"></div>
+                  </div>
                 </div>
-                
-                <div class="letters-slider-container slide-25-up">
-                    <div class="letters-slider">
-                        <div class="letter-card">
-                            <div class="letter-date">JANUARY 15, 1915</div>
-                            <h3 class="letter-location">Flanders, Belgium</h3>
-                            <div class="letter-content">
-                                My dearest Mother,<br><br>
-                                The trenches are wet and muddy beyond description. We stand for hours in water up to our knees. The cold penetrates to the bone, but our spirits remain high. The Indian troops beside us bear it all with remarkable fortitude—I've never seen such stoicism. Yesterday, one of them shared his last bit of food with me. We communicate mostly through gestures, but there is a brotherhood here that transcends language.<br><br>
-                                Your loving son,<br>
-                                William
-                            </div>
-                        </div>
-                        
-                        <div class="letter-card">
-                            <div class="letter-date">MARCH 12, 1915</div>
-                            <h3 class="letter-location">Neuve Chapelle, France</h3>
-                            <div class="letter-content">
-                                Dear Father,<br><br>
-                                We fought bravely yesterday. The Indian Corps alongside us charged with such courage that it inspired us all. The sound of their battle cry still rings in my ears. Their Sikh soldiers wear turbans even in battle—a splash of color amidst the dreary landscape. One of them, a tall fellow named Singh, saved three of our wounded men under heavy fire. I wish our newspapers at home would tell their stories too.<br><br>
-                                Your son,<br>
-                                Thomas
-                            </div>
-                        </div>
-                        
-                        <div class="letter-card">
-                            <div class="letter-date">MAY 2, 1915</div>
-                            <h3 class="letter-location">Ypres, Belgium</h3>
-                            <div class="letter-content">
-                                My beloved Elizabeth,<br><br>
-                                Words cannot describe the horror we witnessed yesterday. The Germans released a strange yellow-green cloud that drifted toward our lines. Men began choking and gasping for air. In that moment of terror, it was a Canadian doctor who showed us to urinate on our handkerchiefs and cover our faces. This simple action saved many lives. The Indian troops, despite never having faced such a weapon, regrouped with remarkable discipline. Their bravery puts many to shame.<br><br>
-                                Forever yours,<br>
-                                James
-                            </div>
-                        </div>
-                        
-                        <div class="letter-card">
-                            <div class="letter-date">AUGUST 18, 1916</div>
-                            <h3 class="letter-location">The Somme, France</h3>
-                            <div class="letter-content">
-                                Dear Sarah,<br><br>
-                                The battle rages on with no end in sight. Last night, I spoke with a Canadian sergeant named McKenzie. Despite the heavy losses his unit has suffered, his resolve is unwavering. We shared stories of home over a tin of bully beef—his descriptions of the vast Canadian prairies made me momentarily forget the hell surrounding us. These small moments of humanity keep us going. Please send more chocolate in your next package—it's worth more than gold here.<br><br>
-                                Missing you always,<br>
-                                Edward
-                            </div>
-                        </div>
-                        
-                        <div class="letter-card">
-                            <div class="letter-date">OCTOBER 5, 1916</div>
-                            <h3 class="letter-location">Beaumont Hamel</h3>
-                            <div class="letter-content">
-                                My darling wife,<br><br>
-                                The mud here consumes everything—men, horses, even tanks. Yesterday, we watched in awe as Indian stretcher-bearers worked tirelessly under artillery fire to rescue wounded men—regardless of whether they were British, Canadian, or Indian. Their dedication to duty is beyond measure. I've learned a few words of Hindustani, and my attempts bring smiles to their weary faces. In this desolation, these small connections matter enormously.<br><br>
-                                With all my love,<br>
-                                Henry
-                            </div>
-                        </div>
-                        
-                        <div class="letter-card">
-                            <div class="letter-date">APRIL 10, 1917</div>
-                            <h3 class="letter-location">Vimy Ridge, France</h3>
-                            <div class="letter-content">
-                                Dear Mother,<br><br>
-                                The Canadians have done the impossible. After days of brutal fighting, they've taken Vimy Ridge—a position the French couldn't capture in two years of trying. Their courage is beyond words. Our artillery support was precise, but it was their determination that won the day. Every Canadian I've met carries himself with quiet confidence. They've paid a terrible price, but there's a sense that something important has happened here—not just for the war effort, but for Canada itself.<br><br>
-                                Your loving son,<br>
-                                Geoffrey
-                            </div>
-                        </div>
-                        
-                        <div class="letter-card">
-                            <div class="letter-date">JUNE 24, 1917</div>
-                            <h3 class="letter-location">Mesopotamia (now Iraq)</h3>
-                            <div class="letter-content">
-                                Dear Brother,<br><br>
-                                The heat here is unbearable—a stark contrast to the freezing trenches of France. Our Indian comrades seem to fare better in this climate. They've taught us how to wrap our headgear to keep the sun at bay. Yesterday, I watched in amazement as a Gurkha patrol silently eliminated an Ottoman outpost without firing a shot. Their bravery and skill are remarkable. I've come to respect these men deeply and count many as friends despite our different backgrounds.<br><br>
-                                Stay safe at home,<br>
-                                Richard
-                            </div>
-                        </div>
-                        
-                        <div class="letter-card">
-                            <div class="letter-date">SEPTEMBER 30, 1917</div>
-                            <h3 class="letter-location">Passchendaele, Belgium</h3>
-                            <div class="letter-content">
-                                Dearest Mother,<br><br>
-                                The landscape here is unrecognizable—shell holes filled with water, shattered trees, mud so thick it can swallow a man. Yet amidst this devastation, I witness daily acts of humanity. A Canadian nurse works tirelessly in our field hospital, her hands steady even as shells fall nearby. She treats all wounded with equal care—British, Canadian, Indian. Yesterday, she taught an Indian soldier how to write a letter home while his arm healed. These small kindnesses remind us why we fight.<br><br>
-                                Your devoted son,<br>
-                                Albert
-                            </div>
-                        </div>
-                        
-                        <div class="letter-card">
-                            <div class="letter-date">MARCH 21, 1918</div>
-                            <h3 class="letter-location">St. Quentin, France</h3>
-                            <div class="letter-content">
-                                My dear wife,<br><br>
-                                The German offensive has hit us hard. In our darkest hour, I saw true brotherhood emerge. Canadian and Indian troops held the line together when all seemed lost. Language barriers disappeared as men communicated through gestures, expressions, and the universal language of courage. An Indian havildar (sergeant) gave me his last water when mine was destroyed by shrapnel. I don't know his name, but I owe him my life. When this war is over, I hope our nations remember these bonds forged in fire.<br><br>
-                                Forever yours,<br>
-                                Charles
-                            </div>
-                        </div>
-                        
-                        <div class="letter-card">
-                            <div class="letter-date">NOVEMBER 10, 1918</div>
-                            <h3 class="letter-location">Near Mons, Belgium</h3>
-                            <div class="letter-content">
-                                My dearest Emily,<br><br>
-                                Rumors are flying that the war will end tomorrow. After four years of hell, it's hard to believe. Last night, I sat around a small fire with two Canadians and an Indian soldier. Despite our different paths to this place, we shared the same hope—to return home and never witness such horror again. The Indian soldier showed me a photograph of his family in Punjab. His village seemed as distant from my London street as the moon, yet in that moment, the distance didn't matter. We were simply men dreaming of peace.<br><br>
-                                With hope in my heart,<br>
-                                Samuel
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-        </section>
+          </section>
 
         <!-- CTA Section -->
         <section class="cta-section">
