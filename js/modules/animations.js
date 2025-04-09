@@ -6,6 +6,8 @@ import Lenis from 'https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.39/dis
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(ScrollTrigger);
 
+// Smooth scrolling lenis
+
 export function lenis() {
     const lenis = new Lenis({
         duration: 1.2,
@@ -36,47 +38,82 @@ export function heroAnimation() {
     const welcomeHeading = document.querySelector(".hero-h1");
     const welcomePar = document.querySelector(".hero-p");
     const welcomeSub = document.querySelector(".home-subtitle");
+    const pageHeading = document.querySelector(".page-heading");
+    const pageSubheading = document.querySelector(".sub");
 
     gsap.fromTo(
       welcomeHeading,
-      {
+        {
         opacity: 0,
         y: 50
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power2.out"
-      }
+        },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.out"
+        }
     );
+
+    gsap.fromTo(
+        pageHeading,
+        {
+            opacity: 0,
+            y: -50,
+            scale: 0.8
+        },
+        {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 1,
+            ease: "power4.out"
+        }
+      );
+
+      gsap.fromTo(
+        pageSubheading,
+        {
+            opacity: 0,
+            y: -50,
+            scale: 0.8
+        },
+        {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 1,
+            delay: .2,
+            ease: "power4.out"
+        }
+      );
 
     gsap.fromTo(
         welcomePar,
         {
-          opacity: 0,
-          y: 50
+            opacity: 0,
+            y: 50
         },
         {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          delay: .5,
-          ease: "power2.out"
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            delay: .5,
+            ease: "power2.out"
         }
       );
       gsap.fromTo(
         welcomeSub,
         {
-          opacity: 0,
-          y: -50
+            opacity: 0,
+            y: -50
         },
         {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          delay: .8,
-          ease: "power2.out"
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            delay: .8,
+            ease: "power2.out"
         }
       );
   }
@@ -96,17 +133,17 @@ export function heroAnimation() {
     gsap.fromTo(homeImageColumn,
         { opacity: 0, x: 100 },
         {
-          opacity: 1,
-          x: 0,
-          duration: 1.2,
-          ease: "power4.out",
-          scrollTrigger: {
-            trigger: homeImageColumn,
-            start: "top 80%",
-            end: "bottom 60%",
-            toggleActions: "play none none none",
-            scrub: true
-          }
+            opacity: 1,
+            x: 0,
+            duration: 1.2,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: homeImageColumn,
+                start: "top 80%",
+                end: "bottom 60%",
+                toggleActions: "play none none none",
+                scrub: true
+            }
         }
       );
       
