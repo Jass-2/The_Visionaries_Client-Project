@@ -41,92 +41,24 @@ export function heroAnimation() {
     const pageHeading = document.querySelector(".page-heading");
     const pageSubheading = document.querySelector(".sub");
 
-    gsap.fromTo(
-      welcomeHeading,
-        {
-        opacity: 0,
-        y: 50
-        },
-        {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            ease: "power2.out"
-        }
-    );
-
-    gsap.fromTo(
-        pageHeading,
-        {
-            opacity: 0,
-            y: -50,
-            scale: 0.8
-        },
-        {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 1,
-            ease: "power4.out"
-        }
-      );
-
-      gsap.fromTo(
-        pageSubheading,
-        {
-            opacity: 0,
-            y: -50,
-            scale: 0.8
-        },
-        {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 1,
-            delay: .2,
-            ease: "power4.out"
-        }
-      );
-
-    gsap.fromTo(
-        welcomePar,
-        {
-            opacity: 0,
-            y: 50
-        },
-        {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            delay: .5,
-            ease: "power2.out"
-        }
-      );
-      gsap.fromTo(
-        welcomeSub,
-        {
-            opacity: 0,
-            y: -50
-        },
-        {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            delay: .8,
-            ease: "power2.out"
-        }
-      );
+    gsap.fromTo(welcomeHeading, { opacity: 0, y:  50 }, { opacity: 1, y: 0, duration: 1, ease: "power2.out" });
+    gsap.fromTo(pageHeading,    { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, ease: "power4.out" });
+    
+    gsap.fromTo(pageSubheading, { opacity: 0, y: -50, }, { opacity: 1, y: 0, duration: 1, delay: 0.2, ease: "power4.out" });
+    
+    gsap.fromTo(welcomePar,     { opacity: 0, y:  50 }, { opacity: 1, y: 0, duration: 1, delay: 0.5, ease: "power2.out" });
+    gsap.fromTo(welcomeSub,     { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1, delay: 0.8, ease: "power2.out" });
+    
   }
 
   export function scrollAnimations() {
-    const homeImageColumn = document.querySelector(".home-image-column");
-    const homeTextColumn = document.querySelector(".home-text-column");
     const homeHeading = document.querySelector(".home-who-we-are h2");
     const eventsHeading = document.querySelector(".home-events h2");
     const eventCards = document.querySelectorAll(".home-event-card");
     const ctaDiv = document.querySelector(".cta-container");
     const donationCard = document.querySelector(".memory-card");
     const donationForm = document.querySelector(".donation-form-card");
+
 
     // Image column animation
 
@@ -169,6 +101,12 @@ export function heroAnimation() {
 
 
 
+    const memorialColumns = document.querySelectorAll(".memorial-column");
+    const slide100Right = document.querySelectorAll(".slide-100-right");
+    const slide100Left = document.querySelectorAll(".slide-100-left");
+    const slide25Up = document.querySelectorAll(".slide-25-up");
+
+
     // Events heading animation
 
     gsap.fromTo(eventsHeading,
@@ -209,49 +147,51 @@ export function heroAnimation() {
     ease: "power4.out"
     });
 
-    // Right donation card animation
+    // Slide 100 left and right animations
 
-    gsap.fromTo(donationForm,
-        { opacity: 0, x: 100 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 1.2,
-          ease: "power4.out",
-          scrollTrigger: {
-            trigger: '.donation-content',
-            start: "top 80%",
-            end: "bottom 60%",
-            toggleActions: "play none none none",
+    slide100Left.forEach((el) => {
+        gsap.fromTo(el,
+          { opacity: 0, x: 100 },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 1.2,
+            ease: "power4.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 80%",
+              end: "bottom 60%",
+              toggleActions: "play none none none",
+            }
           }
-        }
-      );
+        );
+      });
       
-    // Left donation card animation
-    gsap.fromTo(donationCard,
-    { opacity: 0, x: -100 },
-    {
-        opacity: 1,
-        x: 0,
-        duration: 1.2,
-        ease: "power4.out",
-        scrollTrigger: {
-        trigger: '.donation-content',
-        start: "top 80%",
-        end: "bottom 60%",
-        toggleActions: "play none none none",
-        }
-    }
-    );
+      slide100Right.forEach((el) => {
+        gsap.fromTo(el,
+          { opacity: 0, x: -100 },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 1.2,
+            ease: "power4.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 80%",
+              end: "bottom 60%",
+              toggleActions: "play none none none",
+            }
+          }
+        );
+      });
 
     // CTA animation
 
     gsap.fromTo(ctaDiv,
-        { opacity: 0, y: 200, scale: 0.8 },
+        { opacity: 0, y: 100, },
         {
             opacity: 1,
             y: 0,
-            scale: 1,
             duration: 1,
             ease: "power4.out",
             scrollTrigger: {
@@ -263,5 +203,42 @@ export function heroAnimation() {
             }
         }
         );
+
+
+    // Memorial page text column animation
+
+    memorialColumns.forEach(column => {
+        gsap.set(column, {opacity: 0, y: 100});
+        gsap.to(column, {
+            opacity: 1,
+            y: 0,
+            ease: "power2.out",
+            duration: 1,
+            scrollTrigger: {
+                trigger: column,
+                toggleActions: 'play none none none',
+                start: 'top bottom',
+                end: 'bottom 60%',
+            }
+        });
+      })
+
+    // Slide up for 25px
+
+      slide25Up.forEach(slideTF => {
+        gsap.set(slideTF, {opacity: 0, y: 25});
+        gsap.to(slideTF, {
+            opacity: 1,
+            y: 0,
+            ease: "power2.out",
+            duration: 1,
+            scrollTrigger: {
+                trigger: slideTF,
+                toggleActions: 'play none none none',
+                start: 'top bottom',
+                end: 'bottom 60%',
+            }
+        });
+      })
 
   }
