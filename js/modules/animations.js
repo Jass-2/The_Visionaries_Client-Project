@@ -1,0 +1,208 @@
+import { gsap } from "https://cdn.jsdelivr.net/npm/gsap@3.12.5/index.js";
+import { ScrollTrigger } from "https://cdn.jsdelivr.net/npm/gsap@3.12.5/ScrollTrigger.js";
+import { SplitText } from "../plugins/SplitText.js";
+import Lenis from 'https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.39/dist/lenis.min.mjs';
+
+gsap.registerPlugin(SplitText);
+gsap.registerPlugin(ScrollTrigger);
+
+export function lenis() {
+    const lenis = new Lenis({
+        duration: 1.2,
+        smooth: true,
+        smoothTouch: false
+      });
+      
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+      
+      ScrollTrigger.scrollerProxy(document.body, {
+        scrollTop(value) {
+          return arguments.length ? lenis.scrollTo(value) : lenis.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+          return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+        },
+        pinType: document.body.style.transform ? "transform" : "fixed"
+      });
+      
+      ScrollTrigger.refresh();
+}
+
+export function heroAnimation() {
+    const welcomeHeading = document.querySelector(".hero-h1");
+    const welcomePar = document.querySelector(".hero-p");
+    const welcomeSub = document.querySelector(".home-subtitle");
+
+    gsap.fromTo(
+      welcomeHeading,
+      {
+        opacity: 0,
+        y: 50
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "power2.out"
+      }
+    );
+
+    gsap.fromTo(
+        welcomePar,
+        {
+          opacity: 0,
+          y: 50
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          delay: .5,
+          ease: "power2.out"
+        }
+      );
+      gsap.fromTo(
+        welcomeSub,
+        {
+          opacity: 0,
+          y: -50
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          delay: .8,
+          ease: "power2.out"
+        }
+      );
+  }
+
+  export function scrollAnimations() {
+    const homeImageColumn = document.querySelector(".home-image-column");
+    const homeTextColumn = document.querySelector(".home-text-column");
+    const homeHeading = document.querySelector(".home-who-we-are h2");
+    const eventsHeading = document.querySelector(".home-events h2");
+    const eventCards = document.querySelectorAll(".home-event-card");
+    const ctaDiv = document.querySelector(".cta-container");
+
+    // Image column animation
+
+    gsap.fromTo(homeImageColumn,
+        { opacity: 0, x: 100 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1.2,
+          ease: "power4.out",
+          scrollTrigger: {
+            trigger: homeImageColumn,
+            start: "top 80%",
+            end: "bottom 60%",
+            toggleActions: "play none none none",
+            scrub: true
+          }
+        }
+      );
+      
+    // Text column animation
+    gsap.fromTo(homeTextColumn,
+    { opacity: 0, x: -100 },
+    {
+        opacity: 1,
+        x: 0,
+        duration: 1.2,
+        ease: "power4.out",
+        scrollTrigger: {
+        trigger: homeTextColumn,
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none",
+        scrub: true
+        }
+    }
+    );
+
+    // Heading animation
+
+    gsap.fromTo(homeHeading,
+    { opacity: 0, y: -100 },
+    {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: "power4.out",
+        scrollTrigger: {
+        trigger: '#about',
+        start: "60% 80%",
+        end: "90% 60%",
+        toggleActions: "play none none none",
+        scrub: true,
+        }
+    }
+    );
+
+    // Events heading animation
+
+    gsap.fromTo(eventsHeading,
+        { opacity: 0, y: -100 },
+        {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: "power4.out",
+        scrollTrigger: {
+            trigger: '.home-events',
+            start: "top 80%",
+            end: "40% 60%",
+            scrub: false,
+        }
+        }
+    );
+
+    // Event cards animation
+
+    gsap.set(eventCards, { opacity: 0, y: 100, scale: 0.4 });
+
+    const tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".home-main-event",
+        start: "90% bottom",
+        end: "120% 60%",
+        toggleActions: "play none none none",
+    }
+    });
+
+    tl.to(eventCards, {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    stagger: 0.2,
+    duration: 1,
+    ease: "power4.out"
+    });
+
+    // CTA animation
+
+    gsap.fromTo(ctaDiv,
+        { opacity: 0, y: 200, scale: 0.8 },
+        {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 1,
+            ease: "power4.out",
+            scrollTrigger: {
+            trigger: ctaDiv,
+            start: "top 80%",
+            end: "bottom 60%",
+            toggleActions: "play none none none",
+            scrub: false
+            }
+        }
+        );
+
+  }
