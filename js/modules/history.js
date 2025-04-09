@@ -1,4 +1,3 @@
-
 /**
  * Sets up the Battlefield slider functionality
  * with drag and smooth scrolling features
@@ -37,6 +36,14 @@ export function setupBattlefieldSlider() {
       
       currentIndex = index;
       updateActiveTab(index);
+
+      // Adjust slider height based on active slide content height
+      const activeSlide = document.querySelector('.battlefield-slide.active');
+      if (activeSlide) {
+        const contentHeight = activeSlide.scrollHeight;
+        slider.style.minHeight = `${contentHeight + 40}px`; // Add some padding
+        activeSlide.style.minHeight = `${contentHeight}px`;
+      }
     };
   
     // Initialize slides positioning
@@ -145,6 +152,11 @@ export function setupBattlefieldSlider() {
     document.addEventListener('mouseup', stopDrag);
     document.addEventListener('touchend', stopDrag);
     
+    // Handle window resize to adjust heights
+    window.addEventListener('resize', () => {
+      goToSlide(currentIndex);
+    });
+    
     // Initialize first slide as active
     goToSlide(0);
   }
@@ -197,7 +209,7 @@ export function setupBattlefieldSlider() {
       const distance = pageX - startX;
       
       // Update velocity for momentum scrolling
-      velocity = pageX - lastPageX;
+      velocity = 0.8 * (pageX - lastPageX) + 0.2 * velocity;
       lastPageX = pageX;
       
       slider.scrollLeft = scrollLeft - distance;
@@ -209,10 +221,10 @@ export function setupBattlefieldSlider() {
       isDragging = false;
       slider.classList.remove('dragging');
       
-      // Apply momentum scrolling with decay
-      const startVelocity = velocity * 10; // Amplify velocity for noticeable effect
+      // Apply momentum scrolling
+      const startVelocity = velocity * 10;
       let currentVelocity = startVelocity;
-      const friction = 0.95; // Friction factor (0-1), higher = less friction
+      const friction = 0.95; // Friction factor (higher means less friction)
       let rafId = null;
       
       const applyMomentum = () => {

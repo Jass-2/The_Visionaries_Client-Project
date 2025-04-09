@@ -14,64 +14,72 @@
 </head>
 <body>
     <!-- Header Section -->
-    <div class="header-background"></div>
-    <header class="header">
-        <div class="logo">
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-header">
+          <div class="logo">
             <a href="index.html">
-                            <img src="images/Full-Logo.svg" alt="Brothers In Arms Logo">
-
+                          <img src="images/Full-Logo.svg" alt="Brothers In Arms Logo">
+  
             </a>
+          </div>
+          <div class="mobile-close-button" id="mobileCloseButton">
+            <span></span>
+            <span></span>
+          </div>
         </div>
-        <nav class="desktop-nav">
+        
+        <div class="mobile-menu-content">
+          <div class="mobile-menu-title">Menu</div>
+          <nav class="mobile-nav">
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="donations.html">Donation</a></li>
+              <li><a href="memorial.html">Memorial</a></li>
+              <li><a href="history.html">History</a></li>
+              <li><a href="news-events.html">News &amp; Events</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+          
+          <div class="mobile-contact-section">
+            <div class="mobile-contact-title">Get in Touch</div>
+            <div class="mobile-contact-email">info@brotherinarms.com</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Header Section -->
+      <div class="header-section">
+        <!-- Fixed Background for Header -->
+        <div class="header-background"></div>
+        
+        <header class="header">
+          <div class="logo">
+            <a href="index.html">
+                          <img src="images/Full-Logo.svg" alt="Brothers In Arms Logo">
+  
+            </a>
+          </div>
+          <nav class="desktop-nav">
             <ul>
               <li><a href="about.html">About us</a></li>
               <li><a href="memorial.html">Memorial</a></li>
               <li><a href="history.html">History</a></li>
-              <li><a href="events.html">News & Events</a></li>
+              <li><a href="news-events.html">News &amp; Events</a></li>
               <li><a href="contact.html" class="active">Contact us</a></li>
               <li><a href="donations.html" class="donation-primary">Donate</a></li>
   
             </ul>
           </nav>
-        <div class="mobile-menu-button">
+          <div class="mobile-menu-button" id="mobileMenuButton">
             <span></span>
             <span></span>
             <span></span>
-        </div>
-    </header>
-
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay">
-        <div class="mobile-menu-header">
-            <div class="logo">
-                <a href="index.html">
-                                <img src="images/Full-Logo.svg" alt="Brothers In Arms Logo">
-
-                </a>
-            </div>
-            <div class="mobile-close-button">
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <div class="mobile-menu-content">
-            <nav class="mobile-nav">
-                <ul>
-                    <li><a href="about.html">About us</a></li>
-                    <li><a href="donations.html">Donation</a></li>
-                    <li><a href="memorial.html">Memorial</a></li>
-                    <li><a href="history.html">History</a></li>
-                    <li><a href="events.html">News & Events</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
-                </ul>
-            </nav>
-            
-            <div class="mobile-contact-section">
-                <div class="mobile-contact-title">Contact Us</div>
-                <div class="mobile-contact-email">info@brotherinarms.com</div>
-            </div>
-        </div>
-    </div>
+          </div>
+        </header>
+      </div>
+      
 
     <!-- Main Content -->
     <main class="container">
@@ -88,7 +96,6 @@
                 <div class="memorial-image">
                     <img src="images/memorial-banner.png" alt="Memorial Relief Sculpture">
                 </div>
-                <div class="memorial-divider"></div>
             </div>
         </section>
 
@@ -111,10 +118,17 @@
                 </div>
 
                 <div class="memorial-images-row">
+
+                    <div class="memorial-image-container">
+                        <img src="images/memorial-img1.png" alt="Indian Soldiers in World War I">
+                    </div>
+                    <div class="memorial-image-container">
+
                     <div class="memorial-image-container slide-25-up">
                         <img src="images/memorial-img1.png" alt="Indian Soldiers in World War I">
                     </div>
                     <div class="memorial-image-container slide-25-up">
+
                         <img src="images/memorial-img2.png" alt="Indian Troops Marching">
                     </div>
                 </div>
@@ -138,12 +152,81 @@
             </div>
         </section>
 
-        <!-- Voices Section -->
-        <section class="memorial-section voices-section">
-            <div class="memorial-content">
-                <h2 class="memorial-section-title">Voices from the Front</h2>
-                <div class="memorial-section-subtitle">LETTERS THAT SPEAK THROUGH TIME</div>
+        <!-- Memorial Wall Section -->
+        <section class="memorial-section memorial-wall-section">
+            <div class="memorial-wall-content">
+                <h2 class="memorial-section-title">Memorial Wall</h2>
+                <div class="memorial-section-subtitle">HONORING THEIR MEMORY</div>
                 
+
+                <div class="memorial-wall-container">
+                    <div class="memorial-wall-slider-wrapper">
+                        <div class="memorial-wall-slider">
+                            <div class="memorial-wall-card">
+                                <h3 class="memorial-wall-name">John Smith</h3>
+                                <p class="memorial-wall-message">In memory of my grandfather who served with courage and honor during World War I. His stories of camaraderie with Indian soldiers inspired our family for generations.</p>
+                            </div>
+                            
+                            <div class="memorial-wall-card">
+                                <h3 class="memorial-wall-name">Rajinder Singh</h3>
+                                <p class="memorial-wall-message">Honoring my great-grandfather who fought at Neuve Chapelle. His sacrifice helped shape our world today. May we never forget the bonds forged in battle.</p>
+                            </div>
+                            
+                            <div class="memorial-wall-card">
+                                <h3 class="memorial-wall-name">William Brown</h3>
+                                <p class="memorial-wall-message">To all those who served alongside my uncle at Ypres. Though they came from different worlds, they stood together as brothers in the face of unimaginable hardship.</p>
+                            </div>
+                            
+                            <div class="memorial-wall-card">
+                                <h3 class="memorial-wall-name">Amrit Kaur</h3>
+                                <p class="memorial-wall-message">Remembering the forgotten heroes of Mesopotamia. My grandfather spoke of the courage of his comrades until his final days. Their stories must live on.</p>
+                            </div>
+                            
+                            <div class="memorial-wall-card">
+                                <h3 class="memorial-wall-name">James Wilson</h3>
+                                <p class="memorial-wall-message">In honor of the Canadian and Indian soldiers who fought side by side at the Somme. Their shared sacrifice reminds us that humanity transcends borders.</p>
+                            </div>
+                            
+                            <div class="memorial-wall-card">
+                                <h3 class="memorial-wall-name">Gurpreet Kaur</h3>
+                                <p class="memorial-wall-message">For my ancestor who never returned from France. Though his body lies far from home, his spirit lives on in our family's commitment to peace.</p>
+                            </div>
+                            
+                            <div class="memorial-wall-card">
+                                <h3 class="memorial-wall-name">Michael Davis</h3>
+                                <p class="memorial-wall-message">To the brave men who endured the horrors of trench warfare together. My grandfather's letters spoke of the unbreakable bond between soldiers of all backgrounds.</p>
+                            </div>
+                            
+                            <div class="memorial-wall-card">
+                                <h3 class="memorial-wall-name">Hardeep Singh</h3>
+                                <p class="memorial-wall-message">Honoring the Sikh soldiers who fought with unwavering courage. Their loyalty and sacrifice in a foreign land for a greater cause will never be forgotten.</p>
+                            </div>
+                            
+                            <div class="memorial-wall-card">
+                                <h3 class="memorial-wall-name">Thomas Clark</h3>
+                                <p class="memorial-wall-message">In memory of all who served, regardless of nationality or background. May their example of brotherhood in adversity guide us toward a more peaceful future.</p>
+                            </div>
+                            
+                            <div class="memorial-wall-card">
+                                <h3 class="memorial-wall-name">Amar Patel</h3>
+                                <p class="memorial-wall-message">For those who crossed oceans to fight in distant lands. Their courage and sacrifice helped shape the world we live in today. We will always remember.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="memorial-wall-add">
+                    <button id="add-memorial-message" class="memorial-wall-btn">Write your message</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memorial Message Form Popup -->
+        <div class="memorial-message-popup">
+            <div class="memorial-message-form">
+                <div class="memorial-form-header">
+                    <h3>Add Your Memorial Message</h3>
+                    <button class="memorial-form-close">&times;</button>
+
                 <div class="memorial-voice-content">
                     <div class="memorial-voice-image slide-25-up">
                         <img src="images/memorial-h-img1.png" alt="Soldiers in Trenches">
@@ -268,9 +351,23 @@
                     <p class="slide-25-up">
                         These stone monuments stand as silent witnesses to the valor and sacrifice of Indian soldiers who fought far from home in a conflict not of their making. They serve as places of pilgrimage for descendants and as educational sites for younger generations to learn about this often-overlooked chapter of military history. Through these memorials, we ensure that the contributions of Indian soldiers to world peace and freedom are never forgotten, and their stories continue to inspire future generations.
                     </p>
+
                 </div>
+                <form id="memorial-form">
+                    <div class="memorial-form-group">
+                        <label for="memorial-name">Your Name</label>
+                        <input type="text" id="memorial-name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="memorial-form-group">
+                        <label for="memorial-message">Your Message</label>
+                        <textarea id="memorial-message" name="message" placeholder="Write your message..." required></textarea>
+                    </div>
+                    <div class="memorial-form-actions">
+                        <button type="submit" class="memorial-submit-btn">Submit</button>
+                    </div>
+                </form>
             </div>
-        </section>
+        </div>
 
         <!-- CTA Section -->
         <section class="cta-section">
@@ -293,99 +390,60 @@
 
     <!-- Footer -->
     <footer>
-      <div class="footer-main">
-        <div class="footer-section">
-          <h3>Contact Us</h3>
-          <div class="contact-item">
-            <span class="icon"><img src="images/envelope.svg" alt="mail"></span>
-            <span>info@brotherinarms.com</span>
+        <div class="footer-main">
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <div class="contact-item">
+              <span class="icon"><img src="images/envelope.svg" alt="mail"></span>
+              <span>info@brotherinarms.com</span>
+            </div>
+            <div class="contact-item">
+              <span class="icon"><img src="images/phone.svg" alt="phone"></span>
+              <span>+1 (123) 456-7890</span>
+            </div>
           </div>
-          <div class="contact-item">
-            <span class="icon"><img src="images/phone.svg" alt="phone"></span>
-            <span>+1 (123) 456-7890</span>
+          
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <div class="quick-links">
+              <a href="about.html">About us</a>
+              <a href="donations.html">Donation</a>
+              <a href="memorial.html">Memorial</a>
+              <a href="history.html">History</a>
+              <a href="initiative.html">Initiative</a>
+              <a href="news-events.html">News &amp; Events</a>
+              <a href="contact.html">Contact us</a>
+            </div>
+          </div>
+          
+           <div class="footer-section">
+              <h3>Follow Us</h3>
+              <div>
+                <a  class="social-item" href="http//:instagram.com"><img src="images/Facebook.svg" alt="Facebook" class="social-icon">
+                <span>Srishti Foundation - Canada</span></a>
+              </div>
+              <div >
+                <img class="social-item" src="images/Instagram.svg" alt="Instagram" class="social-icon">
+                <span>srishticanada</span>
+              </div>
+              <div >
+                <img class="social-item" src="images/youtube.svg" alt="YouTube" class="social-icon">
+                <span>Srishti Foundation</span>
+              </div>
+            </div>
+          
+          <div class="footer-section">
+            <h3>Newsletter</h3>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email...">
+              <button type="submit">Send</button>
+            </form>
           </div>
         </div>
         
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <div class="quick-links">
-            <a href="about.html">About us</a>
-            <a href="donations.html">Donation</a>
-            <a href="memorial.html">Memorial</a>
-            <a href="history.html">History</a>
-            <a href="initiative.html">Initiative</a>
-            <a href="events.html">News & Events</a>
-            <a href="contact.html">Contact us</a>
-          </div>
+         <div class="footer-copyright">
+          <a  href="https://www.srishticanada.org/" target="_blank" rel="noopener noreferrer"> By Srishti Foundation</a>
         </div>
-        
-        <div class="footer-section">
-          <h3>Follow Us</h3>
-          <div class="social-item">
-            <img src="images/Facebook.svg" alt="Facebook" class="social-icon">
-            <span>Srishti Foundation - Canada</span>
-          </div>
-          <div class="social-item">
-            <img src="images/Instagram.svg" alt="Instagram" class="social-icon">
-            <span>srishticanada</span>
-          </div>
-          <div class="social-item">
-            <img src="images/youtube.svg" alt="YouTube" class="social-icon">
-            <span>Srishti Foundation</span>
-          </div>
-        </div>
-        
-        <div class="footer-section">
-          <h3>Newsletter</h3>
-          <form class="newsletter-form">
-            <input type="email" placeholder="Enter your email...">
-            <button type="submit">Send</button>
-          </form>
-        </div>
-      </div>
-      
-       <div class="footer-copyright">
-        <a  href="https://www.srishticanada.org/" target="_blank" rel="noopener noreferrer"> By Srishti Foundation</a>
-      </div>
-    </footer>
-
-    
-
-
-
-
-
-    <script>
-        const logo = document.querySelector('.header .logo img');
-      let scrolled = false; // Flag to track whether the logo has switched
-      
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 0 && !scrolled) {
-          // Switch to the second logo only once when scrolling down
-          scrolled = true;
-          logo.classList.add('hidden');
-      
-          setTimeout(() => {
-            logo.src = 'images/logo.svg';
-            logo.classList.remove('hidden');
-          }, 300); 
-      
-        } else if (window.scrollY === 0 && scrolled) {
-          // Switch back to the first logo when scrolling to the top
-          scrolled = false;
-          logo.classList.add('hidden');
-      
-          setTimeout(() => {
-            logo.src = 'images/Full-Logo.svg';
-            logo.classList.remove('hidden');
-          }, 300);
-        }
-      });
-      
-      </script> 
-      
-    
+      </footer>
 </body>
-
-
 </html>

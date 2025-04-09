@@ -58,10 +58,54 @@ export function heroAnimation() {
     const ctaDiv = document.querySelector(".cta-container");
     const donationCard = document.querySelector(".memory-card");
     const donationForm = document.querySelector(".donation-form-card");
+
+
+    // Image column animation
+
+    gsap.fromTo(homeImageColumn,
+        { opacity: 0, x: 100 },
+        {
+            opacity: 1,
+            x: 0,
+            duration: 1.2,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: homeImageColumn,
+                start: "top 80%",
+                end: "bottom 60%",
+                toggleActions: "play none none none",
+                scrub: true
+            }
+        }
+      );
+      
+    // Text column animation
+    gsap.fromTo(homeTextColumn,
+    { opacity: 0, x: -100 },
+    {
+        opacity: 1,
+        x: 0,
+        duration: 1.2,
+        ease: "power4.out",
+        scrollTrigger: {
+        trigger: homeTextColumn,
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none",
+        scrub: true
+        }
+    }
+    );
+
+    // Heading animation
+
+
+
     const memorialColumns = document.querySelectorAll(".memorial-column");
     const slide100Right = document.querySelectorAll(".slide-100-right");
     const slide100Left = document.querySelectorAll(".slide-100-left");
     const slide25Up = document.querySelectorAll(".slide-25-up");
+
 
     // Events heading animation
 
@@ -159,6 +203,7 @@ export function heroAnimation() {
             }
         }
         );
+
 
     // Memorial page text column animation
 
