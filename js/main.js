@@ -30,3 +30,4 @@ import { heroAnimation, scrollAnimations, lenis } from "./modules/animations.js"
   // createPopup();
   // Set up transparent header
   // setupTransparentHeader();
+
