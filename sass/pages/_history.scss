@@ -12,14 +12,14 @@
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  text-align: left; /* Changed from center to left */
+  text-align: left;
 }
 
 .history-section-subtitle {
   font-size: 0.875rem;
   text-transform: uppercase;
   color: #8E9196;
-  text-align: left; /* Changed from center to left */
+  text-align: left;
   margin-bottom: 3rem;
   letter-spacing: 1px;
 }
@@ -90,6 +90,16 @@
   font-size: 1.125rem;
   color: #333;
   text-align: left;
+}
+
+.history-hero-content{
+  display: flex;
+  flex-direction: column;
+  padding: 0 11vw 0 11vw;
+}
+
+.timeline-btn{
+ transform: translateY(-50%);
 }
 
 /* Section 2: Forgotten No More Cards */
@@ -167,7 +177,7 @@
 
 .battlefield-tabs {
   display: flex;
-  justify-content: flex-start; /* Changed from center to flex-start */
+  justify-content: flex-start;
   margin-bottom: 2rem;
   overflow-x: auto;
   padding-bottom: 0.5rem;
@@ -204,34 +214,35 @@
   background-color: #ea384c;
 }
 
+/* Updated slider styles for horizontal card sliding */
 .battlefield-slider {
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  cursor: grab;
+  transition: all 0.3s ease;
+  width: 100%;
+  height: auto;
+  min-height: 600px; /* Ensure enough height for content */
+}
+
+.battlefield-slider.dragging {
+  cursor: grabbing;
+}
+
+.battlefield-slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 2rem;
-  margin-top: 1rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.battlefield-slide {
-  display: none;
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-.battlefield-slide.active {
+  transition: transform 0.5s ease-in-out;
+  user-select: none;
   display: block;
-}
-
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: translateY(10px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
 }
 
 .battlefield-title {
@@ -291,6 +302,127 @@
   color: #ea384c;
 }
 
+/* Section 4: Victoria Cross */
+.history-victoria {
+  padding: 8rem 0;
+  background-color: #f9f9f9;
+}
+
+.victoria-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.victoria-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.victoria-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.victoria-subtitle {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #8E9196;
+  letter-spacing: 1px;
+}
+
+.victoria-description {
+  max-width: 800px;
+  text-align: left;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.victoria-btn {
+  display: inline-block;
+  background-color: #ea384c;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.victoria-btn:hover {
+  background-color: #d82738;
+}
+
+/* Section 5: Letters from Frontline */
+.history-letters {
+  padding: 8rem 0;
+}
+
+.letters-header {
+  margin-bottom: 4rem;
+}
+
+.letters-slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.letters-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  cursor: grab;
+}
+
+.letters-slider::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome/Safari */
+}
+
+.letters-slider.dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+}
+
+.letter-card {
+  flex: 0 0 calc(100% - 2rem);
+  scroll-snap-align: start;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  min-height: 300px;
+}
+
+.letter-date {
+  font-size: 0.875rem;
+  color: #8E9196;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.letter-location {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.letter-content {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.letter-signature {
+  text-align: right;
+  font-style: italic;
+}
+
 /* Responsive Styles */
 @media screen and (min-width: 768px) {
   .history-title {
@@ -300,15 +432,23 @@
   .battlefield-sections {
       grid-template-columns: 1fr 1fr;
   }
+  
+  .letter-card {
+      flex: 0 0 calc(50% - 1rem);
+  }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .history-title {
       font-size: 4rem;
   }
   
   .history-description {
       font-size: 1.25rem;
+  }
+  
+  .letter-card {
+      flex: 0 0 calc(33.333% - 1rem);
   }
 }
 
@@ -318,7 +458,9 @@
   }
   
   .history-forgotten,
-  .history-battlefields {
+  .history-battlefields,
+  .history-victoria,
+  .history-letters {
       padding: 4rem 0;
   }
   
@@ -340,6 +482,10 @@
       gap: 1rem;
       padding-bottom: 0.25rem;
       scrollbar-width: none;
+  }
+  
+  .battlefield-tabs::-webkit-scrollbar {
+    display: none;
   }
   
   .battlefield-tab {
