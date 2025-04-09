@@ -8,7 +8,7 @@
   background-image: url(../images/Banner-pic.png);
   background-size: cover;
   background-position: center center;
-  background-color: rgba(23, 16, 16, 0.37);
+  background-color: rgba(23, 16, 16, 0.72);
   background-blend-mode: multiply;
 }
 
@@ -181,17 +181,20 @@
 
 /* Who We Are Section */
 .home-who-we-are {
-  background-image: url(../images/who-are-we-banner.png);
   display: flex;
   background-color: #1a1a1a;
   color: white;
   height: 100vh;
   text-align: center;
   margin-top: 2.5rem;
-  background-size: cover;
-  background-position: center;
   flex-direction: column;
   justify-content: center;
+  background-image: url(../images/who-are-we-banner.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-color: rgba(23, 16, 16, 0.72);
+  background-blend-mode: multiply;
+  
 }
 
 .home-who-we-are h2 {
