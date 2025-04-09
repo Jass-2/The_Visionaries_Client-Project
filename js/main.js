@@ -7,7 +7,6 @@ import { setupDonation } from './modules/donation.js';
 
 // import { setupTransparentHeader } from './modules/transparentHeader.js';
 import { heroAnimation, scrollAnimations, lenis } from "./modules/animations.js";
-// Initialize on DOM content loaded
 
 
   // Set up mobile menu
@@ -31,4 +30,3 @@ import { heroAnimation, scrollAnimations, lenis } from "./modules/animations.js"
   // createPopup();
   // Set up transparent header
   // setupTransparentHeader();
-});
