@@ -73,7 +73,7 @@ footer {
 
 .newsletter-form {
   display: flex;
-  max-width: 97%;
+  max-width: 56%;
 }
 
 .newsletter-form input {
@@ -86,15 +86,23 @@ footer {
 }
 
 .newsletter-form button {
-  background-color: #222;
-  color: white;
-  padding: 0 0.75rem;
+  background-color: #da7010;
+  color: #fff;
+  padding: 0 .75rem;
   border: none;
   height: 2.5rem;
-  border-radius: 0 0.25rem 0.25rem 0;
+  border-radius: 0 .25rem .25rem 0;
   cursor: pointer;
-  font-size: 0.875rem;
+  font-size: .875rem;
+  width: 70px;
 }
+
+.newsletter-form button:hover {
+  background-color: #C50000;
+  // color: #fff;
+  transition: all .3s ease-in-out;
+}
+
 
 .footer-copyright {
   background-color: #222;
@@ -105,9 +113,25 @@ footer {
 }
 
 .footer-copyright a {
-  color: white;
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
   text-decoration: none;
+  font-weight: 500;
+  color: white; 
+  transition: background-position 0.5s ease, -webkit-text-fill-color 0.5s ease;
 }
+
+.footer-copyright a:hover {
+  background: linear-gradient(to right, #fff, #DA7010, #C50000);
+  background-size: 200% 100%;
+  background-position: -100% 0;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 @media screen and (min-width: 768px) {
   .footer-main {

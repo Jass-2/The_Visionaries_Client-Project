@@ -2,293 +2,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memorial | Brothers In Arms</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <script type="module" src="js/main.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Brothers In Arms</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
-    <!-- Header Section -->
-    <div class="header-background"></div>
-    <header class="header">
+  <div class="container">
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <div class="mobile-menu-header">
         <div class="logo">
-            <a href="index.html">
-                <img src="images/logo-main.svg" alt="Brothers In Arms Logo" width="65" height="65">
-            </a>
+          <a href="index.html">
+            <img src="images/Full-Logo.svg" alt="Brothers In Arms Logo">
+          </a>
+        </div>
+        <div class="mobile-close-button" id="mobileCloseButton">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      
+      <div class="mobile-menu-content">
+        <div class="mobile-menu-title">Menu</div>
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="donations.html">Donation</a></li>
+            <li><a href="memorial.html">Memorial</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="index.html#events">News & Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-contact-section">
+          <div class="mobile-contact-title">Get in Touch</div>
+          <div class="mobile-contact-email">info@brotherinarms.com</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Header Section -->
+    <div class="header-section">
+      <!-- Fixed Background for Header -->
+      <div class="header-background"></div>
+      
+      <header class="header">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/Full-Logo.svg" alt="Brothers In Arms Logo">
+          </a>
         </div>
         <nav class="desktop-nav">
-            <ul>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="donations.html">Donation</a></li>
-                <li><a href="memorial.html">Memorial</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="events.html">News & Events</a></li>
-                <li><a href="contact.html">Contact us</a></li>
-            </ul>
+          <ul>
+            <li><a href="about.html" class="active">About us</a></li>
+            <li><a href="memorial.html">Memorial</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="events.html">News & Events</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="donations.html" class="donation-primary">Donate</a></li>
+          </ul>
         </nav>
-        <div class="mobile-menu-button">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="mobile-menu-button" id="mobileMenuButton">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-    </header>
-
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay">
-        <div class="mobile-menu-header">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="" alt="Brothers In Arms Logo" width="65" height="65">
-                </a>
-            </div>
-            <div class="mobile-close-button">
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <div class="mobile-menu-content">
-            <nav class="mobile-nav">
-                <ul>
-                    <li><a href="about.html">About us</a></li>
-                    <li><a href="donations.html">Donation</a></li>
-                    <li><a href="memorial.html">Memorial</a></li>
-                    <li><a href="history.html">History</a></li>
-                    <li><a href="events.html">News & Events</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
-                </ul>
-            </nav>
-            
-            <div class="mobile-contact-section">
-                <div class="mobile-contact-title">Contact Us</div>
-                <div class="mobile-contact-email">info@brotherinarms.com</div>
-            </div>
-        </div>
+      </header>
+      
+      <!-- Page Title -->
+      <div class="page-title">
+        <h1>About Us</h1>
+        <p>Learn about our mission, vision, and the importance of the memorial</p>
+      </div>
     </div>
 
-    <!-- Main Content -->
-    <main class="container">
-        <!-- Hero Section -->
-        <section class="memorial-hero">
-            <div class="memorial-hero-content">
-                <div class="memorial-subtitle">FOREVER IN OUR HEARTS</div>
-                <h1 class="memorial-title">Gone But <span class="highlight">Never</span> Forgotten</h1>
-                <p class="memorial-description">
-                    Every soldier had a story—stories of sacrifice, bravery, and brotherhood. The Memorial Stories page is dedicated to sharing 
-                    the voices of those who fought side by side, ensuring that their legacy is never forgotten. Through letters, personal accounts, 
-                    and tales of extraordinary valor, we honor their memory and the deep bond between Indian and Canadian soldiers.
-                </p>
-                <div class="memorial-image">
-                    <img src="" alt="Memorial Relief Sculpture">
-                </div>
-                <div class="memorial-divider"></div>
+    <!-- Section 1: Video Section -->
+    <section class="about-video-section">
+      <div class="about-video-container">
+        <div class="about-video-header">
+          <h5 class="about-video-subtitle">BROTHERS IN ARMS BY </h5>
+          <h2 class="about-video-title"><span>Srishti </span>Foundation</h2>
+        </div>
+        <div class="about-video-wrapper">
+          <video controls class="w-full" poster="images/About-us-video-banner.png">
+            <source src="/video/about.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p class="about-video-content">
+          The Brothers In Arms Memorial is more than just a monument—it is a tribute to the bravery, sacrifice, and unity of Indian and Canadian soldiers who fought side by side during World War I. Our mission is to ensure that their stories are never forgotten and that their legacy continues to inspire generations to come. This memorial stands as a symbol of courage, resilience, and the unbreakable bond between two nations.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: Vision and Mission -->
+    <section class="vision-mission-section">
+      <div class="vision-mission-container">
+        <div class="vision-mission-content">
+          <h2 class="vision-header">Vision</h2>
+          <p class="vision-text">To commemorate the valour of Indian and Canadian Brothers In Arms, to inspire future generations to uphold values of humanity and freedom.</p>
+          <div class="divider"></div>
+
+          <h2 class="mission-header">Mission</h2>
+          <p class="mission-text">This memorial highlights the forgotten story of the collaboration between the Indian & Canadian soldiers who fought side by side, at the Western Front, in Europe.</p>
+          <div class="divider"></div>
+          
+          <p class="mission-text">Bring forward shared personal experiences of battle, challenges, emotions and triumph.</p>
+          <div class="divider"></div>
+          
+          <p class="mission-text">To reflect on the lessons from the stories of heroism, sacrifices and voices of liberation.</p>
+          
+          <a href="initiative.html" class="initiative-btn">Initiatives ›</a>
+        </div>
+        <div class="vision-mission-image">
+          <img src="images/vision-banner2.png" alt="World War I soldiers">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Memorial Meaning -->
+    <section class="memorial-meaning-section">
+      <div class="memorial-meaning-container">
+        <div class="memorial-meaning-image">
+          <img src="images/vision-banner2.png" alt="World War I soldier in trench">
+        </div>
+        <div class="memorial-meaning-content">
+          <h2 class="memorial-meaning-title">A Monument to Brotherhood and Sacrifice</h2>
+          <p class="memorial-meaning-text">
+            Over a century ago, Indian and Canadian soldiers fought together, forging a bond through war. Their contributions were immense but often overlooked in mainstream history. This memorial ensures their sacrifices are remembered and honored forever.
+          </p>
+          
+          <h3 class="memorial-meaning-subtitle">What the Memorial Represents</h3>
+          <div class="memorial-meaning-features">
+            <div class="memorial-feature">
+              <span class="memorial-feature-dot">•</span>
+              <p class="memorial-feature-text">A stone monument depicting key battle scenes.</p>
             </div>
-        </section>
-
-        <!-- Honoring Indian Soldiers Section -->
-        <section class="memorial-section">
-            <div class="memorial-content">
-                <div class="memorial-section-label">THE YPRES MEMORIAL</div>
-                <h2 class="memorial-section-title">Honoring Indian Soldiers of World War I</h2>
-                
-                <div class="memorial-three-column">
-                    <div class="memorial-column">
-                        <p>During World War I, Indian soldiers played a crucial role in the First Battle of Ypres (1914), fighting alongside British and Allied forces to stop the German advance in Belgium. The Indian Corps, including the Lahore and Meerut Divisions, arrived on the Western Front and faced brutal trench warfare in freezing conditions. Despite being unfamiliar with the European climate and battlefield tactics, they held key positions and reinforced exhausted British troops.</p>
-                    </div>
-                    <div class="memorial-column">
-                        <p>The Indian soldiers showed immense bravery at Ypres, often launching counterattacks and holding trenches under relentless artillery fire. They suffered heavy casualties due to enemy machine guns, gas attacks, and lack of proper winter clothing. Many Sikh, Gurkha, and Punjabi Muslim regiments distinguished themselves in battle, with stories of individual heroism becoming legendary. The lack of reinforcements and exhaustion made their situation even more difficult.</p>
-                    </div>
-                    <div class="memorial-column">
-                        <p>Despite their sacrifices, the contributions of Indian soldiers at Ypres were largely overlooked in post-war records. Over 7,000 Indian soldiers died on the Western Front, including many at Ypres. Their courage and dedication were later recognized, but many returned home with little reward. Today, their sacrifices are honored at memorials like the Menin Gate in Belgium and the Neuve-Chapelle Memorial in France.</p>
-                    </div>
-                </div>
-
-                <div class="memorial-images-row">
-                    <div class="memorial-image-container">
-                        <img src="" alt="Indian Soldiers in World War I">
-                    </div>
-                    <div class="memorial-image-container">
-                        <img src="" alt="Indian Troops Marching">
-                    </div>
-                </div>
-
-                <div class="memorial-text-blocks">
-                    <div class="memorial-text-block">
-                        <h3>India's Massive Contribution to the War Effort</h3>
-                        <p>During World War I (1914-1918), over 1.3 million Indian soldiers served in various theaters of war, making India the largest contributor to the British war effort outside Europe. Indian troops fought bravely on the Western Front (France and Belgium), the Middle East (Mesopotamia, Gallipoli, and Palestine), and Africa, enduring harsh conditions and heavy casualties. Despite their sacrifices, their contributions remained largely overlooked in mainstream war histories for decades.</p>
-                    </div>
-
-                    <div class="memorial-text-block">
-                        <h3>The Battle of Ypres: Bravery in the Trenches</h3>
-                        <p>One of the most significant battles Indian soldiers participated in was the First Battle of Ypres (1914) in Belgium, where the Indian Corps, including the Lahore and Meerut Divisions, reinforced British and French forces. They fought in extreme weather conditions, facing relentless German attacks, gas warfare, and trench warfare for the first time. Despite shortages of food, proper winter clothing, and reinforcements, they displayed extraordinary courage, holding strategic positions and counterattacking enemy forces.</p>
-                    </div>
-
-                    <div class="memorial-text-block">
-                        <h3>Legacy and Remembrance of Indian Soldiers</h3>
-                        <p>Indian soldiers also played a crucial role in Mesopotamia (modern-day Iraq), Gallipoli, and Palestine, where they fought against Ottoman and German forces. The Mesopotamian campaign, in particular, saw one of the worst military disasters at the Siege of Kut (1916), where thousands of Indian troops were taken prisoner. By the end of the war, nearly 74,000 Indian soldiers had lost their lives, and many more were wounded. Their bravery is commemorated in memorials such as the India Gate in New Delhi, the Menin Gate in Belgium, and the Neuve-Chapelle Memorial in France.</p>
-                    </div>
-                </div>
+            <div class="memorial-feature">
+              <span class="memorial-feature-dot">•</span>
+              <p class="memorial-feature-text">Engraved names of fallen soldiers to give them a place of remembrance.</p>
             </div>
-        </section>
+            <div class="memorial-feature">
+              <span class="memorial-feature-dot">•</span>
+              <p class="memorial-feature-text">A place for education and reflection for future generations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Voices Section -->
-        <section class="memorial-section voices-section">
-            <div class="memorial-content">
-                <h2 class="memorial-section-title">Voices from the Front</h2>
-                <div class="memorial-section-subtitle">LETTERS THAT SPEAK THROUGH TIME</div>
-                
-                <div class="memorial-voice-content">
-                    <div class="memorial-voice-image">
-                        <img src="" alt="Soldiers in Trenches">
-                    </div>
-                    <div class="memorial-voice-text">
-                        <h4 class="memorial-voice-subheader">Stories from the Trenches</h4>
-                        <p class="memorial-paragraph">
-                            During World War I (1914-1918), over 1.3 million Indian soldiers served in various theaters of war, making India the largest contributor to the British war effort outside Europe. Indian troops fought bravely on the Western Front (France and Belgium), the Middle East (Mesopotamia, Gallipoli, and Palestine), and Africa, enduring harsh conditions and heavy casualties. Despite their sacrifices, their contributions remained largely overlooked in mainstream war histories for decades.
-                        </p>
-                        
-                        <h4 class="memorial-voice-subheader">Letters Home</h4>
-                        <p class="memorial-paragraph">
-                            One of the most significant battles Indian soldiers participated in was the First Battle of Ypres (1914) in Belgium, where the Indian Corps, including the Lahore and Meerut Divisions, reinforced British and French forces. They fought in extreme weather conditions, facing relentless German attacks, gas warfare, and trench warfare for the first time. Despite shortages of food, proper winter clothing, and reinforcements, they displayed extraordinary courage, holding strategic positions and counterattacking enemy forces.
-                        </p>
-                        
-                        <h4 class="memorial-voice-subheader">Legacy of Sacrifice</h4>
-                        <p class="memorial-paragraph">
-                            Indian soldiers also played a crucial role in Mesopotamia (modern-day Iraq), Gallipoli, and Palestine, where they fought against Ottoman and German forces. The Mesopotamian campaign, in particular, saw one of the worst military disasters at the Siege of Kut (1916), where thousands of Indian troops were taken prisoner. By the end of the war, nearly 74,000 Indian soldiers had lost their lives, and many more were wounded. Their bravery is commemorated in memorials such as the India Gate in New Delhi, the Menin Gate in Belgium, and the Neuve-Chapelle Memorial in France.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Section 4: Support Options -->
+    <section class="support-options-section">
+      <div class="support-options-container">
+        <div class="support-options-header">
+          <h2 class="support-options-title">Be a Part of History</h2>
+          <p class="support-options-subtitle">SUPPORT THE MEMORIAL</p>
+        </div>
+        <div class="support-options-cards">
+          <div class="support-card">
+            <img src="images/donate.svg" alt="Make a Donation" class="support-card-icon">
+            <h3 class="support-card-title">Make a Donation</h3>
+            <p class="support-card-text">Support the memorial's construction & maintenance.</p>
+          </div>
+          <div class="support-card">
+            <img src="images/volunteer.svg" alt="Volunteer Opportunities" class="support-card-icon">
+            <h3 class="support-card-title">Volunteer Opportunities</h3>
+            <p class="support-card-text">Help with awareness campaigns, events, assembles and fundraising.</p>
+          </div>
+          <div class="support-card">
+            <img src="images/share.svg" alt="Share the Story" class="support-card-icon">
+            <h3 class="support-card-title">Share the Story</h3>
+            <p class="support-card-text">Spread the word through social media & community outreach.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- United Section -->
-        <section class="memorial-section united-section">
-            <div class="memorial-content">
-                <h2 class="memorial-section-title">United in Battle</h2>
-                <div class="memorial-section-subtitle">STORIES OF UNBREAKABLE BONDS</div>
-                
-                <div class="memorial-united-images">
-                    <div class="memorial-united-main-image">
-                        <img src="" alt="Allied Soldiers Together">
-                    </div>
-                    <div class="memorial-united-side-images">
-                        <div class="memorial-united-side-image">
-                            <img src="" alt="Soldiers Group">
-                        </div>
-                        <div class="memorial-united-side-image">
-                            <img src="" alt="Soldiers Walking">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="memorial-united-text">
-                    <h4 class="memorial-united-subheader">Brotherhood Beyond Borders</h4>
-                    <p class="memorial-paragraph">
-                        During World War I (1914-1918), over 1.3 million Indian soldiers served in various theaters of war, making India the largest contributor to the British war effort outside Europe. Indian troops fought bravely on the Western Front (France and Belgium), the Middle East (Mesopotamia, Gallipoli, and Palestine), and Africa, enduring harsh conditions and heavy casualties. Despite their sacrifices, their contributions remained largely overlooked in mainstream war histories for decades.
-                    </p>
-                    
-                    <h4 class="memorial-united-subheader">Shared Hardships</h4>
-                    <p class="memorial-paragraph">
-                        One of the most significant battles Indian soldiers participated in was the First Battle of Ypres (1914) in Belgium, where the Indian Corps, including the Lahore and Meerut Divisions, reinforced British and French forces. They fought in extreme weather conditions, facing relentless German attacks, gas warfare, and trench warfare for the first time. Despite shortages of food, proper winter clothing, and reinforcements, they displayed extraordinary courage, holding strategic positions and counterattacking enemy forces.
-                    </p>
-                    
-                    <h4 class="memorial-united-subheader">Friendships Forged in Fire</h4>
-                    <p class="memorial-paragraph">
-                        Indian soldiers also played a crucial role in Mesopotamia (modern-day Iraq), Gallipoli, and Palestine, where they fought against Ottoman and German forces. The Mesopotamian campaign, in particular, saw one of the worst military disasters at the Siege of Kut (1916), where thousands of Indian troops were taken prisoner. By the end of the war, nearly 74,000 Indian soldiers had lost their lives, and many more were wounded. Their bravery is commemorated in memorials such as the India Gate in New Delhi, the Menin Gate in Belgium, and the Neuve-Chapelle Memorial in France.
-                    </p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- The Bravest Among Them Section -->
-        <section class="memorial-section bravest-section">
-            <div class="memorial-content">
-                <div class="memorial-section-label">VICTORIA CROSS HEROES</div>
-                <h2 class="memorial-section-title">The Bravest Among Them</h2>
-                <div class="memorial-section-subtitle">HONORING EXTRAORDINARY COURAGE</div>
-                
-                <div class="memorial-bravest-image">
-                    <img src="" alt="Victoria Cross Hero">
-                </div>
-                
-                <div class="memorial-bravest-content">
-                    <h4 class="memorial-bravest-subheader">Heroism Beyond Measure</h4>
-                    <p class="memorial-paragraph">
-                        During World War I (1914-1918), over 1.3 million Indian soldiers served in various theaters of war, making India the largest contributor to the British war effort outside Europe. Indian troops fought bravely on the Western Front (France and Belgium), the Middle East (Mesopotamia, Gallipoli, and Palestine), and Africa, enduring harsh conditions and heavy casualties. Despite their sacrifices, their contributions remained largely overlooked in mainstream war histories for decades.
-                    </p>
-                    
-                    <h4 class="memorial-bravest-subheader">Extraordinary Acts of Courage</h4>
-                    <p class="memorial-paragraph">
-                        One of the most significant battles Indian soldiers participated in was the First Battle of Ypres (1914) in Belgium, where the Indian Corps, including the Lahore and Meerut Divisions, reinforced British and French forces. They fought in extreme weather conditions, facing relentless German attacks, gas warfare, and trench warfare for the first time. Despite shortages of food, proper winter clothing, and reinforcements, they displayed extraordinary courage, holding strategic positions and counterattacking enemy forces.
-                    </p>
-                    
-                    <h4 class="memorial-bravest-subheader">Recognition and Honor</h4>
-                    <p class="memorial-paragraph">
-                        Indian soldiers also played a crucial role in Mesopotamia (modern-day Iraq), Gallipoli, and Palestine, where they fought against Ottoman and German forces. The Mesopotamian campaign, in particular, saw one of the worst military disasters at the Siege of Kut (1916), where thousands of Indian troops were taken prisoner. By the end of the war, nearly 74,000 Indian soldiers had lost their lives, and many more were wounded. Their bravery is commemorated in memorials such as the India Gate in New Delhi, the Menin Gate in Belgium, and the Neuve-Chapelle Memorial in France.
-                    </p>
-                    
-                    <h4 class="memorial-bravest-subheader">Lasting Legacy</h4>
-                    <p class="memorial-paragraph">
-                        The extraordinary valor of these soldiers continues to inspire generations. Their stories of sacrifice and courage in the face of overwhelming odds demonstrate the depth of human spirit and determination. Through honoring their memory, we not only pay tribute to their service but also ensure that future generations understand the price of freedom and the bonds that unite nations during times of adversity.
-                    </p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Remembered in Stone Section -->
-        <section class="memorial-section stone-section">
-            <div class="memorial-content">
-                <div class="memorial-section-label">MEMORIAL SITES</div>
-                <h2 class="memorial-section-title">Remembered in Stone</h2>
-                <div class="memorial-section-subtitle">ETERNAL MONUMENTS TO SACRIFICE</div>
-                
-                <div class="memorial-stone-image">
-                    <img src="" alt="Memorial Monument">
-                </div>
-                
-                <div class="memorial-stone-content">
-                    <h4 class="memorial-stone-subheader">India Gate: A National Symbol</h4>
-                    <p class="memorial-paragraph">
-                        The sacrifices of Indian soldiers in World War I are commemorated in several significant memorials across the globe. The India Gate in New Delhi, originally called the All India War Memorial, bears the names of over 13,000 Indian soldiers who died fighting for the British Empire. Standing tall at 42 meters, it has become not just a war memorial but also a symbol of national pride and sacrifice.
-                    </p>
-                    
-                    <h4 class="memorial-stone-subheader">European Monuments of Honor</h4>
-                    <p class="memorial-paragraph">
-                        In Europe, the Menin Gate Memorial in Ypres, Belgium, and the Neuve-Chapelle Indian Memorial in France are dedicated to Indian soldiers who fell during the Great War. The Neuve-Chapelle Memorial commemorates over 4,700 Indian soldiers who died on the Western Front and have no known graves. The memorial's design incorporates both Eastern and Western architectural elements, symbolizing the collaboration between Indian and British forces.
-                    </p>
-                    
-                    <h4 class="memorial-stone-subheader">Places of Pilgrimage and Remembrance</h4>
-                    <p class="memorial-paragraph">
-                        These stone monuments stand as silent witnesses to the valor and sacrifice of Indian soldiers who fought far from home in a conflict not of their making. They serve as places of pilgrimage for descendants and as educational sites for younger generations to learn about this often-overlooked chapter of military history. Through these memorials, we ensure that the contributions of Indian soldiers to world peace and freedom are never forgotten, and their stories continue to inspire future generations.
-                    </p>
-                </div>
-            </div>
-        </section>
+    <!-- Section 5: CTA Section (copied from donations.html) -->
+    <section class="cta-section">
+      <div class="cta-container">
+        <div class="cta-content">
+          <h2 class="cta-title">Keep their<br>Legacy alive</h2>
+          <p class="cta-description">
+            To commemorate the valour of Indian and Canadian Brothers in Arms, to inspire future generations to uphold values of
+            humanity and freedom.
+          </p>
+          <div class="cta-buttons">
+            <a href="donations.html" class="cta-donate-btn">Donate</a>
+            <a href="about.html" class="cta-about-btn">About us</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="cta-container">
-                <div class="cta-content">
-                    <h2 class="cta-title">Keep their<br>Legacy alive</h2>
-                    <p class="cta-description">
-                        To commemorate the valour of Indian and Canadian Brothers
-                        in Arms, to inspire future generations to uphold values of
-                        humanity and freedom.
-                    </p>
-                    <div class="cta-buttons">
-                        <a href="donations.html" class="cta-donate-btn">Donate</a>
-                        <a href="#about" class="cta-about-btn">About</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
+    <!-- Footer (copied from donations.html) -->
     <footer>
       <div class="footer-main">
         <div class="footer-section">
@@ -306,12 +217,12 @@
         <div class="footer-section">
           <h3>Quick Links</h3>
           <div class="quick-links">
-            <a href="index.html#about">About us</a>
+            <a href="about.html">About us</a>
             <a href="donations.html">Donation</a>
-            <a href="index.html#memorial">Memorial</a>
+            <a href="memorial.html">Memorial</a>
             <a href="history.html">History</a>
-            <a href="index.html#initiative">Initiative</a>
-            <a href="index.html#events">News & Events</a>
+            <a href="initiative.html">Initiative</a>
+            <a href="events.html">News & Events</a>
             <a href="contact.html">Contact us</a>
           </div>
         </div>
@@ -342,10 +253,37 @@
       </div>
       
       <div class="footer-copyright">
-        <a href="https://www.srishticanada.org/"> By Srishti Foundation</a>
+        <a  href="https://www.srishticanada.org/" target="_blank" rel="noopener noreferrer"> By Srishti Foundation</a>
       </div>
     </footer>
-
+  </div>
+  
+  <script>
+    const logo = document.querySelector('.header .logo img');
+    let scrolled = false; // Flag to track whether the logo has switched
     
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 0 && !scrolled) {
+        // Switch to the second logo only once when scrolling down
+        scrolled = true;
+        logo.classList.add('hidden');
+    
+        setTimeout(() => {
+          logo.src = 'images/logo.svg';
+          logo.classList.remove('hidden');
+        }, 300); 
+    
+      } else if (window.scrollY === 0 && scrolled) {
+        // Switch back to the first logo when scrolling to the top
+        scrolled = false;
+        logo.classList.add('hidden');
+    
+        setTimeout(() => {
+          logo.src = 'images/Full-Logo.svg';
+          logo.classList.remove('hidden');
+        }, 300);
+      }
+    });
+  </script>
 </body>
 </html>

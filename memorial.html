@@ -18,19 +18,21 @@
     <header class="header">
         <div class="logo">
             <a href="index.html">
-                <img src="images/logo-main.svg" alt="Brothers In Arms Logo" width="65" height="65">
+                            <img src="images/Full-Logo.svg" alt="Brothers In Arms Logo">
+
             </a>
         </div>
         <nav class="desktop-nav">
             <ul>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="donations.html">Donation</a></li>
-                <li><a href="memorial.html">Memorial</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="events.html">News & Events</a></li>
-                <li><a href="contact.html">Contact us</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="memorial.html">Memorial</a></li>
+              <li><a href="history.html">History</a></li>
+              <li><a href="events.html">News & Events</a></li>
+              <li><a href="contact.html" class="active">Contact us</a></li>
+              <li><a href="donations.html" class="donation-primary">Donate</a></li>
+  
             </ul>
-        </nav>
+          </nav>
         <div class="mobile-menu-button">
             <span></span>
             <span></span>
@@ -43,7 +45,8 @@
         <div class="mobile-menu-header">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo-main.svg" alt="Brothers In Arms Logo" width="65" height="65">
+                                <img src="images/Full-Logo.svg" alt="Brothers In Arms Logo">
+
                 </a>
             </div>
             <div class="mobile-close-button">
@@ -83,7 +86,7 @@
                     and tales of extraordinary valor, we honor their memory and the deep bond between Indian and Canadian soldiers.
                 </p>
                 <div class="memorial-image">
-                    <img src="" alt="Memorial Relief Sculpture">
+                    <img src="images/memorial-banner.png" alt="Memorial Relief Sculpture">
                 </div>
                 <div class="memorial-divider"></div>
             </div>
@@ -109,10 +112,10 @@
 
                 <div class="memorial-images-row">
                     <div class="memorial-image-container">
-                        <img src="" alt="Indian Soldiers in World War I">
+                        <img src="images/memorial-img1.png" alt="Indian Soldiers in World War I">
                     </div>
                     <div class="memorial-image-container">
-                        <img src="" alt="Indian Troops Marching">
+                        <img src="images/memorial-img2.png" alt="Indian Troops Marching">
                     </div>
                 </div>
 
@@ -143,7 +146,7 @@
                 
                 <div class="memorial-voice-content">
                     <div class="memorial-voice-image">
-                        <img src="" alt="Soldiers in Trenches">
+                        <img src="images/memorial-h-img1.png" alt="Soldiers in Trenches">
                     </div>
                     <div class="memorial-voice-text">
                         <h4 class="memorial-voice-subheader">Stories from the Trenches</h4>
@@ -173,14 +176,14 @@
                 
                 <div class="memorial-united-images">
                     <div class="memorial-united-main-image">
-                        <img src="" alt="Allied Soldiers Together">
+                        <img src="images/memorial-h-img2.png" alt="Allied Soldiers Together">
                     </div>
                     <div class="memorial-united-side-images">
                         <div class="memorial-united-side-image">
-                            <img src="" alt="Soldiers Group">
+                            <img src="images/memorial-h-img3.png" alt="Soldiers Group">
                         </div>
                         <div class="memorial-united-side-image">
-                            <img src="" alt="Soldiers Walking">
+                            <img src="images/memorial-h-img4.png" alt="Soldiers Walking">
                         </div>
                     </div>
                 </div>
@@ -212,7 +215,7 @@
                 <div class="memorial-section-subtitle">HONORING EXTRAORDINARY COURAGE</div>
                 
                 <div class="memorial-bravest-image">
-                    <img src="" alt="Victoria Cross Hero">
+                    <img src="images/Place-holder-1.png" alt="Victoria Cross Hero">
                 </div>
                 
                 <div class="memorial-bravest-content">
@@ -247,7 +250,7 @@
                 <div class="memorial-section-subtitle">ETERNAL MONUMENTS TO SACRIFICE</div>
                 
                 <div class="memorial-stone-image">
-                    <img src="" alt="Memorial Monument">
+                    <img src="images/Place-holder-1.png" alt="Memorial Monument">
                 </div>
                 
                 <div class="memorial-stone-content">
@@ -281,7 +284,7 @@
                     </p>
                     <div class="cta-buttons">
                         <a href="donations.html" class="cta-donate-btn">Donate</a>
-                        <a href="#about" class="cta-about-btn">About</a>
+                        <a href="about.html" class="cta-about-btn">About</a>
                     </div>
                 </div>
             </div>
@@ -306,12 +309,12 @@
         <div class="footer-section">
           <h3>Quick Links</h3>
           <div class="quick-links">
-            <a href="index.html#about">About us</a>
+            <a href="about.html">About us</a>
             <a href="donations.html">Donation</a>
-            <a href="index.html#memorial">Memorial</a>
+            <a href="memorial.html">Memorial</a>
             <a href="history.html">History</a>
-            <a href="index.html#initiative">Initiative</a>
-            <a href="index.html#events">News & Events</a>
+            <a href="initiative.html">Initiative</a>
+            <a href="events.html">News & Events</a>
             <a href="contact.html">Contact us</a>
           </div>
         </div>
@@ -341,11 +344,48 @@
         </div>
       </div>
       
-      <div class="footer-copyright">
-        <a href="https://www.srishticanada.org/"> By Srishti Foundation</a>
+       <div class="footer-copyright">
+        <a  href="https://www.srishticanada.org/" target="_blank" rel="noopener noreferrer"> By Srishti Foundation</a>
       </div>
     </footer>
 
     
+
+
+
+
+
+    <script>
+        const logo = document.querySelector('.header .logo img');
+      let scrolled = false; // Flag to track whether the logo has switched
+      
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 0 && !scrolled) {
+          // Switch to the second logo only once when scrolling down
+          scrolled = true;
+          logo.classList.add('hidden');
+      
+          setTimeout(() => {
+            logo.src = 'images/logo.svg';
+            logo.classList.remove('hidden');
+          }, 300); 
+      
+        } else if (window.scrollY === 0 && scrolled) {
+          // Switch back to the first logo when scrolling to the top
+          scrolled = false;
+          logo.classList.add('hidden');
+      
+          setTimeout(() => {
+            logo.src = 'images/Full-Logo.svg';
+            logo.classList.remove('hidden');
+          }, 300);
+        }
+      });
+      
+      </script> 
+      
+    
 </body>
+
+
 </html>

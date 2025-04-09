@@ -1,11 +1,9 @@
 
-
-
 /* Donation Page Styles */
 .donation-container {
   max-width: 1110px;
   margin: 0 auto;
-  padding: 8rem 1.5rem;
+  padding: 2rem 1.5rem;
   background-color: #fff;
 }
 
@@ -30,8 +28,8 @@
   font-weight: 700;
 }
 
-.donation-title h1 .red-text {
-  color: #ea384c;
+.red-text {
+  color: #da7010;
 }
 
 /* Simplified flex container for donation content */
@@ -135,12 +133,12 @@
   background-color: rgba(234, 56, 76, 0.05);
 }
 
-.custom-amount {
+.donation-custom-amount {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
 
-.custom-amount input {
+.donation-custom-amount input {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid #ddd;
@@ -148,7 +146,7 @@
   font-size: 0.95rem;
 }
 
-.custom-amount input::placeholder {
+.donation-custom-amount input::placeholder {
   color: #999;
 }
 
@@ -218,10 +216,27 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
+.giving-option-card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  
+  background-color: rgba(23, 16, 16, .7);
+  background-blend-mode: multiply;
+}
+
+.giving-option-card:nth-child(1) { background-image: url(../images/donate-option-bg1.png); }
+.giving-option-card:nth-child(2) { background-image: url(../images/donate-option-bg1.png); }
+.giving-option-card:nth-child(3) { background-image: url(../images/donate-option-bg1.png); }
+.giving-option-card:nth-child(4) { background-image: url(../images/donate-option-bg1.png); }
+.giving-option-card:nth-child(5) { background-image: url(../images/donate-option-bg1.png); }
+.giving-option-card:nth-child(6) { background-image: url(../images/donate-option-bg1.png); }
+
+
 .option-image-container {
   padding: 1.5rem 1.5rem 4rem 1.5rem;
-  display: flex
-;
+  display: flex;
   justify-content: left;
   align-items: center;
 }
@@ -229,7 +244,6 @@
 .option-image {
   width: 8rem;
   height: 8rem;
-  background-color: #f1f1f1;
   border-radius: 8px;
 }
 
@@ -240,12 +254,10 @@
 .option-content h3 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
-  color: #333;
   font-weight: 600;
 }
 
 .option-content p {
-  color: #666;
   font-size: 0.95rem;
   line-height: 1.5;
   margin: 0;
@@ -305,11 +317,27 @@
   color: #333;
 }
 
+/* Header Section Override */
+.header-section {
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.header-section h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.header-section h1 .red-text {
+  color: #ea384c;
+}
+
 /* Tablet Styles */
 @media screen and (min-width: 768px) {
   .donation-content {
-    flex-direction: row;
-    height: 600px;
     min-height: 600px;
   }
   
@@ -326,6 +354,13 @@
     font-size: 3rem;
   }
   
+  .donation-btn{
+
+    font-size: 1.3rem;
+  }
+
+  
+
   .memory-content {
     display: flex;
     height: 250px;
@@ -388,6 +423,11 @@
     max-width: 95%;
   }
   
+ 
+  .donation-btn{  
+    font-size: 1.5rem;
+  }
+
   .giving-options {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -408,5 +448,210 @@
   
   .testimonial-item {
     padding: 1rem 2rem;
+  }
+}
+
+/* Popup styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-content {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 90%;
+  width: 500px;
+  padding: 30px;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.popup-overlay.active .popup-content {
+  transform: translateY(0);
+}
+
+/* Thank you popup styles */
+.thank-you-popup {
+  text-align: center;
+}
+
+.thank-you-popup h3 {
+  color: #ea384c;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.thank-you-popup p {
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* These styles were previously in home.css but are related to the donation box */
+.custom-amount {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.custom-amount input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.custom-amount input::placeholder {
+  color: #999;
+}
+
+.donation-amount-btn {
+  width: 114.648px;
+  height: 54px;
+  border: 1px solid #ddd;
+  padding: 1rem 0;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: white;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.memory-content {
+  padding: 1.5rem;
+  background-color: #da7010;
+  color: white;
+  flex-grow: 1;
+}
+
+.memory-image {
+  width: 100%;
+  height: 24rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.memory-content h3 {
+  font-size: 1.3rem;
+  padding: 0 11rem 0 0;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.memory-content p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.donation-form-card h2 {
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 0.75rem;
+  color: #333;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.donation-form-card p {
+  color: #666;
+  text-align: left;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.donate-btn {
+  width: 100%;
+  background-color: #da7010;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.donate-btn:hover {
+  background-color: #c50000;
+}
+
+@media screen and (min-width: 768px) {
+  .memory-content h3 {
+    font-size: 1.3rem;
+    padding: 0;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .memory-card {
+    width: 100%;
+    height: 41.8rem;
+  }
+  
+  .donation-form-card {
+    height: 41.813rem;
+    width: 100%;
+    padding: 2rem;
+  }
+  
+  .donation-form-card h2 {
+    font-size: 4.5rem;
+    margin-bottom: .75rem;
+  }
+
+  .memory-content h3 {
+    padding-right: 9rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    max-width: 80%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .donation-content{
+    flex-direction: row;
+  }
+  
+  .donation-form-card {
+    width: 60%;
+  }
+
+  .memory-content p {
+     width: 31.688rem;
+}
+  .memory-content h3 {
+    padding-right: 7.5rem;
+    font-size: 1.5rem;
+    max-width: 70%;
   }
 }

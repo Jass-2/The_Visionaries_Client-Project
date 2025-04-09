@@ -1,23 +1,18 @@
 
-
 /* Hero Section (Home-specific) */
 .home-hero-section {    
   background-size: cover;
   background-position: center;
   color: white;
   padding: 1.25rem 1.25rem 4rem;
-  /* width: 100%; */
-  /* padding: 0; */
-  /* margin: 0; */
   background-image: url(../images/Banner-pic.png);
   background-size: cover;
   background-position: center center;
   background-color: rgba(23, 16, 16, 0.37);
   background-blend-mode: multiply;
-  /* position: relative;*/
 }
 
-.header {
+.home-header {
   padding: 1.25rem 5% 1rem;
   width: 90%;
   max-width: 1200px;
@@ -105,8 +100,13 @@
 }
 
 .home-btn-primary {
-  background-color: white;
-  color: #333;
+  font-weight: 500;
+  padding: .5rem 1.5rem;
+  border-radius: .25rem;
+  background-color: #da7010;
+  color: #fff !important;
+  transition: all .3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
 }
 
 .home-btn-secondary {
@@ -114,9 +114,20 @@
   color: white;
 }
 
+
+.main-btns{
+  font-weight: 500;
+  padding: .5rem 1.5rem;
+  border-radius: .25rem;
+  background-color: #da7010;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+}
+
+
+
 /* Vision & Mission Section */
 .home-vision-mission {
-  padding: 2.5rem 1.5rem;
+  padding: 4.5rem 1.5rem;
 }
 
 .home-vision-mission-container {
@@ -128,14 +139,15 @@
 .home-text-column h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .home-divider {
-  height: 1px;
-  background-color: #333;
+  height: .5px;
+  background-color: #33333338;
   width: 100%;
-  margin: 1rem 0;
+  margin: .5rem 0;
 }
 
 .home-image-column {
@@ -144,6 +156,7 @@
 }
 
 .home-image-column img {
+  border-radius: 8px;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -151,17 +164,19 @@
 
 .home-initiatives-btn {
   display: inline-block;
-  margin-top: 2rem;
-  background-color: #333;
-  color: white;
-  padding: 0.5rem 1.25rem;
+  width: fit-content;
+  margin-top: 2.5rem;
+  background-color: #da7010;
+  color: #fff;
+  padding: .5rem 1.25rem;
   text-decoration: none;
   font-weight: 500;
-  border-radius: 2px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
 }
 
 .home-initiatives-btn:hover {
-  background-color: #444;
+  background-color: #C50000;
 }
 
 /* Who We Are Section */
@@ -173,10 +188,11 @@
   height: 100vh;
   text-align: center;
   margin-top: 2.5rem;
+  background-size: cover;
+  background-position: center;
   flex-direction: column;
   justify-content: center;
 }
-
 
 .home-who-we-are h2 {
   font-size: 2.5rem;
@@ -208,7 +224,6 @@
   gap: 2rem;
   align-items: center;
 }
-
 
 .home-history-image {
   width: 100%;
@@ -258,80 +273,163 @@
   margin-bottom: 2rem;
 }
 
-.home-donation-box {
-  background-color: white;
-  color: black;
-  border-radius: 0.5rem;
-  padding: 1.5rem;
+/* New donation box styles from donations.css */
+.donation-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  min-height: auto;
+  max-width: 1110px;
+  margin: 0 auto;
 }
 
-.home-donation-box h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+.donation-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
-.home-donation-type-toggle {
+/* Left card - Memory card */
+.memory-card {
   display: flex;
-  width: 100%;
-  margin-bottom: 1rem;
+  flex-direction: column;
+  background-color: white;
+  height: 100%;
 }
 
-.home-toggle-option {
-  width: 50%;
-  padding: 0.5rem;
-  text-align: center;
-  cursor: pointer;
-}
+// .memory-image {
+//   width: 100%;
+//   height: 250px;
+//   object-fit: cover;
+//   object-position: center;
+// }
 
-.home-toggle-option.active {
-  background-color: #e5e5e5;
-  font-weight: 700;
-}
-
-.home-donation-amounts {
-  display: flex;
-  gap: 0.5rem;
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
-.home-amount-btn {
-  flex: 1;
-  border: 1px solid #ccc;
-  padding: 0.5rem;
-  text-align: center;
-  border-radius: 0.25rem;
-  cursor: pointer;
-}
-
-.home-amount-btn.active {
-  background-color: #e5e5e5;
-  font-weight: 700;
-}
-
-.home-donation-display {
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 0.25rem;
-  padding: 0.75rem;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-}
-
-.home-donate-btn {
-  width: 100%;
-  background-color: black;
+.memory-content {
+  padding: 1.5rem;
+  background-color: #da7010;
   color: white;
-  padding: 0.75rem;
-  border-radius: 0.25rem;
+  flex-grow: 1;
+}
+
+.memory-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.memory-content p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+
+.home-support {
+  background-image: url(../images/donate-banner.png);
+  background-color: #1a1a1a;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem 1.5rem;
+  color: #fff;
   text-align: center;
+  margin-top: 2.5rem;
+}
+/* Right card - Donation form */
+.donation-form-card {
+  padding: 1.5rem;
+  background-color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+}
+
+.donation-form-card h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.donation-form-card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Donation amount buttons - Simplified grid */
+.donation-amounts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.donation-amount-btn {
+  border: 1px solid #ddd;
+  padding: 0.75rem 0;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: white;
+  color: #333;
   font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.donation-amount-btn:hover,
+.donation-amount-btn.active {
+  border-color: #ea384c;
+  background-color: rgba(234, 56, 76, 0.05);
+}
+
+.donation-custom-amount {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.donation-custom-amount input {
+  text-align: center;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.donation-custom-amount input::placeholder {
+  color: #999;
+}
+
+.donation-btn {
+
+  width: 13.938rem;
+  height: 2.8rem;
+  
+  background-color: #da7010;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: .95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .3s ease;
+  margin-top: auto;
+  align-self: center;
+}
+
+.donation-btn:hover {
+  background-color: #c50000;
+}
+
+/* Old donation box styles - keeping for reference but will be unused */
+.home-donation-box {
+  display: none; /* Hide the old donation box */
 }
 
 /* Events Section */
@@ -346,6 +444,7 @@
   color: #333;
   text-align: center;
 }
+
 
 .home-mobile-event-card {
   background-color: white;
@@ -399,13 +498,18 @@
 
 .home-event-more-btn {
   display: inline-block;
-  background-color: #333;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.9rem;
+  font-weight: 500;
+  padding: .5rem 1.5rem;
+  border-radius: .25rem;
+  background-color: #da7010;
+  color: #fff ;
+  margin: 2rem auto 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
   text-align: center;
-  border-radius: 0;
+  width: fit-content;
 }
+
+
 
 .home-desktop-events {
   display: none;
@@ -481,18 +585,25 @@
     min-height: 100vh;
   }
   
-  .header {
+  .home-header {
     padding-top: 2rem;
   }
   
-  .home-hero-content {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+  .home-hero-content p {
+    margin-top: 2rem;
+    font-size: 1.75rem;
+    max-width: 100%;
+    padding: 0 1rem;
   }
-  
-  // .desktop-nav li a {
-  //   color: white;
+  // .home-hero-content {
+  //   padding-top: 8rem;
+  //   padding-bottom: 8rem;
+  //   margin-top: 0;
   // }
+  
+  .global-desktop-nav li a {
+    color: white;
+  }
   
   .home-hero-section {
     padding: 0 5rem 5rem;
@@ -502,12 +613,17 @@
     font-size: 3.5rem;
   }
 
-  .home-hero-content p {
-    max-width: 30rem;
-  }
+  // .home-hero-content p {
+  //   max-width: 30rem;
+  // }
 
   .home-mobile-progress {
     display: none;
+  }
+
+
+  .home-vision-mission {
+    padding: 8rem 1.5rem;
   }
 
   .home-vision-mission-container {
@@ -517,9 +633,13 @@
   }
 
   .home-text-column {
+    display: flex
+;
     width: 50%;
     padding-right: 2.5rem;
-  }
+    flex-direction: column;
+    justify-content: center;
+}
 
   .home-image-column {
     width: 50%;
@@ -527,12 +647,18 @@
   }
 
   .home-who-we-are {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    .home-who-we-are {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center center;
+      background-color: rgba(23, 16, 16, .37);
+      background-blend-mode: multiply;
+  }
+  }
 
   .home-who-we-are h2 {
     font-size: 4.375rem;
@@ -555,10 +681,6 @@
     margin-top: 2.5rem;
   }
 
-
-
-
-
   .home-history-image {
     width: 59%;
   }
@@ -575,7 +697,7 @@
 
   .home-support-intro {
     max-width: 730px;
-    margin: 0 auto;
+    margin: 0  auto 4.5rem  auto;
   }
 
   .home-donation-box {
@@ -607,7 +729,7 @@
 
   .home-desktop-events {
     display: block;
-    max-width: 1125px;
+    max-width: 1110px;
     margin: 0 auto;
     margin-top: 4.5rem;
   }
@@ -620,21 +742,18 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-}
+  }
 
   .home-main-event-image {
-
     overflow: hidden;
     border-radius: 10.8px;
     width: 60%;
     height: auto;
-}
+  }
 
-.home-main-event-image img {
-  border-radius: 10.8px;
-
-}
-
+  .home-main-event-image img {
+    border-radius: 10.8px;
+  }
 
   .home-main-event-info {
     width: 40%;
@@ -699,12 +818,13 @@
 
   .home-events-more-btn {
     display: block;
-    margin: 2rem auto 0;
-    background-color: #333;
-    color: white;
     font-weight: 500;
-    padding: 0.5rem 1.5rem;
-    border-radius: 0.25rem;
+    padding: .5rem 1.5rem;
+    border-radius: .25rem;
+    background-color: #da7010;
+    color: #fff ;
+    margin: 2rem auto 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
     text-align: center;
     width: fit-content;
   }
@@ -768,13 +888,13 @@
     font-weight: 400;
   }
 
-  .quick-links {
+  .global-quick-links {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem 1.5rem;
   }
   
-  .quick-links a {
+  .global-quick-links a {
     margin-bottom: 0;
   }
 }
@@ -787,16 +907,18 @@
     align-items: center;
   }
 
-  .header {
+  .home-header {
     max-width: 1110px;
   }
 
   .home-hero-content {
     max-width: 1110px;
+    margin-top: 9rem;
   }
 
   .home-hero-content h1 {
-    font-size: 4.375rem;
+    font-size: 8rem;
+        line-height: 95%;
   }
 
   .home-history {
@@ -817,6 +939,11 @@
     padding: 3rem;
   }
 
+  .donation-btn {
+    width: 15.938rem;
+    height: 3.8rem;
+  }
+  
   .home-events {
     max-width: 1125px;
     margin: 0 auto;
@@ -834,10 +961,6 @@
     gap: 3rem;
     margin-bottom: 4rem;
   }
-
-  /* .home-main-event-image {
-    height: 350px;
-  } */
 
   .home-main-event-info h3 {
     font-size: 1.5rem;
