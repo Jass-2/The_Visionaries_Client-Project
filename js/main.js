@@ -16,6 +16,10 @@ import { setupVictoriaSlider } from './modules/victoria.js';
 import { setupTimelineSlider } from './modules/timeline.js';
 import { initializePage } from './modules/news.js';
 
+import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
+import { initLettersApp } from './modules/letters.js';
+import './modules/contactForm.js';
+
 
    setupMobileMenu();
 
@@ -31,6 +35,8 @@ import { initializePage } from './modules/news.js';
    setupBattlefieldSlider();
   
    setupLettersSlider();
+
+   initLettersApp(createApp);
  
       // Set up memorial wall slider functionality
    setupVoicesSlider();

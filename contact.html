@@ -87,47 +87,47 @@
     <!-- Contact Form Section -->
     <section class="contact-form-section">
       <div class="contact-container">
-        <div class="contact-form-wrapper">
-          <form class="contact-form">
+        <div class="contact-form-wrapper" id="contact-app">
+          <form class="contact-form" @submit.prevent="submitForm">
             <div class="form-row">
               <div class="form-group half">
                 <label for="firstname">FIRSTNAME</label>
-                <input type="text" id="firstname" placeholder="John">
+                <input type="text" id="firstname" v-model="form.fname" placeholder="John">
               </div>
               
               <div class="form-group half">
                 <label for="lastname">LASTNAME</label>
-                <input type="text" id="lastname" placeholder="Doe">
+                <input type="text" id="lastname" v-model="form.lname" placeholder="Doe">
               </div>
             </div>
             
             <div class="form-group">
               <label for="email">EMAIL</label>
-              <input type="email" id="email" placeholder="johndoe@email.com">
+              <input type="email" id="email" v-model="form.email" placeholder="johndoe@email.com">
             </div>
             
             <div class="form-row">
               <div class="form-group half">
                 <label for="country">COUNTRY</label>
-                <input type="text" id="country" placeholder="Canada">
+                <input type="text" id="country" v-model="form.country" placeholder="Canada">
               </div>
               
               <div class="form-group half">
                 <label for="phone">PHONE NUMBER</label>
-                <input type="tel" id="phone" placeholder="+1 123 456 7890">
+                <input type="tel" id="phone" v-model="form.phone" placeholder="+1 123 456 7890">
               </div>
             </div>
             
             <div class="form-group">
               <label for="subject">SUBJECT</label>
               <div class="select-wrapper">
-                <select id="subject">
+                <select id="subject" v-model="form.inquiry">
                   <option value="general">General Inquiries</option>
-                  <option value="join">Join the cause</option>
-                  <option value="join">Fundraising Campaigns</option>
-                  <option value="join">Corporate Sponsorships</option>
-                  <option value="join">Plabbed Giving</option>
-                  <option value="join">Tribute and Memorial Gifts</option>
+                  <option value="volunteer">Join the cause</option>
+                  <option value="volunteer">Fundraising Campaigns</option>
+                  <option value="volunteer">Corporate Sponsorships</option>
+                  <option value="volunteer">Plabbed Giving</option>
+                  <option value="volunteer">Tribute and Memorial Gifts</option>
                 </select>
                 <div class="select-arrow"></div>
               </div>
@@ -135,11 +135,11 @@
             
             <div class="form-group">
               <label for="message">MESSAGE</label>
-              <textarea id="message" rows="5" placeholder="Write your message here..."></textarea>
+              <textarea id="message" v-model="form.message" rows="5" placeholder="Write your message here..."></textarea>
             </div>
             
             <div class="form-group checkbox-group">
-              <input type="checkbox" id="updates">
+              <input type="checkbox" id="updates" v-model="form.wants_updates">
               <label for="updates" class="checkbox-label">I'd like to receive updates on the memorial.</label>
             </div>
             
