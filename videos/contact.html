@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Brothers In Arms</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <div class="container" id="pageContainer">
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <div class="mobile-menu-header">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/Full-Logo.svg" alt="Brothers In Arms Logo">
+          </a>
+        </div>
+        <div class="mobile-close-button" id="mobileCloseButton">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      
+      <div class="mobile-menu-content">
+        <div class="mobile-menu-title">Menu</div>
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="donations.html">Donation</a></li>
+            <li><a href="memorial.html">Memorial</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="news-events.html">News &amp; Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        
+        <div class="mobile-contact-section">
+          <div class="mobile-contact-title">Get in Touch</div>
+          <div class="mobile-contact-email">info@brotherinarms.com</div>
+          <div class="mobile-contact-phone">+1 (123) 456-7890</div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Header Section -->
+    <div class="header-section">
+      <!-- Fixed Background for Header -->
+      <div class="header-background"></div>
+      
+      <header class="header">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/Full-Logo.svg" alt="Brothers In Arms Logo">
+          </a>
+        </div>
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="memorial.html">Memorial</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="news-events.html">News &amp; Events</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="donations.html" class="donation-primary">Donate</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu-button" id="mobileMenuButton">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+    </div>
+    
+    <!-- Contact Page Title Section (moved out of header) -->
+    <section class="contact-title-section">
+      <div class="contact-container">
+        <div class="contact-page-title">
+          <h1 class="page-heading">Get in Touch</h1>
+          <p>Whether you have questions about the memorial, want to contribute, or simply wish to share a story, we're here to listen. Connect with us and be a part of preserving this historic brotherhood.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+      <div class="contact-container">
+        <div class="contact-form-wrapper" id="contact-app">
+          <form class="contact-form" @submit.prevent="submitForm">
+            <div class="form-row">
+              <div class="form-group half">
+                <label for="firstname">FIRSTNAME</label>
+                <input type="text" id="firstname" v-model="form.fname" placeholder="John">
+              </div>
+              
+              <div class="form-group half">
+                <label for="lastname">LASTNAME</label>
+                <input type="text" id="lastname" v-model="form.lname" placeholder="Doe">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">EMAIL</label>
+              <input type="email" id="email" v-model="form.email" placeholder="johndoe@email.com">
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group half">
+                <label for="country">COUNTRY</label>
+                <input type="text" id="country" v-model="form.country" placeholder="Canada">
+              </div>
+              
+              <div class="form-group half">
+                <label for="phone">PHONE NUMBER</label>
+                <input type="tel" id="phone" v-model="form.phone" placeholder="+1 123 456 7890">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">SUBJECT</label>
+              <div class="select-wrapper">
+                <select id="subject" v-model="form.inquiry">
+                  <option value="general">General Inquiries</option>
+                  <option value="volunteer">Join the cause</option>
+                  <option value="volunteer">Fundraising Campaigns</option>
+                  <option value="volunteer">Corporate Sponsorships</option>
+                  <option value="volunteer">Plabbed Giving</option>
+                  <option value="volunteer">Tribute and Memorial Gifts</option>
+                </select>
+                <div class="select-arrow"></div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">MESSAGE</label>
+              <textarea id="message" v-model="form.message" rows="5" placeholder="Write your message here..."></textarea>
+            </div>
+            
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="updates" v-model="form.wants_updates">
+              <label for="updates" class="checkbox-label">I'd like to receive updates on the memorial.</label>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Stay Connected Section -->
+    <section class="stay-connected-section">
+      <div class="contact-container">
+        <div class="stay-connected-content">
+          <h2 class="section-title">Stay Connected, <br> Stay Engaged</h2>
+          <p class="section-description">
+            Follow us for real-time updates, event announcements, and powerful stories of 
+            courage and brotherhood. Like, share, and help us keep their memory alive.
+          </p>
+          
+          <div class="social-cards-container">
+            <a href="#" class="social-card">
+              <img src="images/Facebook.svg" alt="Facebook" class="social-icon">
+              <span class="social-name">BrothersInArmsMemorial</span>
+            </a>
+            
+            <a href="#" class="social-card">
+              <img src="images/Instagram.svg" alt="Instagram" class="social-icon">
+              <span class="social-name">BrothersInArmsLegacy</span>
+            </a>
+            
+            <a href="#" class="social-card">
+              <img src="images/youtube.svg" alt="YouTube" class="social-icon">
+              <span class="social-name">Memorial Documentary & Events</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA Section - Updated to match the new styling -->
+    <section class="cta-section">
+      <div class="cta-container">
+        <div class="cta-content">
+          <h2 class="cta-title">Keep their<br>Legacy alive</h2>
+          <p class="cta-description">
+            To commemorate the valour of Indian and Canadian Brothers in Arms, to inspire future generations to uphold values of
+            humanity and freedom.
+          </p>
+          <div class="cta-buttons">
+            <a href="donations.html" class="cta-donate-btn">Donate</a>
+            <a href="about.html" class="cta-about-btn">About</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+      <div class="footer-main">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <div class="contact-item">
+            <span class="icon"><img src="images/envelope.svg" alt="mail"></span>
+            <span>info@brotherinarms.com</span>
+          </div>
+          <div class="contact-item">
+            <span class="icon"><img src="images/phone.svg" alt="phone"></span>
+            <span>+1 (123) 456-7890</span>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <div class="quick-links">
+            <a href="about.html">About us</a>
+            <a href="donations.html">Donation</a>
+            <a href="memorial.html">Memorial</a>
+            <a href="history.html">History</a>
+            <a href="initiative.html">Initiative</a>
+            <a href="news-events.html">News &amp; Events</a>
+            <a href="contact.html">Contact us</a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-item">
+            <img src="images/Facebook.svg" alt="Facebook" class="social-icon">
+            <span>Srishti Foundation - Canada</span>
+          </div>
+          <div class="social-item">
+            <img src="images/Instagram.svg" alt="Instagram" class="social-icon">
+            <span>srishticanada</span>
+          </div>
+          <div class="social-item">
+            <img src="images/youtube.svg" alt="YouTube" class="social-icon">
+            <span>Srishti Foundation</span>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Newsletter</h3>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email...">
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-copyright">
+        <a href="https://www.srishticanada.org/"> By Srishti Foundation</a>
+      </div>
+    </footer>
+  </div>
+  
+ 
+  
+  <script src="js/hamburger.js"></script>
+</body>
+</html>
