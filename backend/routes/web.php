@@ -19,6 +19,9 @@ $router->get('/', function () use ($router) {
 
 $router->get('/letters', 'LetterController@index');
 $router->get('/letters/{id}', 'LetterController@show');
+$router->put('/letters/{id}', 'LetterController@update');
+$router->delete('/letters/{id}', 'LetterController@destroy');
+
 
 $router->get('/events', 'EventController@index');
 $router->get('/events/{id}', 'EventController@show');
