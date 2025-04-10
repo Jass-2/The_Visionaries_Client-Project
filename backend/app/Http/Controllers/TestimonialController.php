@@ -34,17 +34,4 @@ class TestimonialController extends Controller
 
         return response()->json($testimonial, 201);
     }
-
-    public function destroy($id)
-    {
-        $item = Testimonial::find($id);
-
-        if (!$item) {
-            return response()->json(['message' => 'Testimonial not found'], 404);
-        }
-
-        $item->delete();
-
-        return response()->json(['message' => 'Testimonial deleted']);
-    }
 }
