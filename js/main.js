@@ -20,6 +20,9 @@ import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
 import { initLettersApp } from './modules/letters.js';
 import './modules/contactForm.js';
 import { initTimelineApp } from './modules/timelineFetch.js';
+import { initWallApp } from './modules/memorial-wall.js';
+
+
 
    setupMobileMenu();
 
@@ -41,6 +44,7 @@ import { initTimelineApp } from './modules/timelineFetch.js';
  
       // Set up memorial wall slider functionality
    setupVoicesSlider();
+   initWallApp();
    
 
    setupMemorialWallSlider();

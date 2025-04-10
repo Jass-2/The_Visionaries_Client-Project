@@ -208,6 +208,7 @@
 
 
         <!-- Memorial Wall Section -->
+    <div id="wall-app">
         <section class="memorial-section memorial-wall-section">
             <div class="memorial-wall-content">
                 <h2 class="memorial-section-title">Memorial Wall</h2>
@@ -216,54 +217,9 @@
                 <div class="memorial-wall-container">
                     <div class="memorial-wall-slider-wrapper">
                         <div class="memorial-wall-slider">
-                            <div class="memorial-wall-card">
-                                <h3 class="memorial-wall-name">John Smith</h3>
-                                <p class="memorial-wall-message">In memory of my grandfather who served with courage and honor during World War I. His stories of camaraderie with Indian soldiers inspired our family for generations.</p>
-                            </div>
-                            
-                            <div class="memorial-wall-card">
-                                <h3 class="memorial-wall-name">Rajinder Singh</h3>
-                                <p class="memorial-wall-message">Honoring my great-grandfather who fought at Neuve Chapelle. His sacrifice helped shape our world today. May we never forget the bonds forged in battle.</p>
-                            </div>
-                            
-                            <div class="memorial-wall-card">
-                                <h3 class="memorial-wall-name">William Brown</h3>
-                                <p class="memorial-wall-message">To all those who served alongside my uncle at Ypres. Though they came from different worlds, they stood together as brothers in the face of unimaginable hardship.</p>
-                            </div>
-                            
-                            <div class="memorial-wall-card">
-                                <h3 class="memorial-wall-name">Amrit Kaur</h3>
-                                <p class="memorial-wall-message">Remembering the forgotten heroes of Mesopotamia. My grandfather spoke of the courage of his comrades until his final days. Their stories must live on.</p>
-                            </div>
-                            
-                            <div class="memorial-wall-card">
-                                <h3 class="memorial-wall-name">James Wilson</h3>
-                                <p class="memorial-wall-message">In honor of the Canadian and Indian soldiers who fought side by side at the Somme. Their shared sacrifice reminds us that humanity transcends borders.</p>
-                            </div>
-                            
-                            <div class="memorial-wall-card">
-                                <h3 class="memorial-wall-name">Gurpreet Kaur</h3>
-                                <p class="memorial-wall-message">For my ancestor who never returned from France. Though his body lies far from home, his spirit lives on in our family's commitment to peace.</p>
-                            </div>
-                            
-                            <div class="memorial-wall-card">
-                                <h3 class="memorial-wall-name">Michael Davis</h3>
-                                <p class="memorial-wall-message">To the brave men who endured the horrors of trench warfare together. My grandfather's letters spoke of the unbreakable bond between soldiers of all backgrounds.</p>
-                            </div>
-                            
-                            <div class="memorial-wall-card">
-                                <h3 class="memorial-wall-name">Hardeep Singh</h3>
-                                <p class="memorial-wall-message">Honoring the Sikh soldiers who fought with unwavering courage. Their loyalty and sacrifice in a foreign land for a greater cause will never be forgotten.</p>
-                            </div>
-                            
-                            <div class="memorial-wall-card">
-                                <h3 class="memorial-wall-name">Thomas Clark</h3>
-                                <p class="memorial-wall-message">In memory of all who served, regardless of nationality or background. May their example of brotherhood in adversity guide us toward a more peaceful future.</p>
-                            </div>
-                            
-                            <div class="memorial-wall-card">
-                                <h3 class="memorial-wall-name">Amar Patel</h3>
-                                <p class="memorial-wall-message">For those who crossed oceans to fight in distant lands. Their courage and sacrifice helped shape the world we live in today. We will always remember.</p>
+                            <div class="memorial-wall-card" v-for="entry in wall" :key="entry.id">
+                                <h3 class="memorial-wall-name">{{ entry.name }}</h3>
+                                <p class="memorial-wall-message">{{ entry.message }}</p>
                             </div>
                         </div>
                     </div>
@@ -281,21 +237,24 @@
                     <h3>Add Your Memorial Message</h3>
                     <button class="memorial-form-close">&times;</button>
                 </div>
-                <form id="memorial-form">
+                <form id="memorial-form" @submit.prevent="submitForm">
                     <div class="memorial-form-group">
                         <label for="memorial-name">Your Name</label>
-                        <input type="text" id="memorial-name" name="name" placeholder="Your name" required>
+                        <input type="text" id="memorial-name" name="name" v-model="form.name" placeholder="Your name" required/>
                     </div>
+            
                     <div class="memorial-form-group">
                         <label for="memorial-message">Your Message</label>
-                        <textarea id="memorial-message" name="message" placeholder="Write your message..." required></textarea>
+                        <textarea id="memorial-message" name="message" v-model="form.message" placeholder="Write your message..." required></textarea>
                     </div>
+            
                     <div class="memorial-form-actions">
                         <button type="submit" class="memorial-submit-btn">Submit</button>
                     </div>
                 </form>
             </div>
         </div>
+    </div>
 
         <!-- CTA Section -->
         <section class="cta-section">
