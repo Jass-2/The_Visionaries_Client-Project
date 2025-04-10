@@ -23,6 +23,7 @@ import { initLettersApp } from './modules/letters.js';
 import './modules/contactForm.js';
 import { initTimelineApp } from './modules/timelineFetch.js';
 import { initWallApp } from './modules/memorial-wall.js';
+import { fetchEvents } from './modules/events.js';
 
 
 
@@ -49,6 +50,7 @@ import { initWallApp } from './modules/memorial-wall.js';
    initWallApp();
 
    setupTypewriter();
+   fetchEvents();
 
    
 
