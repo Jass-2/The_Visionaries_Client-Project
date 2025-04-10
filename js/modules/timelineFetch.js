@@ -13,7 +13,7 @@ export function initTimelineApp() {
     methods: {
       async loadTimeline() {
         try {
-          const res = await fetch('http://localhost/The_Visionaries_Client-Project/backend/public/timeline');
+          const res = await fetch('http://localhost:8000/timeline');
           this.timeline = await res.json();
         } catch (err) {
           console.error('Failed to load timeline:', err);
