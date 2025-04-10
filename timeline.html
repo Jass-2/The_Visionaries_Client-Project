@@ -137,92 +137,21 @@
         </div>
         
         <!-- Timeline slider -->
-        <div class="timeline-slider slide-25-up">
-          <!-- Timeline cards -->
-          <div class="timeline-card">
+        <div id="timeline-app" class="timeline-slider slide-25-up">
+          <div class="timeline-card" v-for="item in timeline" :key="item.id">
             <div class="timeline-card-image">
-              <img src="images/timeline-img1.png" alt="Project Inception">
+              <img :src="`images/${item.img_url}`" :alt="item.title" />
             </div>
             <div class="timeline-card-content">
-              <h3>Project Inception</h3>
+              <h3>{{ item.title }}</h3>
               <ul>
-                <li>Initial research and documentation of Indian-Canadian military collaboration.</li>
-                <li>Gathering historical records and veteran testimonials.</li>
-                <li>Formation of the memorial committee.</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="timeline-card">
-            <div class="timeline-card-image">
-              <img src="images/timeline-img2.png" alt="Design Phase">
-            </div>
-            <div class="timeline-card-content">
-              <h3>Design Phase</h3>
-              <ul>
-                <li>Architectural planning and memorial site selection.</li>
-                <li>Artistic collaborations with Canadian and Indian designers.</li>
-                <li>Public consultations and stakeholder engagement.</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="timeline-card">
-            <div class="timeline-card-image">
-              <img src="images/timeline-img3.png" alt="Fundraising">
-            </div>
-            <div class="timeline-card-content">
-              <h3>Fundraising</h3>
-              <ul>
-                <li>Launch of major donation campaigns in both countries.</li>
-                <li>Corporate sponsorships and government grants secured.</li>
-                <li>Community events raising awareness and support.</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="timeline-card">
-            <div class="timeline-card-image">
-              <img src="images/timeline-img4.png" alt="Construction">
-            </div>
-            <div class="timeline-card-content">
-              <h3>Construction</h3>
-              <ul>
-                <li>Groundbreaking ceremony with dignitaries from both nations.</li>
-                <li>Installation of memorial structures and landscaping.</li>
-                <li>Creation of educational exhibits and interactive displays.</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="timeline-card">
-            <div class="timeline-card-image">
-              <img src="images/timeline-img5.png" alt="Educational Programs">
-            </div>
-            <div class="timeline-card-content">
-              <h3>Educational Programs</h3>
-              <ul>
-                <li>Development of school curriculum materials.</li>
-                <li>Virtual reality historical experiences.</li>
-                <li>Scholar exchange programs between Canadian and Indian institutions.</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="timeline-card">
-            <div class="timeline-card-image">
-              <img src="images/timeline-img6.png" alt="Grand Opening">
-            </div>
-            <div class="timeline-card-content">
-              <h3>Grand Opening</h3>
-              <ul>
-                <li>Inauguration ceremony with military honors from both nations.</li>
-                <li>Annual commemoration events established.</li>
-                <li>Online archives and digital memorial launched worldwide.</li>
+                <li>{{ item.timespan }}</li>
+                <li>{{ item.desc }}</li>
               </ul>
             </div>
           </div>
         </div>
+        
         
         <!-- Timeline controls -->
         <div class="timeline-controls">
