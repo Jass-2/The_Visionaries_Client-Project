@@ -21,7 +21,7 @@ export function initWallApp() {
     methods: {
       async fetchWall() {
         try {
-          const response = await fetch('http://localhost/The_Visionaries_Client-Project/backend/public/wall');
+          const response = await fetch('http://localhost:8000/wall');
           if (!response.ok) throw new Error('Failed to load messages');
           this.wall = await response.json();
         } catch (error) {
@@ -30,7 +30,7 @@ export function initWallApp() {
       },
       async submitForm() {
         try {
-          const response = await fetch('http://localhost/The_Visionaries_Client-Project/backend/public/wall', {
+          const response = await fetch('http://localhost:8000/wall', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
