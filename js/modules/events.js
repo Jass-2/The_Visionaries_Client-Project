@@ -1,11 +1,8 @@
 export function fetchEvents() {
   
-    // 🔹 Fetch featured event
     fetch(`http://localhost:8000/events/1`)
       .then(res => res.json())
       .then(event => {
-        if (!event) return;
-  
         const featuredImg = document.querySelector("#featured-img");
         const featuredTitle = document.querySelector(".ne-event-title");
         const featuredLocation = document.querySelector(".ne-event-location");

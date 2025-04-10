@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 08, 2025 at 09:15 PM
+-- Generation Time: Apr 10, 2025 at 07:07 AM
 -- Server version: 8.0.35
 -- PHP Version: 8.3.9
 
@@ -35,8 +35,21 @@ CREATE TABLE contact (
   submitted_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   email text COLLATE utf8mb4_general_ci NOT NULL,
   phone varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
-  inquiry enum('general','volunteer') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
+  inquiry enum('general','volunteer') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  country varchar(99) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  wants_updates int NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table contact
+--
+
+INSERT INTO contact (id, fname, lname, message, submitted_at, email, phone, inquiry, country, wants_updates) VALUES
+(1, 'Alish', 'Khan', 'I\'d like to volunteer for the memorial event.', '2025-04-09 00:00:42', 'alish@example.com', '123-456-7890', 'volunteer', NULL, 0),
+(2, 'aawdawd', 'adwdawd', 'rgfewertt543', '2025-04-09 23:03:38', 'man@man.man', '12345654321', 'general', 'awdawd', 1),
+(3, '13123dad', 'adwdawd', 'adwdawd', '2025-04-09 23:07:23', 'adaw@afaf.com', '345654321', 'general', 'dfghfd', 1),
+(4, 'dadawd', 'fadwdaw', 'dadwawd', '2025-04-09 23:25:20', 'adaw@afaf.com', '2345654321', 'general', 'wdefd', 1),
+(5, 'aawdawd', 'adwdawd', 'test123', '2025-04-09 23:39:58', 'man@man.man', '6969699', 'general', 'adawdawd', 1);
 
 -- --------------------------------------------------------
 
@@ -62,9 +75,7 @@ INSERT INTO events (id, title, place, date, description, article_1, posted_at) V
 (1, 'Charity Banquet', 'City Hall, London, Ontario', 'March 15, 2025', 'Srishti Foundation hosted a formal fundraising banquet in support of the Brothers In Arms Memorial. The event featured speeches, live music, and an auction to raise awareness and funds.', 'On March 15, community members and supporters gathered at City Hall in London, Ontario for a heartfelt evening of remembrance and generosity. The Srishti Foundation’s charity banquet was the first in a series of fundraising events to support the Brothers In Arms Memorial, an initiative commemorating Canadian soldiers who served in World War I.\r\nThe evening included a formal dinner, guest speakers from local veterans’ groups, and a silent auction featuring donated art and memorabilia. Guests shared stories and honored fallen heroes, with all proceeds directed toward the memorial’s construction and educational outreach efforts. Organizers reported strong turnout and overwhelming support.', '2025-04-08 05:53:52'),
 (2, 'Memorial Run Draws Big Crowd', 'Victoria Park, London', 'April 10, 2025', 'Hundreds of locals turned out for a 5K run organized by the Srishti Foundation to raise funds for the Brothers In Arms Memorial. The event combined fitness with remembrance.', 'A brisk spring morning didn’t deter over 300 runners and walkers from taking part in the \"Run for Brothers\" 5K event at Victoria Park in Kitchener. Organized by the Srishti Foundation, the run served as both a tribute to Canadian soldiers and a fundraiser for the Brothers In Arms Memorial project.\r\n\r\nParticipants wore bibs bearing the names of fallen WWI soldiers, turning the park path into a moving tribute. Families, students, and veterans joined together, symbolizing unity and resilience. The event concluded with refreshments, speeches, and music by a local high school band, with all donations going directly to the memorial campaign.', '2025-04-08 05:56:50'),
 (3, 'Art Show Supports Veterans', 'McMichael Canadian Art Collection', 'April 22, 2025', 'An art exhibition curated by local artists opened in support of the Brothers In Arms Memorial. Proceeds from ticket sales and selected artwork went to Srishti Foundation’s campaign.', 'On April 22, the McMichael Canadian Art Collection hosted an inspiring evening where art met remembrance. The Srishti Foundation partnered with Canadian artists to launch Brushes of Valor, an exhibit that explored themes of war, memory, and national pride—all in support of the Brothers In Arms Memorial.\r\n\r\nGuests explored a variety of pieces from landscapes of Flanders fields to abstract representations of courage. Several artworks were auctioned off, raising over $8,000 for the memorial initiative. The show aimed not just to raise funds, but to evoke reflection on the sacrifices made during wartime.', '2025-04-08 05:56:50'),
-(4, 'Candlelight Vigil for the Fallen', 'Riverwalk Commons, Newmarket, Ontario', 'May 5, 2025', 'Residents gathered at dusk for a moving candlelight vigil to honor soldiers remembered in the Brothers In Arms Memorial. Local youth and veterans shared personal tributes.', 'The Riverwalk Commons in Newmarket fell silent as hundreds of flickering candles were lit in solemn remembrance on the evening of May 5. Hosted by the Srishti Foundation, the vigil offered community members a space to mourn, reflect, and honor the legacy of Canadian soldiers from the First World War.\r\n\r\nVeterans shared personal accounts, while local students read letters written by WWI soldiers—a preview of the historical material to be featured in the upcoming Brothers In Arms Memorial. The event underscored the importance of preserving these stories for future generations.', '2025-04-08 05:56:50'),
-(5, 'Gala Raises Funds for Memorial', 'Queen Elizabeth Centre', 'May 25, 2025', 'A black-tie fundraising gala brought together donors, veterans, and public figures to support the Brothers In Arms Memorial. The event included performances and a pledge drive.', 'On May 25, the Queen Elizabeth Centre in Mississauga transformed into a space of elegance and remembrance during the Srishti Foundation’s fundraising gala. The evening featured live classical music, speeches by dignitaries, and a touching performance from a children’s choir singing wartime-era songs.\r\n\r\nIn between courses, guests heard stories of Canadian soldiers whose sacrifices will be immortalized through the Brothers In Arms Memorial. The pledge drive held mid-event surpassed expectations, raising over $25,000. The gala closed with a standing ovation in tribute to the fallen.', '2025-04-08 05:56:50'),
-(6, 'Students Join Tribute Project', 'Central Library, Brampton, Ontario', 'June 2, 2025', 'Local students contributed letters, poems, and artwork to the Brothers In Arms Tribute Wall. Their contributions will be part of the memorial\'s digital archives.', 'The Central Library in Brampton buzzed with youthful energy and quiet reverence on June 2 as students from across Peel Region unveiled their contributions to the Brothers In Arms Memorial Tribute Wall. Organized by the Srishti Foundation, the initiative invites young Canadians to engage with the legacy of WWI through creative expression.\r\nStudents presented letters written in the voices of soldiers, poems reflecting on loss and duty, and artwork depicting moments of courage. These submissions will be archived digitally as part of the memorial’s interactive component, helping future visitors connect with the human stories behind the names.', '2025-04-08 05:56:50');
+(4, 'Candlelight Vigil for the Fallen', 'Riverwalk Commons, Newmarket, Ontario', 'May 5, 2025', 'Residents gathered at dusk for a moving candlelight vigil to honor soldiers remembered in the Brothers In Arms Memorial. Local youth and veterans shared personal tributes.', 'The Riverwalk Commons in Newmarket fell silent as hundreds of flickering candles were lit in solemn remembrance on the evening of May 5. Hosted by the Srishti Foundation, the vigil offered community members a space to mourn, reflect, and honor the legacy of Canadian soldiers from the First World War.\r\n\r\nVeterans shared personal accounts, while local students read letters written by WWI soldiers—a preview of the historical material to be featured in the upcoming Brothers In Arms Memorial. The event underscored the importance of preserving these stories for future generations.', '2025-04-08 05:56:50');
 
 -- --------------------------------------------------------
 
@@ -131,6 +142,16 @@ CREATE TABLE media_events (
   event_id int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table media_events
+--
+
+INSERT INTO media_events (id, media_name, media_type, media_url, event_id) VALUES
+(1, 'Event 1 preview', 'img', 'Event1.png', 1),
+(2, 'Event 2 preview', 'img', 'Event2.png', 2),
+(3, 'Event 3 preview', 'img', 'Event3.png', 3),
+(4, 'Event 4 preview', 'img', 'Event4.png', 4);
+
 -- --------------------------------------------------------
 
 --
@@ -144,6 +165,16 @@ CREATE TABLE media_news (
   media_url varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   news_id int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table media_news
+--
+
+INSERT INTO media_news (id, media_name, media_type, media_url, news_id) VALUES
+(1, 'News 1', 'img', 'News1.png', 1),
+(2, 'News 2', 'img', 'News2.png', 2),
+(3, 'News 3', 'img', 'News3.png', 3),
+(4, 'News 4', 'img', 'News4.png', 4);
 
 -- --------------------------------------------------------
 
@@ -169,9 +200,7 @@ INSERT INTO news (id, title, place, date, description, article_1, posted_at) VAL
 (1, 'Charity Banquet Raises Funds for War Memorial', 'City Hall, London, Ontario', 'March 15, 2025', 'The Srishti Foundation hosted a formal charity banquet to support its Brothers In Arms Memorial project. The event drew a full house, raising both awareness and substantial donations.', 'LONDON, ON — A formal charity banquet organized by the Srishti Foundation drew over 200 guests to City Hall on March 15, all united in a common goal: to honor the memory of Canadian soldiers through the upcoming Brothers In Arms Memorial.\r\nAttendees were treated to a sit-down dinner, live string music, and a keynote address by a retired lieutenant-colonel who shared stories from the frontlines. A silent auction featured donated items from local artists and businesses. Organizers confirmed that the evening raised more than $18,000 for the memorial fund.', '2025-04-08 06:02:59'),
 (2, 'Hundreds Attend Memorial Run for Veterans', 'Victoria Park', 'April 10, 2025', 'More than 300 participants turned out for a community 5K to support the Brothers In Arms Memorial. The run raised awareness for the foundation’s WWI remembrance efforts.', 'KITCHENER, ON — Community members laced up their running shoes on April 10 for a 5K memorial run at Victoria Park, hosted by the Srishti Foundation. The event was part of a broader fundraising initiative for the Brothers In Arms Memorial, which aims to commemorate Canadian soldiers from World War I.\r\n\r\nParticipants ranged from local students to veterans and city councillors, many wearing bibs with soldier names. The event concluded with a reading of wartime letters and a collective moment of silence. Proceeds from registration and donations went directly to the memorial project.', '2025-04-08 06:02:59'),
 (3, 'Art Exhibit Pays Tribute to WWI Soldiers', 'McMichael Canadian Art Collection', 'April 22, 2025', 'A collaborative art exhibition opened to the public as a fundraiser for the Brothers In Arms Memorial. Local artists donated works themed around war, memory, and sacrifice.', 'VAUGHAN, ON — The McMichael Canadian Art Collection welcomed visitors on April 22 for the launch of a special exhibit supporting the Srishti Foundation’s Brothers In Arms Memorial. The exhibit, titled Brushes of Valor, featured over 30 works inspired by the lives and legacies of soldiers from the First World War.\r\n\r\nAll ticket proceeds and select artwork sales went to the memorial fund. Organizers said the exhibit seeks not only to raise funds but to spark dialogue about the human cost of war and the importance of historical memory.\r\n\r\n', '2025-04-08 06:02:59'),
-(4, 'Candlelight Vigil Honors the Fallen', 'Riverwalk Commons', 'May 5, 2025', 'A candlelight vigil brought together community members to reflect on the sacrifices of Canadian soldiers. The event was part of the Brothers In Arms campaign.', 'NEWMARKET, ON — Hundreds gathered at Riverwalk Commons on May 5 for a solemn candlelight vigil in remembrance of Canada’s fallen soldiers. The event, organized by the Srishti Foundation, is one of several efforts underway to build public support for the Brothers In Arms Memorial.\r\n\r\nCandles were lit one by one as letters from soldiers were read aloud by local students. Veterans and family members also spoke, drawing emotional responses from the crowd. “It was beautiful, moving, and necessary,” said one attendee.', '2025-04-08 06:02:59'),
-(5, 'Gala Evening Boosts Memorial Fundraising', 'Queen Elizabeth Centre', 'May 25, 2025', 'The Srishti Foundation hosted a black-tie gala to raise funds for its WWI memorial initiative. The evening featured performances, speeches, and a high-impact pledge drive.', 'MISSISSAUGA, ON — Elegance met remembrance on May 25 at the Queen Elizabeth Centre as more than 300 guests attended the Srishti Foundation’s fundraising gala. The black-tie event supported the Brothers In Arms Memorial and featured guest speakers, musicians, and a moving tribute to fallen soldiers.\r\n\r\nDonors responded generously to a live pledge drive, helping the foundation raise over $25,000 in a single night. “This memorial will not just be a monument—it will be a teaching tool and a symbol of unity,” said Srishti\'s director during her closing remarks.', '2025-04-08 06:02:59'),
-(6, 'Youth Tribute Wall Project Launches', 'Central Library', 'June 2, 2025', 'Local youth gathered to unveil their contributions to the Brothers In Arms Tribute Wall. Letters and art will be featured as part of the memorial’s educational program.', 'BRAMPTON, ON — A wave of young voices joined the Brothers In Arms Memorial project on June 2 as students from across Peel Region unveiled personal tributes at the Central Library. The event, organized by the Srishti Foundation, showcased handwritten letters, poetry, and art from youth inspired by the lives of Canadian soldiers.\r\n\r\nThe submissions will become part of the memorial’s digital archive, bringing a fresh perspective to Canada’s wartime history. “It’s an opportunity for students to connect to the past and express what remembrance means to them,” said a foundation representative.', '2025-04-08 06:02:59');
+(4, 'Candlelight Vigil Honors the Fallen', 'Riverwalk Commons', 'May 5, 2025', 'A candlelight vigil brought together community members to reflect on the sacrifices of Canadian soldiers. The event was part of the Brothers In Arms campaign.', 'NEWMARKET, ON — Hundreds gathered at Riverwalk Commons on May 5 for a solemn candlelight vigil in remembrance of Canada’s fallen soldiers. The event, organized by the Srishti Foundation, is one of several efforts underway to build public support for the Brothers In Arms Memorial.\r\n\r\nCandles were lit one by one as letters from soldiers were read aloud by local students. Veterans and family members also spoke, drawing emotional responses from the crowd. “It was beautiful, moving, and necessary,” said one attendee.', '2025-04-08 06:02:59');
 
 -- --------------------------------------------------------
 
@@ -220,12 +249,12 @@ CREATE TABLE timeline (
 --
 
 INSERT INTO timeline (id, title, timespan, `desc`, img_url) VALUES
-(1, 'Concept & Planning', 'January – March 2024', 'Initial vision, research, and design planning for the Brothers In Arms Memorial. Key stakeholders met to define goals and scope.', 'phase1.jpg'),
-(2, 'Fundraising Launch', ' April – August 2025', 'Public campaign began to raise funds through events, online donations, and community outreach. Partnerships and sponsorships were secured.', 'phase2.jpg'),
-(3, 'Design Finalization', 'September – October 2025', 'Architects and historians collaborated to finalize the design, incorporating community feedback and historical accuracy.', 'phase3.jpg'),
-(4, 'Construction Begins', 'November 2025 – March 2026', 'Groundbreaking and foundational work commenced. Site preparation and monument structure installation began.', 'phase4.jpg'),
-(5, 'Installation & Detailing', 'April – May 2026', 'Key elements such as plaques, lighting, and landscaping were added. Digital features and tribute wall were integrated.', 'phase5.jpg'),
-(6, 'Official Unveiling', 'June 2025', 'Memorial was officially unveiled to the public in a community ceremony with veterans, donors, and families in attendance.', 'phase6.jpg');
+(1, 'Concept & Planning', 'January – March 2024', 'Initial vision, research, and design planning for the Brothers In Arms Memorial. Key stakeholders met to define goals and scope.', 'timeline-img1.png'),
+(2, 'Fundraising Launch', ' April – August 2025', 'Public campaign began to raise funds through events, online donations, and community outreach. Partnerships and sponsorships were secured.', 'timeline-img2.png'),
+(3, 'Design Finalization', 'September – October 2025', 'Architects and historians collaborated to finalize the design, incorporating community feedback and historical accuracy.', 'timeline-img3.png'),
+(4, 'Construction Begins', 'November 2025 – March 2026', 'Groundbreaking and foundational work commenced. Site preparation and monument structure installation began.', 'timeline-img4.png'),
+(5, 'Installation & Detailing', 'April – May 2026', 'Key elements such as plaques, lighting, and landscaping were added. Digital features and tribute wall were integrated.', 'timeline-img5.png'),
+(6, 'Official Unveiling', 'June 2025', 'Memorial was officially unveiled to the public in a community ceremony with veterans, donors, and families in attendance.', 'timeline-img6.png');
 
 -- --------------------------------------------------------
 
