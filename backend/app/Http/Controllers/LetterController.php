@@ -19,4 +19,29 @@ class LetterController extends Controller
         }
         return response()->json($letter);
     }
+
+    public function update($id, Request $request)
+    {
+        $letter = Letter::find($id);
+        $this->validate($request, [
+            'flname' => 'required|string|max:255',
+            'date' => 'required|string|max:255',
+            'message' => 'required|string',
+        ]);
+
+        $letter->flname = $request->input('flname');
+        $letter->date = $request->input('date');
+        $letter->message = $request->input('message');
+        $letter->save();
+
+        return response()->json($letter);
+    }
+
+    public function destroy($id)
+    {
+        $letter = Letter::find($id);
+        $letter->delete();
+        return response()->json(['message' => 'Letter deleted successfully']);
+    }
+
 }
