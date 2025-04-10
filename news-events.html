@@ -91,22 +91,13 @@
           </div>
           <div class="ne-featured-event">
             <div class="ne-featured-event-image">
-              <img src="images/Event1.png"" alt="Featured Event" class="ne-event-img" />
+              <img class="ne-event-img" id="featured-img" alt="Featured Event" />
             </div>
             <div class="ne-featured-event-details">
-              <h2 class="ne-event-title">Diwali or Deepavali</h2>
-              <p class="ne-event-location">Centennial Hall, London, ON</p>
-              <p class="ne-event-description">
-                which means a row of lights, is the biggest and most popular
-                ancient festival of our Dharmic traditions. Celebrated by
-                Hindus, Sikhs, and Jains, the festival marks the return of joy
-                to our minds, going from darkness to light & new beginnings
-                symbolized by the return of Sri Rama to Ayodhya, Bandi Chorr
-                Divas and Nirvana of Mahavira. Like the row of lights lit from a
-                single source, all of us and everything is one with the Universe
-                and powered by the same source.
-              </p>
-              <p class="ne-event-date">November 10th</p>
+              <h2 class="ne-event-title" id="featured-title"></h2>
+              <p class="ne-event-location" id="featured-location"></p>
+              <p class="ne-event-description" id="featured-description"></p>
+              <p class="ne-event-date" id="featured-date"></p>
             </div>
           </div>
         </div>
@@ -114,51 +105,22 @@
 
       <!-- Event Cards Section - First Row -->
       <section class="ne-event-cards">
-        <div class="ne-section-content">
-          <div class="ne-event-card">
-            <p class="ne-card-date">November 10th</p>
-            <img src="images/event2.png"" alt="Event" class="ne-card-img" />
-            <h3 class="ne-card-title">Diwali or Deepavali</h3>
-            <p class="ne-card-location">Centennial Hall, London, ON</p>
-          </div>
-          <div class="ne-event-card">
-            <p class="ne-card-date">November 10th</p>
-            <img src="images/event3.png"" alt="Event" class="ne-card-img" />
-            <h3 class="ne-card-title">Diwali or Deepavali</h3>
-            <p class="ne-card-location">Centennial Hall, London, ON</p>
-          </div>
-          <div class="ne-event-card">
-            <p class="ne-card-date">November 10th</p>
-            <img src="images/event4.png"" alt="Event" class="ne-card-img" />
-            <h3 class="ne-card-title">Diwali or Deepavali</h3>
-            <p class="ne-card-location">Centennial Hall, London, ON</p>
-          </div>
+        <div class="ne-section-content event-cards-container">
+
         </div>
       </section>
 
       <!-- Event Cards Section - Second Row -->
-      <section class="ne-event-cards">
-        <div class="ne-section-content">
-          <div class="ne-event-card">
-            <p class="ne-card-date">November 10th</p>
-            <img src="images/event2.png" alt="Event" class="ne-card-img" />
-            <h3 class="ne-card-title">Diwali or Deepavali</h3>
-            <p class="ne-card-location">Centennial Hall, London, ON</p>
-          </div>
-          <div class="ne-event-card">
-            <p class="ne-card-date">November 10th</p>
-            <img src="images/event3.png" alt="Event" class="ne-card-img" />
-            <h3 class="ne-card-title">Diwali or Deepavali</h3>
-            <p class="ne-card-location">Centennial Hall, London, ON</p>
-          </div>
-          <div class="ne-event-card">
-            <p class="ne-card-date">November 10th</p>
-            <img src="images/event4.png" alt="Event" class="ne-card-img" />
-            <h3 class="ne-card-title">Diwali or Deepavali</h3>
-            <p class="ne-card-location">Centennial Hall, London, ON</p>
-          </div>
+
+
+      <template id="event-card-template">
+        <div class="ne-event-card">
+          <p class="ne-card-date"></p>
+          <img class="ne-card-img" alt="Event" />
+          <h3 class="ne-card-title"></h3>
+          <p class="ne-card-location"></p>
         </div>
-      </section>
+      </template>
      
         
 
