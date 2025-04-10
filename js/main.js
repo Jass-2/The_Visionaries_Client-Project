@@ -19,7 +19,7 @@ import { initializePage } from './modules/news.js';
 import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js';
 import { initLettersApp } from './modules/letters.js';
 import './modules/contactForm.js';
-
+import { initTimelineApp } from './modules/timelineFetch.js';
 
    setupMobileMenu();
 
@@ -30,6 +30,7 @@ import './modules/contactForm.js';
    setupVictoriaSlider();
 
    setupTimelineSlider();
+   initTimelineApp();
 
    initializePage();
    setupBattlefieldSlider();
