@@ -9,6 +9,8 @@ import { heroAnimation, scrollAnimations, lenis } from "./modules/animations.js"
 import { setupBattlefieldSlider, setupLettersSlider } from './modules/history.js';
 import { setupVoicesSlider, setupMemorialWallSlider } from './modules/memorial-slider.js';
 
+import { setupTypewriter } from './modules/typewriter.js';
+
 
 
 
@@ -45,6 +47,9 @@ import { initWallApp } from './modules/memorial-wall.js';
       // Set up memorial wall slider functionality
    setupVoicesSlider();
    initWallApp();
+
+   setupTypewriter();
+
    
 
    setupMemorialWallSlider();
