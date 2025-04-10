@@ -24,6 +24,7 @@ import './modules/contactForm.js';
 import { initTimelineApp } from './modules/timelineFetch.js';
 import { initWallApp } from './modules/memorial-wall.js';
 import { fetchEvents } from './modules/events.js';
+import { fetchNews } from './modules/news-fetch.js';
 
 
 
@@ -51,6 +52,7 @@ import { fetchEvents } from './modules/events.js';
 
    setupTypewriter();
    fetchEvents();
+   fetchNews();
 
    
 
