@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News | Brothers In Arms CMS</title>
+  <link rel="stylesheet" href="../admin/admin-style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>Content</h1>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="active"><a href="news.html">News</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="letters.html">Letters</a></li>
+          <li><a href="progress.html">Our Progress</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="user-actions">
+        <a href="dashboard.html" class="dashboard-link">Dashboard</a>
+        <a href="login.html" class="logout-link">Logout</a>
+      </div>
+      
+      <header class="content-header">
+        <h1>News</h1>
+        <p class="api-info">API ID : NEWS & EVENTS PAGE</p>
+      </header>
+
+      <section class="content-section">
+        <h2>Lived content</h2>
+      
+          <div class="content-list" id="news-list">
+
+          </div>
+      </section>
+      
+      <!-- Add/Edit News Form (Initially Hidden) -->
+      <section id="news-form-section" class="form-section" style="display: none;">
+        <h2 id="form-title">Article name</h2>
+        
+        <form class="content-form">
+          <div class="form-group">
+            <label for="title">TITLE</label>
+            <input type="text" id="title" placeholder="Content name">
+          </div>
+          
+          <div class="form-group">
+            <label for="article">ARTICLE</label>
+            <input type="text" id="article" placeholder="Title description">
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group half">
+              <label for="place">PLACE</label>
+              <input type="text" id="place" placeholder="Location">
+            </div>
+            
+            <div class="form-group half">
+              <label for="date">DATE</label>
+              <input type="text" id="date" placeholder="DD/MM/YYYY">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group half">
+              <label for="description">DESCRIPTION</label>
+              <textarea id="description" placeholder="Text" rows="8"></textarea>
+            </div>
+            
+            <div class="form-group half">
+              <label for="images">IMAGES</label>
+              <div class="image-upload-container">
+                <div class="image-upload">
+                  <img src="css/camera-plus.svg" alt="Upload Icon">
+                  <p>Upload images here</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="save-btn">Save</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Simple toggle to show/hide the form
+    document.getElementById('add-content-btn').addEventListener('click', function() {
+      document.getElementById('news-form-section').style.display = 'block';
+      document.getElementById('form-title').textContent = 'Add New Article';
+    });
+    
+    // For demo purposes - Edit buttons
+    const editButtons = document.querySelectorAll('.edit-btn');
+    editButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        document.getElementById('news-form-section').style.display = 'block';
+        document.getElementById('form-title').textContent = 'Edit Article';
+      });
+    });
+  </script>
+  <script src="news-cms.js"></script>
+</body>
+</html>
