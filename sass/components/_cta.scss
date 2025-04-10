@@ -1,0 +1,129 @@
+
+/* CTA Section Styles */
+.cta-section {
+  padding: 0 1.5rem;
+  margin: 2.5rem 0 4rem;
+}
+
+.cta-container {
+  max-width: 1110px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cta-content {
+  background-image: url(../images/cta-banner.png) !important;
+  background-color: #464646;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-blend-mode: hard-light;
+  border-radius: 1rem;
+  padding: 3rem 1.5rem;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-color: rgba(23, 16, 16, .72);
+  background-blend-mode: multiply;
+  background-blend-mode: multiply, normal, normal;
+
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.cta-description {
+  font-size: 1rem;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cta-donate-btn {
+  font-weight: 500;
+  padding: .5rem 1.5rem;
+  border-radius: .25rem;
+  background-color: #da7010;
+  color: #fff !important;
+  transition: all .3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+  min-width: 120px;
+  text-align: center;
+}
+.cta-donate-btn:hover {
+  background-color: #C50000;
+  transition: all .3s ease-in-out;
+
+}
+
+.cta-about-btn {
+  background-color: rgba(255, 255, 255, .2);
+  color: #fff;
+  text-align: center;
+  border-radius: .25rem;
+  min-width: 120px;
+  text-decoration: none;
+  padding: .5rem 1.5rem;
+}
+
+.cta-about-btn:hover {
+  background-color: #C50000;
+  transition: all .3s ease-in-out;
+
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 768px) {
+  .cta-section {
+    padding: 0 2rem;
+    margin: 4rem 0 6rem;
+  }
+  
+  .cta-content {
+          display: flex;
+            padding: 4.5rem;
+            text-align: left;
+            height: 484px;
+            flex-direction: column;
+            justify-content: space-around;
+  }
+  
+  .cta-title {
+    font-size: 3.5rem;
+  }
+  
+  .cta-description {
+    font-size: 1rem;
+    max-width: 27.813rem;
+    line-height: 1.5;
+}
+
+  .cta-buttons {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cta-section {
+    margin: 6rem 0 8rem;
+  }
+  
+  .cta-title {
+    font-size: 4.5rem;
+  }
+}

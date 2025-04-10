@@ -1,0 +1,171 @@
+
+/* Footer */
+footer {
+  width: 100%;
+}
+
+.footer-main {
+  background-color: #333;
+  color: white;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-section {
+  margin-bottom: 1.5rem;
+}
+
+.footer-section h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.contact-item, .social-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.icon {
+  margin-right: 0.5rem;
+  width: 1rem;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.icon img {
+  width: 100%;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+  opacity: 0.8;
+}
+
+.social-icon:hover {
+  opacity: 1;
+}
+
+.quick-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.quick-links a {
+  font-size: 0.875rem;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+  text-decoration: none;
+  color: white;
+}
+
+.quick-links a:hover {
+  opacity: 1;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 56%;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  height: 2.5rem;
+  border-radius: 0.25rem 0 0 0.25rem;
+  font-size: 0.875rem;
+}
+
+.newsletter-form button {
+  background-color: #da7010;
+  color: #fff;
+  padding: 0 .75rem;
+  border: none;
+  height: 2.5rem;
+  border-radius: 0 .25rem .25rem 0;
+  cursor: pointer;
+  font-size: .875rem;
+  width: 70px;
+}
+
+.newsletter-form button:hover {
+  background-color: #C50000;
+  // color: #fff;
+  transition: all .3s ease-in-out;
+}
+
+
+.footer-copyright {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.footer-copyright a {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: white; 
+  transition: background-position 0.5s ease, -webkit-text-fill-color 0.5s ease;
+}
+
+.footer-copyright a:hover {
+  background: linear-gradient(to right, #fff, #DA7010, #C50000);
+  background-size: 200% 100%;
+  background-position: -100% 0;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+@media screen and (min-width: 768px) {
+  .footer-main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem 2.5rem;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-main {
+    flex-wrap: nowrap;
+    padding: 3rem 10rem;
+  }
+  
+  .footer-section {
+    flex: 1;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-main {
+    flex-direction: row;
+    padding: 2rem 10rem;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    flex: 1;
+  }
+}
